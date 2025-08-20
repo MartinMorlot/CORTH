@@ -1,2 +1,12 @@
 # For now
 *.csv
+
+# Stations file
+*.gz
+*.tar
+
+# 
+[.]R*
+
+
+
