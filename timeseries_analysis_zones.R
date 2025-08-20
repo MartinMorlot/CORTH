@@ -22,6 +22,8 @@ dataFrame_normalized_data <- data.frame(date=tS)
 
 file_to_read = station_files[40]
 
+dasdas
+
 
 serie_na_replace <- function(serie) {
   Inf_serie <- is.infinite(serie$x)
