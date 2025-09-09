@@ -68,3 +68,12 @@ for (i in seq(1,nrow(station_db_sel))){
 }
 dev.off()
 
+
+#TODO
+
+#redo all corrections deltaH based calculated Q and measured H
+
+#redo all corrections based on the same Qobs and Hobs (without correction)
+
+#compare deltaHobs and deltaHcalc
+
