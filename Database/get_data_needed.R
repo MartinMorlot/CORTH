@@ -41,6 +41,9 @@ df_courbecorrection <- read.csv("Database/Extracted")
 
 df_courbe <- read.csv("Database/Extracted_pointcourbe.csv")
 
+list_stations_and_curve <- c()
+
+
 pdf("All_curves_select_station.pdf")
 for (i in seq(1,nrow(station_db_sel))){
     print(i)
@@ -50,7 +53,7 @@ for (i in seq(1,nrow(station_db_sel))){
     list_of_curve_per_station <- entetecourbe_sel_nosta$noct
     first_curve=TRUE
     for (curve_i in list_of_curve_per_station){
-        curve_sel <- which(df_courbe$noct %in% curve)
+        curve_sel <- which(df_courbe$noct %in% curve_i)
         if(length(curve_sel)>0){
             point_curve <- df_courbe[curve_sel, ]
             if(first_curve){
@@ -74,6 +77,8 @@ dev.off()
 #redo all corrections deltaH based calculated Q and measured H
 
 #redo all corrections based on the same Qobs and Hobs (without correction)
+
+
 
 #compare deltaHobs and deltaHcalc
 
