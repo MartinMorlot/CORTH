@@ -1,5 +1,5 @@
 # For now
-*.csv
+.csv
 
 # Stations file
 *.gz
@@ -7,7 +7,5 @@
 
 # 
 [.]R*
-
-
 
 .Rproj.user

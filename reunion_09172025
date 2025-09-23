@@ -1,0 +1,11 @@
+Pour chaque annee:
+date debut
+date fin
+date maxima
+duree par an
+maxima par an
+integral (par linear interopolation par trapeze)
+integral normalized
+
+Hclustering (python-orange)
+
