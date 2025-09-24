@@ -1,0 +1,1700 @@
+nosta,codehydro,nom,courdo,xlambert,ylambert,pk,bv,type,nogest,module,qrefetiage,qix2,qix5,qix10,mnemo,comment,datemaj,typemes,cotedebordement,coteseuil,nomcommune,inseecommune,ngfechelle,dateenregistrement,datecreation,codehydro3,codesitehydro3,synchronisation
+1,"A3792010","BEINHEIM","la Sauer",1020.447,2444.379,,530,"S","115680",3.75,1.03,19,26,30,"A3792010","
+observations depuis le 26/10/64
+zéro de l'échelle :renivelée le 22/06/1982 = 111.89 NGF rive gauche, puis renivelé le 23 juillet 2002 par géomètre expert Pierre-André BORD:=112.277
+Adresse: pont de la Sauer à 1000 m env. du 60, rue principale
+67930-BEINHEIM
+Propriétaire du terrain : la commune de BEINHEIM
+plan cadastral: section  ; parcelle 296 
+
+appareil d'acquisition sur site installé le 23 octobre 2001.
+Marque OTT: type NIMBUS n° 149987; MIDI n°166668.
+La station a été modernisée en 2007 avec CPL + lpn/8 +modem waevcom
+Tel : 06 77 07 81 61 
+
+Jaugeages au saumon effectués à partir de 3 m au pont de la RN 63; LAMBERT X=1020-560;Y=1145-220
+
+Responsable et gestionnaire de la station: Stephane LAPINE
+
+SECURITE
+L'accès de la station de mesure ce fait par un chemin de terre, il est relativement carrossable sauf par temps enneigé. Par temps humide il est également difficile de faire demi-tour car il y a un risque d'enlisement.
+Le lieu est isolé et n'est fréquenté que par des chasseurs ou des paysans.
+Echelle LIMNIMETRIQUE:
+L'accès à l'échelle est difficile ainsi qu'au lit de la rivière.
+Jaugeage au MOULINET:
+Les jaugeages à gué se font  sans risques si la hauteur à l'échelle limnimétrique ne dépasse pas  120cm.
+Jaugeage au SAUMON et au stream pro ADCP:
+En cas de crue le pont de la station peut être innondé en conséquence,  la mesure au saumon se fait au niveau du village à l'intersection avec le pont de la RN 63.
+Dans ce cas il faut mettre en oeuvre les feux spéciaux du camion et porter les vêtements à haute visibilité classe 3 ou 2.
+Jaugeage ADCP/STREAM PRO:
+En eau moyenne, le jaugeage est possible sans danger avec le stream pro.
+
+RECOMMANDATIONS:
+Nettoyage de l'échelle LIMNIMETRIQUE: Une perche telescopique munie d'une brosse est souhaitable.
+Pour éviter la glissade et la chute, il serait souhaitable pour sécuriser l' accès à l'échelle et au lit, d'équiper la station d'un escalier en béton ou d'un autre support adapté au terrain.
+Jaugeage au MOULINET: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, mettre les EPI.
+
+GP
+","05/12/05 00:00:00","10",,,,,,"07/06/23 16:12:00",,"A369011001","A3690110",
+2,"A2702010","SAULXURES","la Bruche",956.612,2389.293,,39,"S","115680",0.9389999999999999,0.19,8,11,13,"A2702010","observations depuis le 01/09/1965
+arrêtée le 08/01/2001
+zéro de l'échelle jusqu'au 01/08/199 5: 425.015 m NGF
+nouvelle échelle = pas nivelée
+Adresse : rte de Senone(N424) première maison à droite 67420- SAINT BLAISE LA ROCHE
+
+Historique des gestionnaire, si différent de DIREN Alsace : NON
+
+Buts- vocation station : ..
+
+---
+EMPLACEMENT ET METHODES DE JAUGEAGE : en amont du pont et de l'emplacement de l'échelle limnimétrique.
+(la dernière méthode utilisée) moulinet avec perche pirée
+
+Etiage : moulinet c31
+
+Eaux basses : moulinet c31
+
+Eaux moyennes : adcp stream pro
+
+Crues : saumon ; ADCP rio grande possible
+
+---
+---
+ANALYSE QUALITE COURBES TARAGE : 
+---
+Jaug en crue ? OUI
+Jaug étiage ? OUI
+Jaug moyen ? OUI
+
+T du jaug maxi (gumbel) : N.R.
+T du jaug mini (débits classés) : N.R.
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable ? Non
+
+Géométrie lit stable ? Non
+Causes changement courbe ? Modifications progressives ( phénomènes lents d'alluvionnement)
+
+EN CRUE :
+Débordement en lit majeur ? non
+Totalité débit mesuré ? oui
+si non, estimation partie dérivée ?
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? pendant une époque les pêcheurs alimentés leur étang en agissant une vanne situé à 50 m en aval de la station.
+
+Existe t il un contrôle aval ? N.R.
+
+Extrapolation courbe :
+Quelle méthode employée ? depuis 1995 tracé assisté par le logiciel BAREME
+Qualité globale de la partie extrapolée de la courbe ? bonne
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? non.
+
+Gêne de l'écoulement par de la végétation, ou autre ? non.
+
+Présence ouvrage influençant écoulement et comment ? N.R.
+
+Existe t il un contrôle aval ? Non
+
+Bilan sur Hydro : bon
+
+Qualité des débits selon les années ? N.R.du 13 septembre 1965 à aujourd'hui il y a 457 jaugeages qui ont éét réalisés
+
+Qualité des débits par gamme de débit ? N.R.
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? N.R.
+","10/18/99 00:00:00","10",,,,,,"02/04/25 16:28:00",,"A270011001","A2700110",
+3,"A3151010","SCHWEIGHOUSE AMONT","moder",995.9450000000001,2438.879,,282,"S","115680",2.47,0.98,22,32,39,"A3151010","observations depuis le11/08/67
+zéro de l'échelle = 146.416 NGF
+Adresse:Tennis Club, rue des Sports
+67590- SCHWEIGHOUSE
+","10/18/99 00:00:00","10",,,,,,"02/04/25 16:29:00",,"A315010001","A3150100",
+4,"A3301010","SCHWEIGHOUSE (AVAL)","La Moder",996.8390000000001,2438.573,953.2,622,"S","115680",5.58,2.38,44,65,79,"A3301010","Coordonnées LAMBERT Zone II étendu.
+Plan cadastral: section 53, parcelle: 32. Propriétaire: Association foncière de remembrement (Mairie de Schweighouse).
+Station ""ANNONCE DE CRUE"".
+Observations depuis le 11/05/1966
+Adresse: Station d'épuration 67590 SCHWEIGHOUSE
+gestionnaire: Guillaume PHILIPPS
+
+zéro de l'échelle = 143.904 NGF
+Echelle limnimétrique: 3 m.
+CR2M/SAB 600 - HDL N° 5984 (en attente sur le site)
+Sonde
+Abri: Type ""OTT R16"".
+ALCYR: CYR 2/GSM n° 020111
+Abri: GROLLEAU + panneau solaire
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N°03 88 72 60 66.
+Jaugeage de crue au saumon sur le pond de la D85.
+
+SECURITE
+L'accès de la station de mesure ce fait par un chemin de terre, il est relativement carrossable sauf par temps enneigé. Par temps humide il est également difficile de faire demi-tour car il y a un risque d'enlisement, par forte crue le chemin qui mène à la station peut-être innondée.
+
+Jaugeage au MOULINET:
+Les jaugeages à gué se font  sans risques spécifiques. 
+
+Jaugeage au SAUMON
+A partir du pont situé sur la D85, le danger est rél sur ce pont à grande circulation.
+
+Jaugeage ADCP/STREAM PRO
+A partir du pont situé sur la D85.
+
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, revêtir les EPI.
+
+Le TELEPHERIQUE SERVANT à RéALISER LES JAUGEAGES MOYENs a été en partie détrits en décembre 2010.","05/10/05 00:00:00","00",,,,,,"07/06/23 16:19:00",,"A330010001","A3300100",
+5,"A0044000","BIETLENHEIM","Zorn",999.8,126.775,985.1,738,"S","115680",,,,,,"A0044000","Altitude du zéro de l'échelle: 132.15 NGF
+","02/05/99 00:00:00",,,,,,,,,,,
+6,"A0042300","KALTENHOUSE","MODER",,,,679,"S","115680",,,,,,"A0042300",,"12/24/98 00:00:00",,,,,,,"02/04/25 16:20:00",,"A331010001","A3310100",
+7,"A0041000","INGWILLER","Moder",,,925.48,,"S","115680",,,,,,"A0041000",,"02/05/99 00:00:00",,,,,,,,,,,
+8,"A0029000","FEGERSHEIM","ANDLAU",,,998.52,,"S","115680",,,,,,"A0029000","station RCS anciennement RNB","02/05/99 00:00:00","10",,,,,,"08/20/08 16:35:00",,,,
+9,"A0030500","GEISPOLSHEIM","EHN",,,999.9299999999999,,"S","115680",,,,,,"A0030500",,"02/05/99 00:00:00",,,,,,,,,,,
+10,"A0043500","HATTMATT","ZINSEL DU SUD",,,,,"S","115680",,,,,,"A0043500",,"02/05/99 00:00:00",,,,,,,,,,,
+12,"A0047750","LAUTERBOURG (LAUTER)","LAUTER",,,993.4,,"S","115680",,,,,,"A0047750",,"02/05/99 00:00:00",,,,,,,"01/30/25 14:22:00",,,,
+13,"A0045150","LEMBACH","SAUER",,,931.9400000000001,,"S","115680",,,,,,"A0045150",,"02/05/99 00:00:00",,,,,,,,,,,
+14,"A3782110","LEUTENHEIM","EBERBACH",1016.135,2441.95,996.25,190,"S","115680",,,,,,"0045500","LONGUEUR cours d'eau 45,83 km
+
+adresse: pont du chemin vers le lieu-dit : HEIDENBERG
+67480-LEUTENHEIM
+installation d'un appareil d'acquisition sur site le 19 juin 2006; type MONOPHENE GSM: N° 06 75 00 91 25
+sonde endress+hauser ; model WATERPILOT; L=20m / série N° 5C02600108E; amplitude 0-4mA;
+cabine GROLLEAU 00 313AIITM045 série10; décembre 2003
+
+zéro de l'échelle: 115.465 NGF69 nivelé le 23/07/2002
+rive gauche ; aval pont
+
+mise en service le 11/09/2002 10h00
+
+Gestionnaire: Guillaume PHILIPPS
+
+SECURITE:
+Accès à la station:
+Se fait sans difficulté par un chemin de terre bien carrossable, il n'y a pas de problème pour se garer.
+
+Jaugeage au moulinet:
+Hormis la descente du talus aucune difficulté particulière, la section est régulière.
+
+Jaugeage au saumon:
+Le camion ferme quasiment le pont, mais il y a très peu de passage à cet endroit surtout en hiver et il n'y a pratiquement aucun danger de circulation.
+
+Jaugeage  ADCP / STREAM PRO:
+Sans aucun problème.
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON  : Mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP           :  Revêtir les EPI.","05/09/05 00:00:00","10",,,,,,"02/04/16 13:45:00",,"A368021001","A3680210",
+15,"A060030","STRGMEINAU","RHIN TORTU",,,,,"S","115680",,,,,,"A0036500","LATITUDE de la station de jaugeages
+
+48°33'24''
+ 7°45'19''",,,,,,,,"11/19/09 16:18:00",,,,
+16,"A2260320","STRASBOURG MONTAGNE-VERTE","ILL",997.33,111.03,975.35,4368,"S","115680",,,,,,"A2260320",,"02/16/01 00:00:00",,,,,,,"11/23/22 11:15:00",,"A226032002","A2260320",
+17,"A0033500","WASSELONNE","la Mossig",,,,,"S","000000",,,,,,"A0033500",,,,,,,,,,,,,
+18,"A3501010","DRUSENHEIM","MODER",1012.22,1133.12,979.4299999999999,1552,"S","115680",,,,,,"A3501010","
+adresse:passerelle de la MODER
+67410- DRUSENHEIM
+plan cadastrale: section 6; parcelle 304; propriétaire du terrain : la commune de DRUSENHEIM
+
+Zéro de l'échelle: 119.406 NGF69 nivelée le 23/07/2002 ; rive droite
+
+ALCYR: CYR2 V23 N° 011012 installée le 13/11/2002
+MODEM RTC TEL: 03 88 53 43 38 
+PARAFOUDRE type:
+
+sonde paratronnic:2912-4
+pleine échelle 4m L= 15m Température de réglage 14°
+COURANT 4-20 
+Station modernisée en 2007: CPL + LPN/8 + MODEM ETIC TEL: 03 88 53 43 38 
+
+Jaugeages au saumon effectués sur le pont de la D 468; LAMBERT X = 1012-170 ; Y =1133-120
+
+Responsable et gestionnaire de la station: Guillaume PHILIPPS
+
+SECURITE:
+Le véhicule se gare sans danger sur la rampe d'accés des canoës.
+L'accès à la station ne pose pas de problème.
+
+Jaugeage au moulinet:
+Pas de problèmes spécifiques la section est relativement régulière.
+
+Jaugeage au saumon:
+Possible à partir du pont de la D468 situé en amont de la station.
+
+Jaugeage avec le STREAM-PRO méthode ADCP.
+Possible à partir de la passerelle.
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO sans dangers spécifiques à partir de la passerelle.
+
+","05/06/05 00:00:00","10",,,,,,"02/04/16 13:54:00",,"A350010001","A3500100",
+19,"A2230313","KOGENHEIM (ILL)","L'Ill",985960,84010,,3056,"S","115680",,,,,,"A2230310","HYDROMETRE gestionnaire:
+Nouvelle station CPL paratronic avec capteur hydrologic type LPN/8 + modem RTC N° 03 88 58 98 47.
+La tension pour l'alimentation éléctrique est la charge des batteries est du 220 V .
+altitude du zéro de l'échelle historique en RG:158.30 NGF
+SECURITE:
+L'accès à la station ne pose pas de problème.
+Le véhicule se gare sans danger.
+
+Jaugeage au moulinet: IMPOSSIBLE.
+
+Jaugeage au saumon: Possible à partir du pont de la D203.
+Le risque est celui lié à la circulation routière en conséquence le chantier mobile est à mettre en eouvre le triflasch doit être activé le temps de la mesure. 
+
+Jaugeage avec le STREAM-PRO méthode ADCP à partir du pont de la D203.
+ .
+
+Jaugeage au catamaran télécommandé: risque de glissade lors de la mise à l'eau.
+
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO: revêtir les EPI.
+
+L'habilitation éléctrique ( non éléctricien) est indispensable et doit être à jour.","03/26/08 15:42:00",,,,,,,"01/16/17 15:58:00",,,,
+189,"A3502021","SCHERWILLER AUBACH DIFFLUENCE","Aubach",,,,,"V","115680",,,,,,"A2302021","Sur l'Aubach, à l'aval immédiat de l'ouvrage de dérivation sur le Giessen",,"10",,,,,,"12/04/14 08:21:00","12/04/14 08:21:00",,,
+190,"A23502022","SCHERWILLER GIESSEN DIFFLUENCE","Giessen",,,,,"V","115680",,,,,,"A235002022",,,"10",,,,,,"12/04/14 08:25:00","12/04/14 08:25:00",,,
+23,"A0042700","HASELBOURG","ZORN",958.16,2421.52,,,"S","115680",,,,,,"A0042700","Altitude: 235.00 environ","02/05/99 00:00:00",,,,,,,,,,,
+26,"A3422010","SAVERNE","La Zorn",967.333,2425.943,932.5,185,"S","115680",2.27,0.75,19,28,34,"A3422010","Plan cadastral SAVERNE SECTION 25 ; 1/2000
+
+observations depuis le 24/10/1966
+zéro de l'échelle = 189.515 NGF
+
+appareil de mesure CR2M TYPE600/HDL
+STATION équipée en ligne éléctrique et téléphone pour l 'AC depuis le 2000
+N° Teléphone: 03 88 91 38 17
+
+Gestionnaire Guillaume PHILIPPS
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N° 03 88 91 38 17.								
+
+
+SECURITE
+L'accès à la station de mesure ne pose pas de difficulté, le véhicule est garé sur le bas côté mais gêne le croisement des véhicules sur cette route trés fréquentée où la circulation sur cette portion en ligne droite est rapide  .
+
+Jaugeages au MOULINET:
+Pas de difficultés, la section est régulière.
+
+Jaugeage au SAUMON:
+Sans risques à partir de la passerelle 
+
+Jaugeage ADCP/stream pro
+Sans risques à partir de la passerelle
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON: S'assurer de la solidité de la passerelle: ( elle a été rénovée en 2000 )
+Jaugeage ADCP/STREAM PRO: revêtir les EPI.
+","05/20/05 00:00:00","00",,,,,,"02/04/16 13:57:00",,"A341020001","A3410200",
+27,"A2250310","OHNHEIM","ill",996592,2401370,960.78,167,"S","115680",37.8,27,52,56,58,"A2250310","Coordonnes LAMBERT Zone II étendu.
+latitude : N 48°29'20"" E 7°42'14''
+Observations depuis le 20/10/75
+Adresse: 16, route du Général DE GAULLE  67640 FEGERSHEIM-OHNHEIM
+
+zéro de l'échelle = 141.63 NGF
+Echelle limnimétrique: 2 m. (1970, DDAF67).","05/12/05 00:00:00","10",,,,,,"10/04/19 15:43:00",,"A243003001","A2430030",
+29,"A0045300","FORSTFELD","SAUER",,,,,"S","000000",,,,,,"A0045300",,,,,,,,,,,,,
+30,"A3472010","WALTENHEIM","ZORN",989.42,2429.91,967.12,688,"S","115680",5.38,1.61,52,80,99,"A3472010","Coordonnées LAMBERT Zone II étendu.
+Observations depuis le 01/07/1941; limnigraphe depuis le 16/11/1983.
+Adresse: Pont D332, Rive Droite, Maison éclusière, 67670 WALTENHEIM sur Zorn.
+
+zéro de l'échelle = 147.28 NGF
+Echelle limnimétrique: 5 m.
+ALCYR: CYR2 V23 N° 011010 installé le 10/12/2002. 
+MODEM RTC  Téléphone N°: 03 88 59 15 46
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14Sonde 
+
+sonde:PARATRONIC N° 2912-1 / 4000  L= 20 m.
+PARAFOUDRE Type:
+Abri: Abri galvanisé (SAS).
+
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N° 03 88 59 15 46.
++ une sonde de température installée le 09/07/2009.
+L'alimentation éléctrique est assurée par ES en 220V.
+Jaugeage de crue sur le pont de la D332.
+
+Responsable et gestionnaire de la station: GUILLAUME PHILIPPS
+
+SECURITE:
+Le véhicule se gare sur l'accotement.
+L'accès à la station ne pose pas de problème.
+
+Echelle limnimetrique:
+Lecture et nettoyage sans grandes difficultées.
+
+Jaugeage au moulinet:
+Pas de problèmes spécifiques.
+
+Jaugeage au saumon:
+Possible à partir du pont.
+
+Jaugeage avec le STREAM-PRO méthode ADCP.
+Possible au delà de 1.00 à l'échelle
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, mettre les EPI.
+
+GP","05/20/05 00:00:00","00",,,,,,"07/06/23 16:23:00",,"A348020001","A3480200",
+31,"A3902010","WEILER","LAUTER",1006.87,2463.868,,278,"S","115680",2.52,1.45,7.9,10,12,"A3902010","observations depuis le 27/11/1975
+
+zéro de l'échelle : nivelé le 23/07/2002
+altitude du zéro:166.975 NGF 69
+
+Adresse: Chapelle ST LEON
+67160 Wissembourg
+
+le 6/11/2002 installation d'un CYR2 V23 N°011015
+MODEM RTC TEL: 03 88 94 00 48
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+sonde PARATRONIC 2911-6
+pleine échelle fixée à :  2 m
+longueur du câble:      15 m       
+cabine GROLLEAU 
+
+Gestionnaire: Guillaume PHILIPPS
+
+SECURITE
+
+Echelle LIMNIMETRIQUE:
+L'accès à l'échelle est sans problèmes majeurs.
+Jaugeage au MOULINET:
+Les jaugeages à gué se font  sans risques.
+Jaugeage au SAUMON:
+En cas de crue le pont de la station n'est pas trés fréquenté, en conséquence le jaugeage est sans danger.
+Jaugeage ADCP/STREAM PRO:
+Sans danger.
+
+RECOMMANDATIONS:
+Nettoyage de l'échelle LIMNIMETRIQUE: L'endroit est relativement profond faire attention au-delà de 40 cm.
+Jaugeage au MOULINET: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, mettre les EPI.
+
+GP
+                                       ","05/20/05 00:00:00","10",,,,,,"07/06/23 16:09:00",,"A380020001","A3800200",
+32,"A2732010","RUSS/WISCHES","BRUCHE",964.783,2401.012,950,230,"S","115680",6.04,1.14,63,90,110,"A2732010","Station probablement mise en oeuvre par les Allemands ENTRE 1940 ET 44.
+
+Des relevés ont été observés à partir du 7 février1949: enregistrements continus subdivision de Molsheim: observateur Madame PEPIN Yvonne de SCHWARTZBACH jusqu'au 14 juin 1966: très nombreuses lacunes, jusqu'en 1963.
+
+altitude du zéro de l'échelle 263.18 NGF
+
+Adresse: amont pont D804 rive droite 67130 RUSS
+Hydromètre gestionnaire: Stephane LAPINE
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N° 03 88 97 55 69.								
+
+Historique des gestionnaire, si différent de DIREN Alsace : Station annonce de crue en parallèle jusqu'en 2005
+
+Buts- vocation station :  contrôle amont du bassin de la bruche et tous les affluents du haut bassin versant.
+
+---
+EMPLACEMENT ET METHODES DE JAUGEAGE :
+(la dernière méthode utilisée) ADCP
+
+Etiage :
+Jaugeage au moulinet:
+Hormis la descente du talus, la section est plus profonde en rive gauche et les galets du fond du lit très glissants.
+
+Eaux basses :
+Eaux moyennes :
+Jaugeage  ADCP / STREAM PRO sans difficultés.
+
+
+Crues :
+Jaugeage au saumon : Le camion empiète sur la moitié du pont, le danger lié à la circulation est élevé
+---
+ANALYSE QUALITE COURBES TARAGE :
+---
+Jaug en crue ? OUI
+Jaug étiage ? OUI
+Jaug moyen ? OUI
+
+T du jaug maxi (gumbel) : 10 ans
+T du jaug mini (débits classés) : env 20 ans
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable ? Oui, faible nombre depuis 1962
+
+Géométrie lit stable ? Oui, fond de couche de grès
+Causes changement courbe ? Des travaux ont conduit à des corrections de hauteur sur Hydro ; des embâcles notamment après tempete de 99 ont été nombreux
+
+EN CRUE :
+Débordement en lit majeur ? Non, tout passe dans la section
+Totalité débit mesuré ? oui
+si non, estimation partie dérivée ?
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? NON
+
+Existe t il un contrôle aval ? NON
+
+Extrapolation courbe : Tracé assisté par le logiciel BAREME ( en couple ou en tronçon)
+Quelle méthode employée ? Depuis 1995: Tracé assisté par le logiciel BAREME ( en couple ou en tronçon
+Qualité globale de la partie extrapolée de la courbe: bonne
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? NON
+
+Gêne de l'écoulement par de la végétation, ou autre ? NON
+
+Présence ouvrage influençant écoulement et comment ? NON
+
+Existe t il un contrôle aval ? NON
+
+Bilan sur Hydro : bon
+
+Qualité des débits selon les années ? bon
+
+Qualité des débits par gamme de débit ? bon
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? N.R.
+","05/12/05 00:00:00","10",,,,,,"07/06/23 16:28:00",,"A273011002","A2730110",
+33,"A3712010","GOERSDORF","SAUER",996.915,2453.799,,192,"S","115680",1.91,0.99,12,18,22,"A3712010","altitude du zéro = 171.94 NGF
+
+CR2M depuis le 24/09/96
+Adresse:Maison de convalescence,221
+Liebfrauenthal
+67360 GOERSDORF","10/18/99 00:00:00","10",,,,,,"10/23/23 15:25:00",,"A361011001","A3610110",
+34,"A2312020","THANVILLE","GIESSEN",971.569,2380.736,,99,"S","115680",1.39,0.09,19.3,25.6,29.8,"A2312020","Coordonnées LAMBERT Zone II étendu.
+Observations depuis le 12/01/84
+Adresse: Pont du CD 424 Rive Droite prés du 1, de la rue de l'Eglise 67220 THANVILLE.
+
+zéro de l'échelle = 227.51 NGF
+Echelle limnimétrique: 2 m.
+
+ALCYR: CYR2 V23 N°011018 installé le 26/11/2001. inventaireN°B178
+MODEM RTC Téléphone N°:03.88.57.63.89
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+PARAFOUDRE Type:
+Sonde PARATRONIC: 4-20mA/0/2000
+Abri: Abri en tôle (GROLLEAU).
+
+Depuis le mois de septembre 2006 la station est équipé par paratronic , type CPL avec capteur intelligent Hydrologic type: lpn/8  sous tension 220 V.
+
+Responsable et gestionnaire de la station: Stephane LAPINE.
+
+SECURITE:
+Le véhicule se gare sur le terre plein de l'îlot central.
+L'accès à la station ne pose pas de problème.
+
+Jaugeage au moulinet:
+Pas de problèmes spécifiques.
+
+Jaugeage au saumon: 
+Possible à partir du pont de la D424.
+
+Jaugeage avec le STREAM-PRO méthode ADCP.
+Possible en HE.
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+
+Jaugeage au SAUMON: mettre en oeuvre le chantier mobile et les EPI, la circulation à cet endroit où la chaussée est réduite est intense, une grande prudence est nécessaire. 
+
+Jaugeage STREAM PRO: mettre les EPI.
+
+L'habilitation éléctrique ( non éléctricien) est indispensable et doit être à jour.
+
+gp
+
+
+","05/20/05 00:00:00","10",,,,,,"07/12/23 15:16:00",,"A231020001","A2310200",
+11,"A2420210","ZEMBS À ERSTEIN-KRAFFT-SUCRERIE","ZEMBS",996.042,2392.288,994.75,,"S","115680",,,,,,"A2420210","
+
+
+Altitude 152.5m
+Altitude du zéro de l'échelle: 148.98 NGF
+(Altitude fournie par le SGAL)
+Echelle située dans l'enceinte de la Sucrerie.
+
+Nouvelle échelle installée le 22 août 2001 en amont du pont de la D426.( pas nivelée)
+
+Appareil MONOPHENE GSM installé le 27 avril 2004
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+sonde KELLER N° 2077 ; 20 M ; amplitude 0 - 4mA
+cabine GROLLEAU N° 00313A11TM045 série 9 année 01/12/2003
+
+SECURITE:
+L'accès et l'arrêt à la station est aisé, elle se situe en face de l'entrée de la sucrerie.
+
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP / STREAM PRO: pas possible","05/10/05 00:00:00","00",,,,,,"11/20/23 11:35:00",,"A242020001","A2420200",
+35,"A3832010","NIEDERROEDERN","SELTZBACH",1018.642,2449.14,992.22,206,"S","115680",1.67,0.175,29,43,52,"A3832010","Coordonnées LAMBERT Zone II étendu.
+
+Observations depuis le 23/10/1964
+Adresse: 27, rue de la Gare  67490 NIEDERROEDERN
+
+zéro de l'échelle = 119.65 NGF
+Echelle limnimétrique: 4 m.
+
+CR2M/SAB 600-HDL/CS/M N° 5385 (mise en service en Mars 1997).
+Sonde: PARATRONIC MPX 4 m. N° 6016-4 
+MODEM RTC Téléphone N° 03.88.05.53.03 (alimentation: panneau solaire).
+-Abri: Abri galvanisé (SAS).
+Depuis septembre 2008 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N° 03 88 05  53 03.
+L'alimentation éléctrique est assurée par UN PANNEAU SOLAIRE  qui charge 1 batterie
+
+Jaugeage de crue au saumon sur le pont de la D34.
+
+Responsable et gestionnaire de la station: Stephane LAPINE
+
+SECURITE:
+Accès à la station:
+Le véhicule doit-être garé sur le trottoir
+
+Jaugeage au moulinet:
+La descente du talus pour accéder au lit de la rivière est difficile, pour le jaugeage la section est régulière.
+
+Jaugeage au saumon:
+Le camion obstrue la moitié du pont qui est relativement fréquenté, le danger lié à la circulation doit être pris en compte.
+
+Jaugeage  ADCP / STREAM PRO:
+La vitesse du courant ne permet pas cette méthode.
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON  : Mettre en oeuvre le chantier mobile et les EPI. 
+                       
+GP
+
+
+
+
+
+
+","05/09/05 00:00:00","00",,,,,,"07/06/23 16:15:00",,"A373020001","A3730200",
+36,"A2932010","MUNDOLSHEIM","SOUFFEL",997.3339999999999,2418.189,,118.5,"S","115680",0.3,0.076,2.6,3.8,4.6,"A2932010","Observations du 12/05/79
+zéro de l'échelle = 136.24 NGF
+Adresse:accés par le 1 route de Brumath 
+67460 -Souffelweyersheim
+Commune de MUNDOLSHEIM(en face XEROX)
+67450
+
+2019 : Nouvelle station située en ville (rue de la Souffel)
+Collaboration avec ENGEES - Nouvelle échelle.","10/18/99 00:00:00","10",,,,,,"02/04/25 16:03:00",,"A293020001","A2930200",
+37,"A2762050","MUTZIG","BRUCHE",977.282,2404.898,,230,"S","115680",6.98,0.82,86,130,160,"A2762050","observation du 18/12/81
+arrêtée en janvier 2001
+
+zéro de l'échelle = 186.99 NGF
+
+Historique des gestionnaire, si différent de DIREN Alsace : pas d'autres 
+
+Buts- vocation station : .. RNB 
+
+Station mesurant le débit partiel.
+Complétée avec le canal Couleaux à Mutzig (A2767510) elle forme la station A2762090 Mutzig Bruche Totale.
+---
+EMPLACEMENT ET METHODES DE JAUGEAGE :
+(la dernière méthode utilisée) MOULINET
+
+Etiage : MOULINET
+
+Eaux basses : MOULINET
+
+Eaux moyennes : MOULINET
+
+Crues : SAUMON 25 KG
+
+---
+ANALYSE QUALITE COURBES TARAGE :
+---
+Jaug en crue ? NON
+Jaug étiage ? OUI
+Jaug moyen ? OUI
+
+T du jaug maxi (gumbel) : N.R.
+T du jaug mini (débits classés) : N.R.
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable ?  OUI
+
+Géométrie lit stable ? OUI
+Causes changement courbe ? embâcles
+
+EN CRUE :
+Débordement en lit majeur ? oui
+Totalité débit mesuré ? oui
+si non, estimation partie dérivée ?
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? N.R.
+
+Existe t il un contrôle aval ? non
+
+Extrapolation courbe :
+Quelle méthode employée ? à partir de 1995 tracé assisté par le logiciel BAREME
+Qualité globale de la partie extrapolée de la courbe ? sujet à beaucoup de commentaires selon les différents hydrologues; il faut prendre en compte les éléments validés dans hydro par le dernier hydrologue.
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? Non
+
+Gêne de l'écoulement par de la végétation, ou autre ? non
+
+Présence ouvrage influençant écoulement et comment ? N.R.
+
+Existe t il un contrôle aval ? Non
+
+Bilan sur Hydro :
+
+Qualité des débits selon les années ? En principe les résultats publiés sur HYDRO sont validés et à considérer comme bons.
+
+Qualité des débits par gamme de débit ? N.R.
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? non
+","09/30/99 00:00:00","10",,,,,,"02/04/25 16:22:00",,"A276011001","A2760110",
+38,"A2767510","MUTZIG CAN","CANAL COULEAUX",977.2190000000001,2405.132,,,"S","115680",,,,,,"A2767510","observations du 29/09/1980 au 01/01/2001
+
+zéro de l'échelle = 190.26 NGF.
+
+---
+ANALYSE QUALITE COURBES TARAGE :
+---
+Jaug en crue ? NON c'est un canal
+Jaug étiage ? OUI
+Jaug moyen ? OUI
+
+T du jaug maxi (gumbel) : N.R.
+T du jaug mini (débits classés) : N.R.
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable ? N.R.
+
+Géométrie lit stable ? Non
+Causes changement courbe ? embâcles dans la buse qui passe sous la route quasiment au droit de la station
+
+EN CRUE :
+Débordement en lit majeur ? Non
+Totalité débit mesuré ? oui
+si non, estimation partie dérivée ?
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? N.R.
+
+Existe t il un contrôle aval ? Non
+
+Extrapolation courbe :
+Quelle méthode employée ? N.R.
+Qualité globale de la partie extrapolée de la courbe ?
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? Non
+
+Gêne de l'écoulement par de la végétation, ou autre ?
+
+Présence ouvrage influençant écoulement et comment ?  oui, diamètre buse.
+
+Existe t il un contrôle aval ? Non
+
+Bilan sur Hydro : bon
+
+Qualité des débits selon les années ? N.R.
+
+Qualité des débits par gamme de débit ? N.R.
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? Non.
+","07/12/99 00:00:00","10",,,,,,"02/04/25 16:23:00",,"A276075201","A2760752",
+39,"A2612010","NIEDERNAI","EHN",982.6849999999999,2236.26,,57.599998,"S","115680",0.54,0.15,7.7,11,14,"A2612010","Coordonnées LAMBERT Zone II étendu.
+Observations du 22/12/71
+Adresse: N 422, VILLA REINE 67210 NIEDERNAI
+zéro de l'échelle = 160.06 - Echelle limnimétrique: 1 m.
+ALCYR: CYR 2 V23 N° 011017 installé en Janvier 2002.
+MODEM RTC Téléphone N° 03.88.47.01.93
+Sonde MPX 2 M, N°7343
+Abri: Abri en tôle (GROLLEAU).
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N° 03 88 47 01 93.
+L'alimentation éléctrique est assurée par UN PANNEAU SOLAIRE  qui charge 2 batteries.
+
+Jaugeage de crue au saumon sur le pont de la N422.
+Responsable et gestionnaire de la station: Guillaume PHILIPPS.
+
+SECURITE:
+Accès à la station:
+Se fait sans difficulté par le chemin menant à la Villa Reine, il n'y a pas de problème pour se garer.
+
+Jaugeage au moulinet:
+Hormis la descente du talus aucune difficulté particulière, la section est régulière.
+
+Jaugeage au saumon:
+A partir du pont de la RN 422, cette nationale en cours de déclassement est délesté par la VR du piémont des vosges, en conséquence la circulation n'est plus aussi fréquente et dangereuse.
+
+Jaugeage  ADCP / STREAM PRO:
+Sans problème.
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON  : Mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP           :  Revêtir les EPI.
+                       
+GP","05/09/05 00:00:00","10",,,,,,"02/04/16 13:46:00",,"A261020001","A2610200",
+40,"A2352020","SELESTAT (AMONT)","Le Giessen",979.922,2376.122,994.53,260,"S","115680",3.42,0.14,51,82,100,"A2352020","Coordonnées LAMBERT Zone II étendu.
+Observation depuis le 25/10/1965
+Adresse: Rue du Giessen (ancienne filature) 67600 SELESTAT.
+
+zéro de l'échelle = 172.44 NGF
+Echelle limnimétrique: 2 m. (DDAF67).
+
+Marque OTT: Type NIMBUS N° 
+MODEM RTC Téléphone N° 03.88.92.80.15
+PARAFOUDRE TYPE:
+Abri: Abri en béton.
+
+Jaugeage de crue au saumon sur le pont de la RN 83.
+
+Responsable et gestionnaire de la station: Alain HELLMANN.
+","05/21/04 00:00:00","00",,,,,,"05/23/23 10:44:00",,"A235020002","A2350200",
+41,"A2512010","ANDLAU","Andlau",976.453,2388.514,971.4,41.799999,"S","115680",0.819,0.166,8.699999999999999,13,16,"A2512010","Coordonnées LAMBERT Zone II étendu.
+
+Observations depuis le 18/12/73
+Adresse: 8,rue de la Commanderie  67140 ANDLAU
+
+Altitude du zéro de l'échelle: 217.47 NGF
+
+Mise en place : CR2M/SAB 600 HDL N° 5985 le 10 décembre 2001
+Numéro d'inventaire: B.064
+
+A partir du 23 mars 2005, le CR2M a été remplacé par un appareil de la marque ALCYR: type MONOPHENE GSM 
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+Sonde CNR 4 m, N° 1340-4
+Abri: Type ''OTT R 16''
+La station a été modernisé en 2007 avec l'installation d'ue CPL+  un capteur intelligent LPN/8ET UN MODEM WAEVCOM
+TEL: 06 74 12 42 15
+Jaugeage de crue au saumon, en aval de la station à environ 250 m, sur le pont desservant le lotissement à l'Est de la commune.
+
+Responsable et gestionnaire de la station: Stephane LAPINE
+
+SECURITE:
+L'arrêt du véhicule pour relever le fichier est plus délicat nous sommes obligés de nous garer le long du CD 425 et occupons ainsi un couloir de circulation en conséquence, placés sous le règlement du code de la route et d'un chantier mobile: le tri-flash et les feux spéciaux sont obligatoires ainsi que les vêtements à haute visibilité classe 3 ou 2.
+
+L'accès à la rivière pour les mesures au moulinet se fait sans problème particulier l'endroit étant équipé d'un escalier.
+La section de jaugeage présente des profondeurs régulières et ne présente pas de dangers particuliers.
+
+Concernant le jaugeage au saumon, il est effectué à partir du pont situé en aval de la station l'endroit  est situé à la sortie d'un quartier où la circulation est faible, le danger est celui inhérent au code de la route, les feux spéciaux sont à mettre en oeuvre. 
+GP","08/29/05 00:00:00","00",,,,,,"07/06/23 16:27:00",,"A251020001","A2510200",
+42,"A2860110","HOLTZHEIM","BRUCHE",991101,2408743,990,548,"S","115680",8.24,0.91,85,130,150,"A2860110","Historique:
+
+Station HOLTZHEIM1 ( sortie ouest d'Holtzheim, D93 vers HANGEBIETHEN, en amont du seuil de l'APP de Holtzheim qui a été installée le 27 septembre 1969 et situé à  200m en amont del'actuelle station ): échelle installée le 11/05/1964: la station a été observée en continu du 03/03/1966 au 31/12/1973 en cogestion avec la 2ème CE de DIJON.
+La station d'OBERSCHAEFFOLSHEIM 2 KM en aval remplaça HOLTZHEIM1. En effet l'hydrologue en poste à cette époque mit à profit un seuil qui avait été mis en place grâce au passage du pipe line SE; or il s'avéra par la suite qu'apres plusieurs crues ce seuil qui avait pourtant une chute importante, fût noyé et par la suite la station perdît ses contrôles de fond et les bancs de graviers contribuèrent à une instabilité CHRONIQUE de la CT.  
+En conséquence l'observation de la station s'arrêta le 20 juin 1995 et elle fût à nouveau transférée à HOLTZHEIM mais pour des raisons de sécurité et d'accès, elle ne fût pas installée à l'amont du seuil de l'APP se qui aurait permis des bons contrôles et une meilleure CT en eau basse et moyenne. ( dommage)
+Guillaume PHILIPPS 
+NB: Les jaugeages de crue, s'effectuaient toujours à partir du pont de HOLTZHEIM( D222)
+
+Nouvelle station:
+Coordonnées LAMBERT Zone II étendu.
+
+Nouvel emplacement: Adrese: entre le 3 et 5 rue de Hangenbieten
+67810- HOLTZHEIM
+
+zéro de l'échelle = 144.385 (NGF) (Nivelé par Daniel MORITZ, rattaché au repère n°208 IGN 69).
+Echelle limnimétrique: 3 m.
+zéro de l'échelle H.E. = 144.092 (NGF) (Nivelé par Daniel MORITZ).
+
+CR2M/SAB 600-HDL/P N° 4512
+Sonde CNR 5 m, N° 1339-2
+Abri: Abri en tôle (GROLLEAU).
+.
+Jaugeage de crue, au saumon, au pont de la D222.
+
+Responsable et gestionnaire de la station: Guillaume PHILIPPS.
+
+Depuis le 15 juin 2004 installation d'un appareil d'acquisition sur site; type MONOPHENE GSM: 040204
+sonde paratronic inchangée voir ci-dessus
+NUMERO d'inventaire: 
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+cabine GROLLEAU  LCT 76257 série2; décembre 2003.
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N° 03 88 78 53 10.
++ une sonde de température installée le 09/07/2009.
+L'alimentation éléctrique est assurée par ES en 220V.
+
+SECURITE:
+L'accès à la station ne pose pas de problème.
+Le véhicule se gare sans danger.
+
+Jaugeage au moulinet:
+Pas de problèmes spécifiques; la limite en hauteur à l'échelle limni. pour le passage à gué est de 80 cm, en rive droite les profondeurs sont plus importantes.
+
+Jaugeage au saumon:
+Possible à partir du pont de la D93 situé en aval de la station.
+Le risque est celui lié à la circulation routière en conséquence le chantier mobile est à mettre en eouvreles le triflasch doit être activé le temps de la mesure. 
+
+Jaugeage avec le STREAM-PRO méthode ADCP s'effectue sur la nouvelle passerelle pietonne en aval.
+
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO: revêtir les EPI.
+
+L'habilitation éléctrique ( non éléctricien) est indispensable et doit être à jour.
+
+---
+ANALYSE QUALITE COURBES TARAGE :
+---
+Jaug en crue ? OUI
+Jaug étiage ? OUI
+Jaug moyen ? OUI
+
+T du jaug maxi (gumbel) : N.R.
+T du jaug mini (débits classés) : N.R.
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable en étiage ? non
+
+Géométrie lit stable ? non
+Causes changement courbe ? modifications brusques ( affouillement dû à une crue)
+et également modifications progressives ( phénomènes lents d'alluvionnement)
+
+EN CRUE :
+Débordement en lit majeur ? observé une seule fois en 1990 le 16 février
+Totalité débit mesuré ? non
+si non, estimation partie dérivée: oui le canal de la bruche est mesuré à ACHENHEIM point RNB.
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? Le pont D 222 est constitué de 2 piles il est situé dans le virage que fait la bruche à son droit et on constate que pratiquement le plus important du débit passe en rive droite et au centre  et le résultat est un important dépot de gravier en rive droite et une arche bien limitée.
+
+Existe t il un contrôle aval ? non
+
+Extrapolation courbe : Tracé assisté par BAREME
+Quelle méthode employée ? N.R.
+Qualité globale de la partie extrapolée de la courbe : moyen
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? Non
+
+Gêne de l'écoulement par de la végétation, ou autre ? pile de pont en période de crue
+
+Présence ouvrage influençant écoulement et comment ?pile de pont en période de crue
+
+Existe t il un contrôle aval ? Non
+
+Bilan sur Hydro : bon
+
+Qualité des débits selon les années ? N.R.
+
+Qualité des débits par gamme de débit ? bon suivi en basses eaux
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? non
+
+","06/08/06 00:00:00","10",,,,,,"12/08/21 15:45:00",,"A286011003","A2860110",
+44,"A2842010","SOULTZ LES BAINS","MOSSIG",980.092,2409.592,,163,"S","115680",1.39,0.395,10,16,19,"A2842010","Observations depuis le 13/11/1970 / HYDROMETRE gestionnaire actuellement Stephane LAPINE
+
+zéro de l'échelle = 167.26 m NGF
+
+Adresse: pont D45 aval rive gauche,  8 rue de Strasbourg 67120
+
+appareil de mesure CR2M TYPE600/HDL N° 4996 installé le 25 janvier 2001; remplacé depuis le 16 MARS 2005 par:
+Appareil MONOPHENE GSM installé le 27 avril 2004 
+sonde PARATRONIC N° 1340-2  /  4-20mA
+pleine échelle 2 m Longueur du câble: 15 m
+
+Depuis 2006 (RHYAL)
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N°03 90 40 39 26
+Historique des gestionnaire, si différent de DIREN Alsace : 
+
+Buts- vocation station : connaissance Q Mossig
+
+---
+EMPLACEMENT ET METHODES DE JAUGEAGE : Le jaugeage se fait au droit de l'échelle limnimétrique. Si les hauteurs 
+                                                                  le permettent, nous utilisons l'ADCP Stream pro; si les niveaux sont                                                                                 inférieures à 30 cm, nous pratiquons le jaugeage par integration au moulinet.
+
+Etiage :
+Jaugeage au micro moulinet:
+Pas de problèmes spécifiques.
+
+Eaux basses : micromoulinet
+
+Eaux moyennes :  Jaugeage avec la perche piree et le moulinet C31 ou le STREAM-PRO méthode ADCP Possible.
+
+Crues : Jaugeage au saumon : Possible à partir du pont ou ADCP Rio Grande non encore exploité.
+---
+---
+ANALYSE QUALITE COURBES TARAGE :
+---
+Jaug en crue : 184.5 cm = 15.7 m3/s
+Jaug étiage : OUI
+Jaug moyen : OUI
+
+T du jaug maxi (gumbel) : N.R.
+T du jaug mini (débits classés) : N.R.
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable : 7 courbes depuis 1970 démontre une relative stabilité.
+
+Géométrie lit stable : oui.
+Causes changement courbe : modification progressive due peut être à une intervention sur la prise d'eau du canal de la bruche plus en aval ( lieu dit: LE CANAL ) une suspiscion d'affouillement à l'aval et ponctuellement la formation d'embâcles au niveau de l'ancien pont SNCF.
+
+EN CRUE :
+Débordement en lit majeur ? Nous n'avons pas constaté de débordement.
+
+Totalité débit mesuré ? En principe tout le débit passe au droit de la station.
+si non, estimation partie dérivée ?
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? 
+
+Existe t il un contrôle aval ? non
+
+Extrapolation courbe :
+Quelle méthode employée ? N.R.
+Qualité globale de la partie extrapolée de la courbe ?
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? à ma connaissance non, mais il y a une STEP 2 km en amont de la station.
+
+Gêne de l'écoulement par de la végétation, ou autre?: ou beaucoup d'atterissement de bois mort au droit de la station.
+
+Présence ouvrage influençant écoulement et comment ? N.R.
+
+Existe t il un contrôle aval ? non
+
+Bilan sur Hydro :
+
+Qualité des débits selon les années ? En principe les données sur banque hydro ont été validées jusqu'à 2006 par les hydrologues en charge à la DIREN, en conséquence elle sont validées selon les critères et les codes de la banque.
+
+Qualité des débits par gamme de débit ? Souvent les extropolations hautes ont été validées avec beaucoup de prudence.
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? N.R.
+","07/20/05 00:00:00","10",,,,,,"07/06/23 16:25:00",,"A284020001","A2840200",
+191,"A2820001","WASSELONNE","Mossig",,,,,"S","115680",,,,,,"A2820001",,,"00",,,,,,"02/04/25 16:04:00","02/23/16 10:15:00","A282000101","A2820001",
+46,"A0022700","BALDENHEIM/RATSHAMHAUSEN","ill",983.14,2375.12,923.58,,"S","115680",,,,,,"A0022700","Altitude: 171.00 environ
+","02/05/99 00:00:00",,,,,,,,,,,
+47,"A2260200","BALDENHEIM","LA BLIND",984.194,2374.53,,,"S","115680",,,,,,"A2260200","Altitude: 170 m
+
+échelle RNB 
+
+installation d'un appareil d'acquisition sur site le 18 mars 2004; type MONOPHENE GSM: 040205
+sonde endress+hauser ; model WATERPILOT; L=20m / série N° 5C02600108E; amplitude 0-4mA;
+cabine GROLLEAU 00 313AIITM045 série10; décembre 2003
+
+NUMERO d'inventaire: B.270
+
+gestionnaire: Guillaume PHILIPPS 03 88 22 73 90
+
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+SECURITE:
+L'accès à la station de mesure ne pose pas de difficulté, le véhicule est garé sur un terre plein donnant accès au champ.
+
+Echelle LIMNIMETRIQUE:
+La lecture de l'échelle est difficile: il y a un risque de chute de hauteur en cas de dérapage.
+
+Jaugeage au MOULINET:
+Les jaugeages à gué avec le moulinet sont plus difficiles, il faut se rendre 250m en aval de la station au niveau d'un ancien barrage c'est un des rares endroits où la section est régulière. Par contre l'accès avec le véhicule de jaugeage n'est pas possible par tous les temps car le chemin de terre devient très vite impraticable par temps humide car il y a un talus à remonter.
+
+Jaugeage au SAUMON:
+Possible à partir du pont.
+Pour les jaugeages au saumon une partie de la chaussée est utilisée par le camion, en conséquence la prudence s'impose car la D209 est trés fréquentée et la vitesse des véhicules très élevées, il est nécessaire d'opter pour le chantier mobile et de mettre en oeuvre les feux spéciaux et le triflach.
+
+Jaugeage ADCP/STREAM PRO
+La technique de jaugeage ADCP avec le STREAM PRO nécessite la tenue réglementaire soit le port du vêtement de signalisation à haute visibilité classe 3 ou 2. 
+
+
+RECOMMANDATIONS:
+Nettoyage de l'échelle LIMNIMETRIQUE: Une perche telescopique munie d'une brosse est souhaitable.
+Jaugeage au MOULINET: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, mettre les EPI.
+
+GP","05/12/05 00:00:00","00",,,,,,"02/04/16 14:02:00",,"A226020001","A2260200",
+48,"A3250210","GUNDERSHOFFEN","Falkensteinbach",990.02,2446.23,,69,"S","115680",,,,,,"A3250210","Coordonnées LAMBERT Zone II étendu.
+Altitude: 167.00 environ
+Longueur:29,18 km
+
+Adresse: PONT RN 62; gestion. DDE67
+Propriétaire du terrain: Département. (section    ; parcelle      ).
+zéro de l'échelle = 163.741 NGF69, (échelle nivelée le 23/07/2002).
+
+CR2M: SAB 600 HDL n° 4512 
+Numéro d'inventaire: B.065
+Remplacé par ALCYR V22 GSM N°06 75 00 91 23
+
+Sonde PARATRONNIC: 2912-2 / 2 signal 4-20mA    
+Pleine échelle:         4 m
+Longueur de câble: 15 m
+N° INVENTAIRE: B 240
+
+Responsable et gestionnaire de la station: Stephane LAPINE.
+
+SECURITE
+
+STATION:
+L'accès à la station est dangereux. Mettre en oeuvre le chantier mobile et les EPI
+Il faut garer le véhicule à cheval sur le bas-côté mais en laissant les roues de droite sur la chaussé car par temps humide il y a un risque d'enlisement. Cette portion de route est trés fréquentée, les véhicules roulent vite et il y a un grand danger pour sortir côté conducteur, le croisement des véhicules est rendu plus difficile pendant l'arrêt du camion.
+Ensuite pour accéder à la station, il faut remonter à pied le long des glissières de sécurité.
+
+Echelle LIMNIMETRIQUE:
+L'accès à l'échelle est très difficile ainsi qu'au lit de la rivière.
+
+Jaugeage au MOULINET:
+Les jaugeages à gué se pratiquent  sans risques.
+
+Jaugeage au SAUMON:
+Le jaugeage est trop dangereux en conséquence il n'est pas pratiqué.
+
+Jaugeage ADCP/STREAM PRO:
+Le jaugeage est possible.
+
+RECOMMANDATIONS:
+
+Jaugeage au MOULINET: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, impossible car trop dangereux.  
+Jaugeage STREAM PRO, mettre les EPI.
+
+Pas de risque éléctrique.
+GP
+","09/14/06 00:00:00","00",,,,,,"02/04/16 13:47:00",,"A325021001","A3250210",
+49,"A0031200","ILLKIRCH","ill",996.62,2406.11,966.74,,"S","115680",,,,,,"A0031200","Altitude: 141.00 environ
+","02/05/99 00:00:00","10",,,,,,"05/03/07 17:10:00",,,,
+50,"A0036250","ACHENHEIM","Canal de la Bruche",990.36,2410.65,992.85,,"S","115680",,,,,,"A0036250",,"02/05/99 00:00:00",,,,,,,,,,,
+51,"A0045050","AUENHEIM","Moder",1016.54,2438.55,990.35,,"S","115680",,,,,,"A0045050","Altitude: 121.00 environ
+","02/05/99 00:00:00",,,,,,,,,,,
+52,"A0025100","EBERSHEIM","GIESSEN",983.67,2377.87,999.25,,"S","115680",,,,,,"A0025100","Altitude: 167.00 environ","02/05/99 00:00:00",,,,,,,,,,,
+53,"A0430030","SUNDHOUSE","Ischert",994.269,2376.375,,,"S","115680",,,,,,"A0430310","
+Altitude: 164m
+Station de mesures installée le 25 Mars 2004.
+Lieu: sur le ban communal de Sundhouse, à l'Est de la D468, au lieu-dit ""Frauenwald"", en rive droite de l'Ischert.
+
+Cabine GROLLEAU N° LCT 76957 Série N°5 du 1/12/2003.
+
+MONOPHEME GSM N° 040203.
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Sonde              (0-4mA) 20m.
+
+Echelle (1 m.) installée le 29 Février 2000.
+
+gestionnaire Guillaume PHILIPPS
+SECURITE:
+Accès à la station:
+La prudence s'impose, il y a beaucoup de circulation à cet endroit,  le véhicule est garé sur un dégagement mais à la sortie d'un virage, la visibilité est réduite.
+
+Jaugeage au moulinet:
+Il est effectué en aval à la sortie de la buse ARMCO.La section est relativement  profonde est la prudence s'impose.
+
+Jaugeage au saumon:
+Sans danger le chemin rural est trés peu fréquenté.
+
+Jaugeage  ADCP / STREAM PRO:
+Sans difficultés.
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière, la profondeur en rive gauche est plus ilportante.
+Jaugeage au SAUMON  : Mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP           :  Revêtir les EPI.
+GP","05/23/05 00:00:00","00",,,,,,"02/04/25 16:30:00",,"A043030001","A0430300",
+54,"A0045200","GUNSTETT","Sauer",987.01,2448.68,952.62,,"S","115680",,,,,,"A0045200","Altitude: 161.00 environ
+","02/05/99 00:00:00",,,,,,,,,,,
+55,"A0044300","VENDENHEIM","Landgraben",1002.02,2421.82,,,"S","115680",,,,,,"A0044300","Altitude: 131.00 environ","02/05/99 00:00:00",,,,,,,,,,,
+56,"A0041750","REICHSHOFFEN","Schwartzbach",990.775,2451.63,997.15,,"S","115680",,,,,,"A0041750","Altitude: 185.00 environ
+","02/05/99 00:00:00",,,,,,,,,,,
+57,"A0041650","ZINSWILLER","Zinsel du nord",985.1900000000001,2448.45,,,"S","115680",,,,,,"A0041650","Altitude: 178.00 environ
+","02/05/99 00:00:00",,,,,,,,,,,
+58,"A0028500","BOLSENHEIM","Scheer",990.04,2393.81,982.77,,"S","115680",,,,,,"A0028500","Altitude: 154.00 environ","02/05/99 00:00:00",,,,,,,,,,,
+59,"A0001272","GRANDFONTAINE SOURCE","source des minieres",,,,,"S","115680",,,,,,"A0001272",,"12/24/98 00:00:00",,,,,,,,,,,
+60,"A0042500","BISCHWILLER","MODER",,,971.5,,"S","115680",,,,,,"A0042500",,"02/05/99 00:00:00",,,,,,,,,,,
+61,"A2240310","OSTHOUSE","ILL",993.225,91.26000000000001,,3120,"S","115680",,,,,,"A2240310","Coordonnées LAMBERT Zone II étendu.
+
+Observations depuis Novembre 2001.
+zéro de l'échelle = 151.87 (NGF), 151.64 (NN).
+Echelle limnimétrique: 2 m. (DDAF67).","05/12/05 00:00:00","00",,,,,,"10/04/19 15:43:00",,"A237003001","A2370030",
+63,"A236030","EBERSMUNSTER","ILL",,,,,"V","115680",,,,,,"A236030",,"12/24/98 00:00:00",,,,,,,"05/03/07 17:00:00",,,,
+192,"A2230320","SAND ILL","Ill",,,,,"S","115680",,,,,,"A2230320","Station installée en régie 2016-2017 (MK - MZ)
+Station destinée à la mesure de débits en crue  afin de préciser les débits de l'Ill en crue transitant dans le Ried (Kogenheim et Osthouse rapidement débordantes).
+
+Ill totale = Sand Ill + Sand Canal",,,,,,,,"02/04/25 16:03:00","09/01/16 12:25:00","A237047101","A2370471",
+194,"A0530742","ZELSHEIM (RIED)","Heulachgraben",1044968,6809701,,0,"S","115680",,,,,,"ZELSHEIM",,,"00",,,,,,"01/26/23 10:50:00","05/07/21 15:22:00","A053074201","A0530742",
+67,"A2782010","WOLXHEIM","BRUCHE",982.02,2408.99,,615,"S","115680",,,,,,"A 2782010","observations en continue depuis octobre 2006. Hydromètre gestionnaire : Stephane LAPINE
+
+Depuis septembre 2006 la station est équipée pour l'AC par le matériel CPL PARATRONIC avec un capteur intelligent hydrologic type LPN/8 + moden RTC N° 03 88 38 36 16.
++ une sonde de température installée le 09/07/2009.
+L'alimentation éléctrique est assurée par ES en 220V.
+
+zéro de l'échelle jusqu'au:       = 161.43   mNGF
+
+Adresse : carte IGN TOP 25  MONT ST ODILE 3716 ET
+
+Historique des gestionnaire, si différent de DIREN Alsace : station uniquement annonce de crue jusqu'en 2005, hauteur non bancarisées sur Hydro
+
+Buts- vocation station : .. LA QUESTION DE SON MAINTIEN EST POSEE EN INTERNE..(2007)
+
+---
+EMPLACEMENT ET METHODES DE JAUGEAGE :
+(la dernière méthode utilisée) ADCP
+
+Etiage :
+Jaugeage au moulinet:
+Il ne peut s'effectuer au niveau du seuil, très mauvaise section. En étiage, il faut effectuer les mesures une 20taine de mètres en aval du seuil.
+
+Eaux basses :
+Eaux moyennes :
+Jaugeage avec le STREAM-PRO méthode ADCP, elle s'effectue à partir du pont.
+
+Crues :
+Jaugeage au saumon:
+Possible à partir du pont. Le risque est celui lié à la circulation routière.
+---
+---
+ANALYSE QUALITE COURBES TARAGE :
+---
+Jaug en crue ? bon
+Jaug étiage ? mauvais
+Jaug moyen ? OUI
+
+T du jaug maxi (gumbel) : N.R.
+T du jaug mini (débits classés) : N.R.
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable ? N.R.
+
+Géométrie lit stable ? Non, le seuil est d'années en années de plus en plus abîmés suites aux crues
+Causes changement courbe ? Seuil en mauvais état
+
+EN CRUE :
+Débordement en lit majeur ? non
+Totalité débit mesuré ? non
+si non, estimation partie dérivée ? oui le canal de la bruche ainsi que le bras d'ALTORF et le DACHSTEINERBACH
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? N.R.
+
+Existe t il un contrôle aval ? Non
+
+Extrapolation courbe :
+Quelle méthode employée ? Tracé assisté par BAREME
+Qualité globale de la partie extrapolée de la courbe ? bonne
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? N.R.
+
+Gêne de l'écoulement par de la végétation, ou autre ? N.R.
+
+Présence ouvrage influençant écoulement et comment ? seuil devenu instable
+
+Existe t il un contrôle aval ? N.R.
+
+Bilan sur Hydro :
+
+Qualité des débits selon les années ? N.R.
+
+Qualité des débits par gamme de débit ? N.R.
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? N.R.
+","11/16/06 00:00:00","00",,,,,,"02/04/16 13:43:00",,"A285011001","A2850110",
+68,"A224030","ERSTEIN PONT DE BOIS","ILL",,,,,"S","115680",,,,,,"A224030",,"03/15/06 00:00:00","10",,,,,,,,,,
+195,"A2360033","MUTTERSHOLTZ (RIED)","Hanfgraben",,,,,"S","115680",,,,,,,,,"00",,,,,,"03/11/22 09:30:00","12/14/21 15:40:00",,"A2360033",
+340,"A3520200","HOERDT (ZI)","Landgraben",,,,,"S","115680",,,,,,,"DREAL Grand Est - Installation le 24/10/2024 Echelle limnimétrique et capteur autonome Ijinus.
+Etude des écoulements débits et hauteurs",,,,,,,,"01/29/25 14:29:00","11/13/24 15:55:00","A352020001",,
+80,"A2512020","VALFF","Andlau",985.12,2392.1,982.6,55.099998,"V","115680",,,,,,"A2512020","
+
+
+
+
+ carte selestat 3717 est","01/27/99 00:00:00","10",,,,,,,,,,
+81,"A2842011","SCHARRACHBERGHEIM","MOSSIG",979.45,2412.151,997.75,22.6,"V","115680",,,,,,"A2842011","
+
+
+
+
+
+
+
+carte 3716 est : Molsheim  /  Lambert 2
+échelle limni. aval step","01/27/99 00:00:00","10",,,,,,,,,,
+83,"A2842012","IRMSTETT","Mossig",979.55,2412.525,996.12,22.6,"V","115680",,,,,,"A2842012","
+
+
+
+
+
+
+point de jaugeage amont step","01/27/99 00:00:00","10",,,,,,,,,,
+85,"A01224032","OSTHOUSE CANAL","Canal du Moulin",,,,,"S","115680",,,,,,"A224032","SECURITE:
+Accès à la station:
+Se fait sans difficulté par un chemin de terre  carrossable, il n'y a pas de problème pour se garer.
+
+Jaugeage au moulinet:
+Hormis la descente du talus aucune difficulté particulière, la section est relativement profonde mais régulière.
+
+Jaugeage au saumon:
+Le camion ferme quasiment le pont, mais il y a très peu de passage à cet endroit il n'y a pratiquement aucun danger de circulation.
+
+Jaugeage  ADCP / STREAM PRO:
+Sans aucun problème.
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON  : Mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP           :  Revêtir les EPI.","05/09/05 00:00:00",,,,,,,"05/03/07 17:21:00",,,,
+86,"A1223032","KOGENHEIM ( CANAL )","Le Canal du Moulin",,,,,"S","115680",,,,,,"A1223032",,"05/25/04 00:00:00",,,,,,,,,,,
+87,"A1234567","DUPPIGHEIM","LE BRAS D'ALTDORF",987.58,105.53,,,"V","115680",,,,,,"A1234567","carte 1/25000 strasbourg 1-2","03/15/06 00:00:00",,,,,,,"09/05/08 09:05:00",,,,
+90,"A053031","BOOFZHEIM LACHTER"," la Lachter",995.47,84.17,,30,"V","115680",,,,,,"A053031","coordonnées lambert : Benfeld 1-2
+situation D5 Boofzheim- Herbsheim, rive gauche
+côté aval du pont sur la lachter.
+jusqu'au 12/02/92 l'altitude du zéro de l'échelle: 156.293 NGF","03/15/06 00:00:00","10",,,,,,"06/29/07 10:51:00",,,,
+95,"A3430210","ECKARTSWILLER (OBERHOF)","la Zinsel du Sud",965.337,2433.937,982.45,88.900002,"S","115680",,,,,,"A3430210","ALTITUDE 194.00M
+CARTE IGN 3714 ET Série bleue
+station cpl avec capteur hydrologic lpn/8 modem RTC N°03 88 70 19 15
+station AC 
+
+HYDROMETRE gestionnaire: Guillaume PHILIPPS
+
+SECURITE JAUGEAGES: 
+Port des EPI Classiques: En effet les jaugeages de crues sont possibles à l'ADCP STREAM PRO à partir du pont amont station.
+zéro de l'échelle 190.460 IGN 69","11/16/06 00:00:00","00",,,,,,"02/17/17 15:11:00",,"A343021001","A3430210",
+96,"A2380770","ERSTEIN  ILL - KRAFT CANAL DECHARGE","CANAL DE DECHARGE ILL",994.8,92.90000000000001,,3100,"S","115680",,,,,,"MURGIESSEN","
+SITUATION: Route ERSTEIN-GERSTHEIM - PONT SUR LE CANAL DE DECHARGE DE L'ILL.
+
+échelle installée en 1906 au pont RD426 (dit pont de gerstheim) ; 
+COTE ZERO DE L'ECHELLE :  148.92 NN/ 149.14NGFortho
+
+limnigraphe OTT X - 8 J installée le 01/02/1946
+
+Depuis la suppression du barrage à aiguille, les jaugeages sont effectués au pont de la RD 468 à Erstein-Krafft en aval du croisement canal Rhin-Rhone / canal de décharge de l'Ill : les hauteurs associées à ces jaugeages sont lues sur l'échelle""historique"" de la RD426  (dit pont de Gerstheim).","12/30/99 00:00:00","10",,,,,14914,"12/18/23 14:46:00",,"A238077201","A2380772",
+97,"A34920","WEYERSHEIM","ZORN",,,,,"S","115680",,,,,,"A34920",,"02/04/00 00:00:00",,,,,,,,,,,
+99,"A315010","PFAFFENHOFFEN","MODER",,,,77.099998,"S","115680",,,,,,"A315010",,"03/15/00 00:00:00","10",,,,,,,,,,
+105,"A224029","ERSTEIN-AVAL STEINSAU","ILL AVAL STEINSAU",,,,,"V","115680",,,,,,"A224029",,"06/06/03 00:00:00","10",,,,,,"03/19/09 11:46:00",,,,
+116,"041950","HAGUENAU","ZINSEL DU NORD",,,,,"S","115680",,,,,,"RNB",,"07/16/04 00:00:00","10",,,,,,,,,,
+117,"A0410300","SCHOENAU","MUHLBACH",994.45,2371.453,,,"S","115680",,,,,,"A0410300","Station de mesures installée le 17 Mars 2004.
+Lieu: dans l'agglomération de Schoenau, au pont du Muhlbach, en rive gauche.
+Cabine GROLLEAU N° OSLCT76957 N° Série 6 du 01/12/2003.
+
+MONOPHEME GSM N° 040213.
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Sonde Endress+Hauser WaterpilotFMX 167-A1ABB1A7 (4-20mA); amplitude 0à 0.2 bar; L=5m.
+Echelle (1m.) installée en rive gauche, le 17 Mars 2004.
+
+SECURITE:
+Le véhicule se gare sans danger particulier.
+L'accès à la station ne pose pas de problème.
+
+Jaugeage au moulinet:
+Pas de problèmes particuliers.
+
+Jaugeage au saumon:
+Possible à partir du pont.
+
+Jaugeage avec le STREAM-PRO méthode ADCP.
+Pas de difficultés spécifiques.
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, la pente est nulle.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, mettre les EPI.
+","05/23/05 00:00:00","00",,,,,,"02/04/16 14:03:00",,"A041030001","A0410300",
+118,"A0530310","FRIESENHEIM","WESTERLACHGRABEN",984.831,2380.934,,,"S","115680",,,,,,"A0530310","
+Station de mesures installée le 23/03/2004
+Lieu: au Sud Ouest de la commune, en aval du pont sur le Westerlachgraben, en rive gauche.
+Cabine GROLLEAU : LCT76957 série3 du 22/12/2003
+
+Type: MONOPHENE GSM, N°040211
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Sonde KEPPLER , L= 10 m., amplitude: 0-4mA.
+
+Echelle (2 m.) installée le 23/03/2004.
+
+","05/06/05 00:00:00","00",,,,,,"05/16/23 10:39:00",,"A053074301","A0530743",
+119,"A2420200","HERBSHEIM","ZEMBS",992.232,2385.254,,,"S","115680",,,,,,"A2420200","
+
+
+
+
+
+Station de mesures installée le 19 Mai 2004.
+Altitude: 158m
+LIEU: dans l'agglomération de HERBSHEIM, au pont de la D5 sur la ZEMBS, en rive droite.
+Cabine GROLLEAU.
+MONOPHEME N°
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Sonde KELLER 2078 (0-4mA) 20m.
+Echelle (2 m.) installée par GESTION HYDRO.
+
+SECURITE:
+Le véhicule se gare sans danger.
+L'accès à la station ne pose pas de problème.
+
+Jaugeage au moulinet:
+Pas de problèmes spécifiques la section est  régulière.
+
+Jaugeage au saumon:
+Possible à partir du pont de la D5 situé au droit de la station.
+
+Jaugeage avec le STREAM-PRO méthode ADCP.
+Possible à partir de la passerelle en amont.
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO sans danger spécifique à partir de la passerelle.
+
+","05/06/05 00:00:00","00",,,,,,"02/04/16 14:01:00",,"A242020101","A2420201",
+120,"A0520033","BOOFZHEIM-RIED","NEUERGRABEN",997.116,2383.275,,,"S","115680",,,,,,"A0530033","
+coordonnées lambert : Benfeld 1-2
+Station de mesures installée le 7 avril 2005
+Altitude: 157.5 m
+
+Lieu: en aval du pont de la D5 (entre Boofzheim et Rhinau) sur le NEUERGRABEN, en rive gauche (entre le pont et la passerelle cycliste).
+
+Cabine grolleau
+
+MONOPHEME N° 040212 alimenté par une batterie, elle même chargée par un panneau solaire.
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Sonde KELLER n° 2087 (10m) Amplitude 4m
+
+Echelle limnimétrique: 0-1m
+
+SECURITE:
+L'accès à la station est facile, mais l'arrêt du véhicule nécessite de se garer sur la piste cyclable qui longe la D5 en conséquence, il faut mettre en oeuvre les feux spéciaux et porter les EPI.
+
+Jaugeages au MOULINET:
+Pour accéder à la rivière il y a risque de glissade sur le talus;
+Le  jaugeage au moulinet se fait sans difficultés particulières, il y a toutefois des bords trés envasés.
+
+Jaugeage au SAUMON 
+Possible à partir du pont mais le danger c'est qu'elle est trés fréquentée car il y a un super marché à proximité.
+
+Pour le jaugeage avec la methode ADCP ou STREAM PRO, les EPI sont nécessaires. 
+
+RECOMMANDATIONS:
+Faire attention aux cyclistes.
+Jaugeage au moulinet: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP STREAM PRO mettre les EPI.","05/23/05 00:00:00","00",,,,,,"01/08/21 16:03:00",,"A052034001","A0520340",
+121,"A0520031","GERSTHEIM-MUHLBACH"," Le MUHLBACH",997.811,2390.959,,,"S","115680",,,,,,"A0520030","
+
+
+
+
+
+Station de mesures installée le 11 avril 2005 
+Altitude 152.5 m
+
+Lieu: en aval du pont de la D320 sur le Muhlbach, en rive gauche.
+Cabine GROLLEAU
+Appareil d'acquisition type CR2M N° 5935 HDL 600
+Sonde PARATRONIC N° 2840; Amplitude 0-3m; L = 10 m
+Echelle 0-1m 
+
+SECURITE: 
+L'accès à la station se fait en arrêtant le véhicule sur l'accotement de la D320, c'est une route relativement fréquentée et la vitesse des véhicules qui circulent sur cette portion de ligne droite est élevée;
+L'accès à l'échelle et au lit de la rivière se fait en descendant un talus.
+
+Jaugeage à gué: 
+La mesure au moulinet ne présente pas de difficultés ni de dangers spécifiques.
+
+Jaugeage au saumon:
+A partir du pont en empiétant sur la chaussée.
+
+Jaugeages ADCP avec le STREAM PRO
+A pied, à partir du pont. 
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, mettre les EPI.","08/10/05 00:00:00","00",,,,,,"02/04/25 16:16:00",,"A053031001","A0530310",
+123,"A0530750","OBENHEIM-ALTWEIL","ALTWEIL",996.202,2387.89,,,"S","115680",,,,,,"A0530750","
+
+
+
+
+
+Station de mesures installée le 06 Mai 2004.
+Lieu: en aval du pont de la D468 (entre Obenheim et Gerstheim) sur l'Altweil, en rive droite.
+Cabine GROLLEAU N°313A11TM045 du 01/12/2003.
+Monopheme N°
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+
+Sonde KELLER 2076 (0-4mA) 20m.
+Echelle (1 m.) installée le 06 Mai 2004.
+
+SECURITE:
+Accès à la station:
+La route est fréquentée, la prudence doit être redoublée au droit de la station pour se garer sur l'accotement .
+
+Jaugeage au moulinet:
+Hormis la descente du talus aucune difficulté particulière, la section est régulière.
+
+Jaugeage au saumon:
+Une grande prudence est nécessaire, car il y a empiètement sur la quasi moitié de la chausséeet la visibilité pour les véhicules venant de Gerstheim réduite à cet endroit.
+
+Jaugeage  ADCP / STREAM PRO:
+Réalisable.
+
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: Attention à la descente du talus: risque de glissade entrainant la chute dans la rivière.
+Jaugeage au SAUMON  : Mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP           :  Revêtir les EPI.
+                       
+GP
+","08/10/05 00:00:00","00",,,,,,"02/04/16 14:00:00",,"A053074001","A0530740",
+124,"A0510030","OBENHEIM-BRUNNWASSER","Le BRUNNWASSER",997.23,2386.4,,,"S","115680",,,,,,"A0510030","
+Station de mesures installée le 11 janvier 2005
+ALTITUDE : 156 m
+Lieu: en aval du pont de la D124 (entre Obenheim et Daubensand), en rive droite en amont du pont.
+Cabine GROLLEAU N° 00313 A11TM044 Série N°4
+
+MONOPHEME N°
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Sonde keller n) 2079 (0-4mA) 20m
+Echelle ( 1m) 
+ECURITE:
+Accès à la station:
+Pas de problème majeur.
+
+Jaugeage au moulinet:
+Ce jaugeage n'est pas réalisable.
+
+Jaugeage au saumon:
+A partir du pont sans grandes difficultés.
+
+Jaugeage  ADCP / STREAM PRO:
+Sans problème.
+
+RECOMMANDATIONS:
+Jaugeage au MOULINET: Néant
+Jaugeage au SAUMON  : Mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage ADCP           :  Revêtir les EPI.
+                       
+","08/10/05 00:00:00","00",,,,,,,,,,
+125,"A2230310","KOGENHEIM  (TOTAL = ILL + CANAL )"," L'Ill",,,,,"S","115680",,,,,,"A1223030",,"05/25/04 00:00:00",,,,,,,"02/04/16 13:49:00",,"A236003001","A2360030",
+127,"A0430311","DIEBOLSHEIM","L ' ISCHERT",995.255,2379.03,,,"S","115680",,,,,,"A0430311","Station de mesures installée le 30 mars 2005
+Altitude: 162.5 m
+
+Lieu: près du pont sur l'Ischert (en direction de la Centrale Electrique de Rhinau), en rive gauche.
+Cabine GROLLEAU N°B234 à l'inventaire + B 239 pour la rehausse.
+
+MONOPHEME N° 040210 équipé d'un panneau solaire.
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Sonde KELLER n°208 Amplitude :4 m
+
+Echelle: 0-1 m
+
+SECURITE:
+Le véhicule se gare sans danger particulier.
+L'accès à la station ne pose pas de problème.
+
+Jaugeage au moulinet:
+Pas de problèmes spécifiques.
+
+Jaugeage au saumon:
+Possible à partir du pont.
+
+Jaugeage avec le STREAM-PRO méthode ADCP.
+Possible en HE.
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO, mettre les EPI.
+
+
+","08/10/05 00:00:00","00",,,,,,"02/04/16 14:01:00",,"A052033001","A0520330",
+131,"A2260020","OHNENHEIM","la BLIND",982.27,2366.36,,,"S","115680",,,,,,"A2260210","
+
+
+
+
+
+
+Station installée le 29 mars 2005
+Altitude: 176m
+
+Type: MONOPHENE GSM N° 040207
+Marque : ALCYR, Christian BURGER;  18, allée des Fauvettes, 92 160 ANTHONY/ Tel: 01 40 96 91 21 fax: 01 40 96 91 24
+Fabricant : ELECTOSTRUCTURE; 14 rue de la Gare, 77 163 MORTCERF/ Tel: 01 64 65 26 13 Fax: 01 64 65 26 14
+
+Cabine GROLLEAU Série 7
+
+Sonde ENDRESS/HAUSER N° 52006116; Waterpilot FMK 167- A1AB6187
+L=10m
+amplitude 0 à 0.2 bar
+
+
+SECURITE:
+L'accès à la station se fait par une route qui mène à un ancien Moulin actuellement habité.
+L'accès à la station ne pose pas de problème particulier mais elle est trés fréquentée par les tracteurs.
+
+Jaugeage au moulinet: 
+La section au droit de la station est régulière.
+
+Jaugeage au saumon:
+Possible à partir du pont.
+
+Jaugeage avec le STREAM-PRO méthode ADCP.
+Possible.
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI passage trés fréquent de tracteurs. 
+Jaugeage STREAM PRO, mettre les EPI.
+
+
+","05/23/05 00:00:00",,,,,,,"02/04/25 16:24:00",,"A226020101","A2260201",
+132,"A2860112","OBERSCHAEFFOLSHEIM","BRUCHE",992.3,110.25,,691,"S","115680",8.67,0.86,85,130,150,"A2860112","Arrêt station le 20 juin 1995 voir fiche HOLTZHEIM ACTUELLE
+
+
+
+---
+ANALYSE QUALITE COURBES TARAGE :
+---
+Jaug en crue ? NON
+Jaug étiage ? OUI
+Jaug moyen ? OUI
+
+T du jaug maxi (gumbel) : N.R.
+T du jaug mini (débits classés) : N.R.
+Incertitudes ? Habituelles (5%)
+
+Courbe de tarage stable ? NON 
+
+Géométrie lit stable ? NON
+Causes changement courbe ? Seuil noyé
+
+EN CRUE :
+Débordement en lit majeur ? NON
+Totalité débit mesuré ? 
+si non, estimation partie dérivée ?
+Si débordement, cote de débordement ?
+si oui, comment est prise en compte cela dans courbe ?
+
+Présence ouvrage influençant écoulement et comment ? N.R.
+
+Existe t il un contrôle aval ? N.R.
+
+Extrapolation courbe :
+Quelle méthode employée ? N.R.
+Qualité globale de la partie extrapolée de la courbe ?
+
+EN ETIAGE :
+Ecoulements influencés par des rejets ? Non
+
+Gêne de l'écoulement par de la végétation, ou autre ? non.
+
+Présence ouvrage influençant écoulement et comment ? seuil pipe line SE
+
+Existe t il un contrôle aval ? N.R.
+
+Bilan sur Hydro :
+
+Qualité des débits selon les années ? N.R.
+
+Qualité des débits par gamme de débit ? N.R.
+
+Etudes antérieures ayant étudié la qualité des courbes de tarage , réf ? N.R.
+","03/07/06 00:00:00","10",,,,,,"01/31/22 14:37:00",,"A286011002","A2860110",
+133,"A2352021","SELESTAT (PONT RD 1083)","Le Giessen",980.14,2376.06,,260,"S","115680",3.42,0.13,51,82,100,"A2352021","carte ign selestat.ribeauville 3717 ET série bleue
+
+Responsable et gestionnaire de la station: Guillaume PHILIPPS
+
+
+STATION CPL /LPN/8
+
+ALIMENTATION PAR CAPTEUR SOLAIRE
+Télétransmission par ligne RTC N° 03 90  57 21 48
+
+
+SECURITE:
+L'accès à la station ne pose pas de problème.
+Le véhicule se gare sans danger.
+
+Jaugeage au moulinet: il s'effectue en amont du pont de la RN 83.
+Pas de problèmes spécifiques; la limite en hauteur à l'échelle limni. pour le passage à gué est de 80 cm, en rive gauche les profondeurs sont plus importantes.
+
+Jaugeage au saumon: Possible à partir du pont de la RN 83. 
+
+Le risque est celui lié à la circulation routière en conséquence le chantier mobile est à mettre en oeuvre e le triangle triflash doit être levé et activé durant toute la durée du chantier.
+
+Jaugeage avec le STREAM-PRO méthode ADCP à partir du pont de la RN 83.
+
+
+RECOMMANDATIONS:
+Jaugeage au moulinet: pour accéder à la rivière, il y a risque de chute en cas de glissade sur le talus.
+Jaugeage au SAUMON, mettre en oeuvre le chantier mobile et les EPI. 
+Jaugeage STREAM PRO: revêtir les EPI.
+","11/16/06 00:00:00","00",,,,,,"03/21/23 13:45:00",,"A235020001","A2350200",
+135,"A1","PUITS DE JACOB","Altrhein",,,,,"V","115680",,,,,,"P1","Jaugeages pour le coefficient de débit des ouvrages pour le service de l'ill.","10/24/06 00:00:00",,,,,,,,,,,
+137,"2","PUIT JACOB TUMENRHEIN","Thumenrhein",,,,,"V","115680",,,,,,"2","service de l'ill","10/24/06 00:00:00","10",,,,,,"02/14/11 17:24:00",,,,
+140,"A287030","ESCHAU-RHIN TORTU","Rhin Tortu",,,,,"V","115680",,,,,,"A287030","MA",,"10",,,"PLOBSHEIM",,,"05/03/07 16:50:00","02/19/07 14:30:00",,,
+144,"A287044","ESCHAU-SCHWARTZWASSER","SCHWARTZWASSER",,,,,"S","115680",,,,,,"A287044",,,,,,,,,"05/03/07 16:51:00","02/19/07 15:29:00",,,
+145,"A264003","ESCHAU-WIBOLSHEIM","ill",,,,,"V","115680",,,,,,"A264003","latitude N 48°28'53""
+            E  7°42'24""",,"10",,,,,,"11/19/09 16:44:00","04/16/07 16:44:00",,,
+147,"A264031","ESCHAU-WIBOLSHEIM BRAS DE DÉCHARGE","petite ill",,,,,"S","115680",,,,,,"A264031","PETITE ILL en effet l'ILL passe dans la centrale d'hydrovolt
+
+LATITUDE: N 48°28'39""
+                 E   7°42'06""",,"10",,,,,,"11/19/09 16:50:00","04/18/07 15:39:00",,,
+148,"A2280350","CHASSEUR FROID ROBERTSAU_TOTAL","Ill",1001539,2416547,,4600,"S","115680",58.4,36,150,180,210,"A2280350","Station gérée par le SNS jusqu'au 01/09/2007, date de sa reprise par la DIREN Alsace (DREAL depuis le 01/01/2010)
+Depuis le 26/10/2009, les horaires de cette station, sont exprimés en Temps Universel (TU).
+L'hydromètre gestionnaire de cette station est Guillaume PHILIPPS.
+Elle est actuellement équipée d'une CPL PARATRONNIC qui est reliée à 2 capteurs dits intelligents : 1 LPN/8 + 1 SEBA light.
+N° téléphone: 03 88 45 75 04
+Jaugeages: 
+Les jaugeages pour cette station ne comportent aucun risque particulier concenant la méthode ADCP.
+Pour avoir le débit au droit de la station, il faut effectuer un jaugeage sur l'Ill en aval du Pont PHARIO à partir de la passerelle qui relie la CITE DE L'ILL à LA STATION TRAM MARC BLOCH.
+Pour jauger le canal de la papeterie, il faut le réaliser sur le pont du cimetière Nord de la ROBERTSAU en amont de la papeterie.Nous observons que ce débit est constant en effet tous les jaugeages effectués à ce jour, se situe entre 14 et 16 m3/s.
+Le zéro de l'échelle :131.664 IGN 69",,"00",,,,,,"02/04/16 13:48:00","06/20/07 16:38:00","A228003001","A2280030",
+149,"A2940031","LA WANTZENAU","ILL",1004.45,120.75,312,4736.1001,"S","115680",,,,,,"A2940031","CARTE 1/25000 BRUMATH 7-8","06/28/07 10:11:00","10",,,,,,"06/28/07 10:13:00","06/28/07 10:11:00",,,
+151,"A2280352","CHASS.FROI-ROBERTSAU CANAL PAP","Canal de la papeterie",1000.9,115.53,,,"S","115680",,,,,,"A2280352","station de jaugeage située en amont de la papeterie de la ROBERTSAU et en Amont de la station du Chasseur foid.
+Le débit est à ajouter au débit jaugé sur la passerelle de la cité de l'ill ou l'ill jaugé à partir du pont PHARIO à la cité de l'ill.",,"10",,,,,,"10/17/14 08:44:00","10/24/07 16:15:00",,,
+153,"A2240282","ERSTEIN-MUHLBACH-AVAL STEINSAU","muhlbach",,,,,"V","115680",,,,,,"A2240282",,,"10",,,,,,"01/27/10 09:34:00","05/27/08 08:11:00",,,
+163,"A220030","SELESTAT_ILL","ILL",979.9400000000001,74.63,,,"V","115680",,,,,,"A220030","SELESTAT 1/25000 . 7-8",,"10",,,,,,"08/22/08 08:25:00","08/22/08 08:25:00",,,
+164,"A2244713","SAND AVAL","Hanfgraben",991.725,88.40000000000001,,,"S","115680",,,,,,"A2244713","BENFELD 1-2
+
+STATION Installée le 24 janvier 1985 et arrêtée le 09 janvier 1990.",,"10",,,,,,"08/27/08 12:34:00","08/25/08 08:46:00",,,
+165,"A2244711","SAND SOURCE","HANFGRABEN",,,,,"S","115680",,,,,,"A2244711",,,,,,,,,"08/27/08 12:41:00","08/27/08 11:14:00",,,
+166,"A224472","SAND AMONT","Hanfgraben",,,,,"S","115680",,,,,,"A224472",,,,,,,,,"08/27/08 11:19:00","08/27/08 11:19:00",,,
+167,"A2244700","SAND STATION","Hanfgraben",,,,,"S","115680",,,,,,"A2244700",,,,,,,,,"02/04/25 16:28:00","08/27/08 12:40:00","A237047001","A2370470",
+168,"A2407310","BINDERNHEIM","Lehgraben",990.65,79.5,,,"S","115680",,,,,,"A2407310","Carte 1/25000 :BENFELD 5-6
+
+Station installée le 07/07/1978 et arrêtée le 05/01/1981",,"10",,,,,,"02/04/25 16:09:00","09/05/08 09:16:00","A241082001","A2410820",
+169,"A225030","HIPSHEIM-ILL","ILL",,,,,"V","115680",,,,,,"A225030","Jaugeage pour service de l'ill
+
+LATITUDE: N =48°27'38""
+                 E =  7°41'05""",,"10",,,,,,"11/19/09 16:56:00","03/18/09 16:26:00",,,
+170,"A225033","HIPSHEIM ","PETITE ILL",,,,,"V","115680",,,,,,"A225033","Jaugeages pour le service de l'ill
+
+latitude: N=48°27'54""
+             E= 7°40'48''",,"10",,,,,,"11/19/09 17:01:00","03/18/09 16:27:00",,,
+171,"A2280353","CHASSEUR FROID ROBERTSAU","ILL",,,,,"S","115680",,,,,,"A2280533","station gérée par Guillaume PHILIPPS",,"10",,,,,,"05/18/11 15:56:00","03/25/09 14:38:00",,,
+185,"CG67","ZELLWILLER","andlau",,,,,"S","115680",,,,,,"CG67",,,,,,,,,"08/01/13 15:54:00","08/01/13 15:54:00",,,
+188,"A3120100","OBERMODERN","Moder",,,,,"S","115680",,,,,,"A3120100",,,,,,,,,"02/04/16 13:58:00","10/07/14 16:07:00","A312000101","A3120001",

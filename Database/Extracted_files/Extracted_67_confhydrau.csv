@@ -1,0 +1,4 @@
+nocon,nosta,condatedeb,condatefin,condatemaj,condateenregistrement,condatecreation,concomment,connom,libcont1,valinf1,incer1,libcont2,valinf2,incer2,libcont3,valinf3,incer3,libcont4,valinf4,incer4,libcont5,valinf5,incer5
+0,67,"01/01/00 00:00:00","01/01/50 00:00:00",,"11/09/22 10:32:00","11/09/22 10:28:00","Etablissement des hauteurs à l'échelle quand les difféents contrôles hydrauliques changent.","3 controles Hydraulq","Seuil 1 - ilot centrale",100,0,"Seuil 1 noyé",1800,100,"Seuil 2 noyé / chenal",2300,200,,,,,,
+1,32,"01/01/00 00:00:00","01/01/50 00:00:00",,"11/22/22 08:08:00","11/22/22 08:08:00",,"2 contrôles","Contrôle seuil",-150,50,"contrôle chenal",450,100,,,,,,,,,
+2,42,"01/01/00 00:00:00","01/01/50 00:00:00",,"12/28/22 11:50:00","12/28/22 11:49:00","Estimation des hauteurs de controles.","gestions des contole","enrochements sous pont",50,50,"chenal",1650,100,,,,,,,,,

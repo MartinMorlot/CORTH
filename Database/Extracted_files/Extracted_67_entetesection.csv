@@ -1,0 +1,46 @@
+nosec,nosta,snom,sdatedeb,sdatefin,szero,sfond,scomment,sdatemaj,sdateenregistrement,sdatecreation,susage
+4,41,"Station Andlau","07/15/03 00:00:00","12/31/05 00:00:00",21747,21748,"Au droit de l'échelle de la station.",,,,
+5,34,"Pont HE Thanvillé","07/15/03 00:00:00","12/31/05 00:00:00",22751,22765,"Section de jaugeage HAUTES EAUX en AVAL du pont.",,,,
+7,32,"Profil  long Wisches","07/16/03 00:00:00","12/31/05 00:00:00",26318,26256,"263.180 = 0.00 Echelle station.
+264.135 = 0.00 Echelle Hautes Eaux.",,,,
+8,32,"Pont HE Wisches","07/16/03 00:00:00","12/31/03 00:00:00",26414,26260,"Au droit de l'échelle des Hautes Eaux en AVAL du pont.",,,,
+9,40,"Pont HE Selestat","07/15/03 00:00:00","12/31/05 00:00:00",17214,17238,"Au droit de l'échelle des Hautes Eaux en AVAL du pont.",,,,
+10,40,"Station Selestat","07/15/03 00:00:00","12/31/03 00:00:00",17244,17276,"Au droit de l'échelle de la station.
+",,,,
+11,40,"Profil long Selestat","07/15/03 00:00:00","12/31/05 00:00:00",17244,17247,"172.440 = 0.00 de l'échelle de la station.
+172.145 = 0.00 de l'échelle Hautes Eaux.",,,,
+12,39,"Pont HE Niedernai","07/15/03 00:00:00","12/31/05 00:00:00",16019,15985,"Au droit de l'échelle Hautes Eaux en AVAL du pont.",,,,
+27,41,"Pont HE Andlau","07/15/03 00:00:00","12/31/05 00:00:00",21700,21616,"Pont HE situé en AVAL de la station limnigraphique.","11/27/06 15:53:00","11/27/06 15:53:00",,
+28,42,"Pont Holtzheim (HE)","07/16/03 00:00:00","12/31/08 00:00:00",14409,14390,"au droit de l'échelle de HAUTES EAUX, en aval du pont.",,"04/25/07 11:10:00",,
+30,44,"profil pont SLB","01/01/70 00:00:00","12/31/50 00:00:00",16763,16745,,,"01/21/09 10:37:00","01/21/09 10:37:00",
+32,16,"s1","01/01/04 00:00:00","12/31/50 00:00:00",0,-161,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 04/10/2006 à 14:30",,"04/11/11 16:34:00","04/11/11 16:31:00",
+34,67,"1","10/01/06 00:00:00","10/01/10 00:00:00",16178,16217,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 12/12/2006 à 10:10","05/19/11 09:57:00","05/19/11 11:07:00","05/19/11 09:57:00",
+35,48,"gundershoffen","01/01/98 00:00:00","12/31/15 00:00:00",16374,16378,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 09/10/2002 à 14:05","04/13/11 15:01:00","11/17/11 15:28:00","04/13/11 15:01:00",
+37,44,,"01/01/00 00:00:00","12/31/50 00:00:00",16726,16728,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 10/06/2009 à 11:35",,"12/01/11 10:47:00","12/01/11 10:47:00",
+50,1,"BEINHEIM","10/20/05 00:00:00","12/31/06 00:00:00",15228,15251,"Nivellement réalisé au droit de l'échelle.
+Nivellement: NGF-AN.
+","01/21/09 10:47:00","01/21/09 10:47:00",,
+53,4,"SCHWEIGHOUSE AVAL","10/18/05 00:00:00","12/31/06 00:00:00",9758,9573,"Section de jaugeage Hautes Eaux.
+Nivellement réalisé au pont de la D.85.
+Nivellement fictif.",,,,
+54,30,"WALTENHEIM","10/18/05 00:00:00","12/31/06 00:00:00",14728,14712,"Nivellement réalisé à la station, côté aval du pont.
+Nivellement: NGF",,,,
+55,30,,"01/01/09 00:00:00","12/31/50 00:00:00",14728,14734,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 19/07/2010 à 06:45",,"12/01/11 09:02:00","12/01/11 09:02:00",
+56,35,"NIEDERROEDERN","10/19/05 00:00:00","12/31/06 00:00:00",12004,12010,"Nivellement réalisé au droit de l'échelle.
+Nivellement: IGN-AN.",,,,
+57,14,"LEUTENHEIM","10/19/05 00:00:00","12/31/06 00:00:00",11546,11556,"Nivellement réalisé à la station, coté aval du pont.
+Nivellement: IGN-AN.",,,,
+58,18,"DRUSENHEIM (H.E.)","10/18/05 00:00:00","12/31/10 00:00:00",11941,11707,"Nivellement réalisé au droit de l'échelle des Hautes Eaux, au pont de la D.468.
+Nivellement: IGN-AN.
+","03/18/08 16:30:00","03/18/08 16:32:00",,
+38,34,"thanvillé","01/01/99 00:00:00","12/31/50 00:00:00",22751,22757,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 24/05/2011 à 11:35",,"12/01/11 14:38:00","12/01/11 14:38:00",
+39,42,"holtz","01/01/90 00:00:00","12/31/50 00:00:00",14438,14423,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 01/08/2011 à 12:15",,"12/01/11 16:35:00","12/01/11 16:35:00",
+40,133,,"01/01/09 00:00:00","12/31/50 00:00:00",17247,17266,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 04/10/2010 à 09:45",,"12/30/11 07:51:00","12/30/11 07:51:00",
+41,19,,"01/01/00 00:00:00","12/31/50 00:00:00",15837,15564,"Cette section est établie à partir du profil en travers du jaugeage réalisé le 09/12/2010 à 12:00",,"02/07/12 16:23:00","02/07/12 16:23:00",
+46,188,"1","10/13/14 00:00:00","01/01/50 00:00:00",17249,17228,"Dossier : 2014101800
+Cabinet SCHALLER-ROTH-SIMLER
+Coupe complète",,"08/07/15 09:33:00","08/07/15 08:59:00",
+47,188,"2","10/13/14 00:00:00","01/01/50 00:00:00",17249,17228,"Cabinet SCHALLER-ROTH-SIMLER
+Coupe centrée sur la Moder",,"08/07/15 09:33:00","08/07/15 09:15:00",
+48,32,"droit de l'échelle","10/12/09 09:50:00","01/01/50 00:00:00",26354,26290,"Extrait du relevé topographique réalisé par le cabinet Schaller-Roth-Simler.",,"03/17/17 14:23:00","03/17/17 14:23:00",
+49,16,"10m aval pont","12/11/18 00:00:00","12/31/50 00:00:00",-297,-297,"Extrait à partir d'un jaugeage au Stream Pro réalisé à la traine le 11/12/2018",,"06/21/19 10:26:00","12/13/18 16:12:00",3

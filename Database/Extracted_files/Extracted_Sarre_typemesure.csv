@@ -1,0 +1,11 @@
+notype,nomtype
+"00","Hauteur"
+"10","Débit"
+"20","Pluie Instantanée"
+"21","Pluie cumulée"
+"22","Température"
+"30","Piézométrie"
+"40","Oxygène dissous"
+"41","Résistivité"
+"42","PH"
+"99","Autre"

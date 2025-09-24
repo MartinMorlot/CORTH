@@ -1,0 +1,57 @@
+nosta,codehydro,nom,courdo,xlambert,ylambert,pk,bv,type,nogest,module,qrefetiage,qix2,qix5,qix10,mnemo,comment,datemaj,typemes,nomcommune,inseecommune,ngfechelle,dateenregistrement,datecreation,cotedebordement,coteseuil,codehydro3,codesitehydro3,synchronisation
+1,"A9372050","BLIESBRUCK PONT","BLIES",953.444,2468.475,983.2,1815,"S","367670",,,,,140,"BLIE1","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:07:00","00",,,,"08/27/24 16:40:00",,,,"A937205050","A9372050",
+2,"A9402110","BOUSSEVILLER","HORN",974.826,2471.043,958.99,94.5,"S","367670",,,,,6.1,"BOUS","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:08:00","00",,,,"08/27/24 16:42:00",,,,"A932215050","A9322150",
+4,"A9091060","DIEDENDORF","SARRE",946.096,2441.386,817.51,732.51001,"S","115680",7.34,1.58,111,167,204,"DIED","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:09:00","00",,,,"07/05/23 15:54:00",,,,"A907105050","A9071050",
+5,"A9021040","HERMELANGE","SARRE",944.424,2419.333,780.99,185.75,"S","115680",1.45,0.282,16.8,22.9,26.9,"HERM","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.
+Cette station correspond à la nouvelle station modernisée CPL. Cette station et l'ancienne station lmnimétrique A9021050 se trouvent quasiment au même endroit, la surperficie du BV ainsi que les coordonnées X,Y vérifiés n'ont pas été modifiés.","11/26/09 16:11:00","00",,,,"07/05/23 15:43:00",,,,"A902101050","A9021010",
+6,"A9091050","KESKASTEL","SARRE",944.301,2451.589,838.08,879.45001,"S","115680",8.92,1.65,110,161,195,"KESK","Le PK a été vérifié en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifiée via l'outil déclic compatible avec la BD Carthage, en mars 2010.","11/26/09 16:12:00","00",,,,"07/05/23 15:55:00",,,,"A909106050","A9091060",
+7,"A9001050","LANEUVEVILLE-LES-LORQUINS","SARRE BLANCHE",944.169,2416.449,774.1799999999999,71.949997,"S","115680",1.21,0.296,7.52,11.8,14.6,"LANEUV","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:13:00","00",,,,"07/05/23 15:50:00",,,,"A900105050","A9001050",
+8,"A9352050","OERMINGEN","EICHEL",950.77,2455.401,994.9400000000001,276.84,"S","367670",,0.378,,,81,"OERM","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:15:00","00",,,,"08/27/24 16:45:00",,,,"A926000101","A9260001",
+9,"A9532005","FORBACH","ROSSELLE",929.751,2474.985,991.03,190,"S","367670",,,,,23,"FORB","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:11:00","00",,,,"08/27/24 16:46:00",,,,"A953205050","A9532050",
+10,"A9072050","POSTROFF","ISCH",947.45,2438.45,997.1799999999999,146.64999,"S","115680",1.59,0.179,46.7,69.5,84.5,"POST","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","12/10/09 14:20:00","00",,,,"07/05/23 15:52:00",,,,"A906215050","A9062150",
+14,"A9251050","SARREGUEMINES [WELFERDING]","SARRE ",943.615,2468.563,875.6799999999999,3740,"S","367670",,,,,,"WELFER",,"12/18/98 00:00:00","10",,,,"03/04/16 14:55:00",,,,"A931109050","A9311090",
+16,"A9301010","WITTRING","SARRE",951.856,2461.35,860.66,1715.84,"S","367670",,,,,360,"WITT","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:21:00","00",,,,"08/27/24 16:39:00",,,,"A930108040","A9301080",
+17,"A3750010","LAUTERBOURG","RHIN",1028.956,2455.984,349.7,49300,"S","115680",1190,568,3190,3780,4170,"LAUTER","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+Le bassin versant n'a pas pu être vérifiévia l'outil déclic compatible avec la BD Carthag, c'est l'ancienne valeur issue de la banque Hydro II qui a été reprise.","11/26/09 16:13:00","00",,,,"07/05/23 15:59:00",,,,"A302009050","A3020090",
+135,"A9232010","DIEMERINGEN","EICHEL",955.401,2449.167,984.8099999999999,153.36,"S","367670",,,,,38,"DIEM","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:10:00","00",,,,"08/27/24 16:43:00",,,,"A923205040","A9232050",
+169,"A9200100","SARRALBE [CENTRE]","SARRE",943.698,2455.499,847.41,1302.6,"S","115680",11.6,2.16,139,202,245,"SARRAL","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:17:00","00","SARRALBE","57",,"07/05/23 15:58:00","08/31/04 16:16:00",,,"A920107050","A9201070",
+189,"A9311050","SARREGUEMINES [CENTRE]","SARRE",945.691,2467.564,871.05,1780,"S","367670",,,,,,"SARREG","Station CPL crée en 2006.
+Premiers jaugeages éffectués en 2007.
+Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","03/16/10 10:00:00","00","SARREGUEMINES","57210",,"08/03/20 17:55:00","12/12/07 10:22:00",,,"A931108060","A9311080",
+308,"A0610030","STRASBOURG [SÉMAPHORE NORD]","Rhin",1003.063,2413.336,293.99,39650,"S","367670",,,,,,"STRAS","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+Le bassin versant n'a pas pu être vérifiévia l'outil déclic compatible avec la BD Carthag, c'est l'ancienne valeur issue de la banque Hydro II qui a été reprise.",,"00","STRASBOURG [SEMAPHORE NORD]",,,"08/03/20 17:55:00","03/16/10 09:14:00",,,"A061005051","A0610050",
+11,"A9192060","SARRALBE [EICH]","ALBE",942.681,2454.562,999.997,408.89001,"S","115680",3.22,0.229,39.1,59.8,73.5,"EICH","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:16:00","00",,,,"07/05/23 15:56:00",,,,"A919205050","A9192050",
+310,"A9425050","BLIESBRUCK_HS","BLIES",953.4299999999999,2468.47,982.3,1930,"S","367670",,,137,209,257,"A9425050",,"12/11/98 00:00:00","10",,,,"03/05/24 16:40:00",,,,"A937205040","A9372050",
+312,"A9612010","CREUTZWALD","BISTEN",917120,2478580,,55.799999,"S","115680",0.546,0.254,5.09,7.44,8.99,"CREUTZ","Station gerée par la DREAL LORRAINE jusqu'en Janvier 2011 et transferée par convention au Service de la Navigation de Strasbourg qui en était gestionaire jusqu'en Janvier 2012, depuis cette date et suite à le restructuration des missions régaliennes la station est gerée par la DREAL ALSACE.
+
+Un import des jaugeages (fournis par la DREAL LORRAINE) et un import des courbes de tarage présentent dans la Banque Hydro 2 vers Bareme à été effectué le 16/07/2012",,"00",,,,"07/05/23 16:02:00","06/06/12 16:33:00",,,"A961205050","A9612050",
+13,"A9013050","VASPERVILLER","SARRE ROUGE",948.357,2415.084,995.45,89.5,"S","115680",1.45,0.524,8.220000000000001,13.7,17.4,"VASP","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:21:00","00",,,,"07/05/23 15:48:00",,,,"A901305050","A9013050",
+309,"A9021050","HERMELANGE","SARRE",944.424,2419.333,780.99,185.75,"S","367670",,,,,,"HERMLIMNI","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.
+Cette station correspond à l'ancienne station limnimétrique se trouvant à l'aval du seuil formé par le radier du pont.","12/18/98 00:00:00","00",,,,"01/31/22 10:25:00",,,,"A902101060","A9021010",
+315,"A9372060","BLIESBRUCK TYROLIENNE","BLIES",953.444,2468.475,983.2,1815,"S","367670",,,,,,"BLI2","Nouvelle station au niveau du terrain de foot.",,"00",,,,"02/16/16 16:09:00","03/27/15 11:36:00",,,"A937205051","A9372050",
+316,"A9021021","IMLING","RUISSEAU",944600,2422564,,,"S","115680",,,,,,"IMLI","STATION EN PHASE DE TEST POUR PRENDRE EN COMPTE L'APPORT DU RUISSEAU QUI SE JETTE DANS LA SARRE ENTRE HERMELANGE ET SARREBOURG ",,"10",,,,"07/05/23 14:59:00","09/25/15 10:17:00",,,"A902102101","A9021021",
+19,"A9021010","SARREBOURG ","SARRE",946.662,2425.803,788.5,310.89999,"S","115680",2.91,0.305,31.9,45.7,54.8,"SARREB","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:18:00","00",,,,"07/05/23 15:46:00",,,,"A902102050","A9021020",
+12,"A9221010","SARREINSMING","SARRE",948.468,2464.885,868.174,1760,"S","367670",,,,,,"SARREI","Les PK ont été vérifiés en mars 2010 via la BD Carthage.
+La superficie du Bassin Versant a été vérifié via l'outil décli,c compatible avec la BD Carthage, en mars 2010.","11/26/09 16:20:00","00",,,,"03/04/16 10:47:00",,,,"A931108050","A9311080",
+317,"A9372053","FRAUENBERG","BLIES",,,,,"S","367670",,,,,140,"FRAUENBERG","Station test installée en octobre 2018",,"00","FRAUENBERG",,,"08/27/24 16:41:00","10/25/18 17:06:00",,,"A937205301","A9372053",
+318,"A9532010","FORBACH HS","Rosselle",,,,,"S","367670",,,,,,"FORBACH HS",,,"00",,,19300,"11/20/23 16:04:00","04/20/20 17:20:00",,,"A953205060","A9532050",
+319,"A9400001","HANWEILER","Sarre",,,,,"S","115680",,,,,,"HANWEILER","Station pour export Hydro2",,"00",,,,"04/19/21 15:57:00","01/14/15 14:50:00",,,"A940000101","A9400001",
+320,"A12345678","SEMAPHORE-KEHL MERE - FILLE","Rhin",,,,,"S","367670",,,,,,,"Test des courbes de tarage à double échelle avec la station de Kehl",,,,,,"01/28/25 14:14:00","08/23/23 11:05:00",,,,,
+321,"A23456789","SEMAPHORE-WANTZ MERE - FILLE","Rhin",,,,,"S","367670",,,,,,,"CT mère fille avec la station VNF de la Wantzenau",,,,,,"08/29/23 16:46:00","08/29/23 15:51:00",,,,,
