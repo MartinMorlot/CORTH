@@ -16,10 +16,6 @@ uh <- terra::vect(
 
 station_l93 <- project(station, crs(uh))
 
-plot(uh)
-
-View(data.frame(uh))
-
 uh_sel <- uh[
     c(1,9,10),
 ]
@@ -32,34 +28,72 @@ Extracted_loc <- "Database/Extracted_files"
 
 files_extract <- list.files(Extracted_loc)
 
-files_station <- files_extract[grepl("station", files_extract)]
+files_station <- files_extract[grepl("station.csv", files_extract)]
 
 setwd(Extracted_loc)
 
-stations_db <- rbind(lapply(files_station, read.csv))
+for(station_file in files_station){
+    print(station_file)
+    content <- read.csv(station_file)
+    region <-unlist(lapply(strsplit(station_file, "_"), "[[", 2))
+    content$region <- region 
+    names_of_columns = colnames(content)
+    if(station_file == files_station[1]){
+        default_columns = names_of_columns
+        merged_content = content
+    }
 
-stations_db_sel <- stations_db[which(stations_db$codehydro %in% site_names), ]
+    not_there=which(!names_of_columns %in% default_columns)
+    if(length(not_there) > 0){
+        content <- content[,-not_there]
+    }
 
-nosta_sel <- stations_db_sel$nosta
+    if(station_file != files_station[1]){
+        default_columns = names_of_columns
+        merged_content = rbind(merged_content, content)
+    }
+}
+
+stations_db <- merged_content
+
+extra_site_code <- c(
+    "A3500100",
+    "A9091060",
+    "A9260001",
+    "A2280030",
+    "A9071050"
+)
+
+stations_db_sel <- stations_db[
+    which(stations_db$codehydro %in% c(site_names, extra_site_code)),
+]
+
+nosta_sel <- stations_db_sel$nosta;
 
 load_data_from_db_files <- function(
     file_list
 ) {
     i <- 0
-    data <- data.frame()
-    for(file in file_list){
-        file_content <- read.csv(file)
-        if(nrow(file_content)){
+    for(file_name in file_list){
+        region <-unlist(lapply(strsplit(file_name, "_"), "[[", 2))
+        file_content <- read.csv(file_name)
+        nb_rows <- nrow(file_content)
+        file_content$region <- rep(region, nb_rows)
+        if(nb_rows > 0){
             if( i == 0){
-                data <- file_content
+                resulting_data <- file_content
             } else {
-                data <- rbind(file_content)
+                resulting_data <- rbind(file_content)
             }
             i <- i+1
         }
     }
-    return(data)
+    if(! exists("resulting_data")){
+        return(resulting_data)
+    }
 }
+
+df_entetecourbe_files <- files_extract[grepl("entetecourbe", files_extract)]
 
 df_entetecourbe <- load_data_from_db_files(df_entetecourbe_files)
 
@@ -71,17 +105,9 @@ df_courbecorrection_files <- files_extract[grepl("correction", files_extract)]
 
 df_courbecorrection <- load_data_from_db_files(df_courbecorrection_files)
 
-df_courbe_files <- files_extract[grepl("courbe", files_extract)]
+df_courbe_files <- files_extract[grepl("_courbe", files_extract)]
 
 df_courbe <- load_data_from_db_files(df_courbe_files)
-
-
-
-
-
-
-
-
 
 
 pdf("All_curves_select_station.pdf")
