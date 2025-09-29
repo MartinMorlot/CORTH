@@ -1,4 +1,5 @@
 library(terra)
+library(dplyr)
 
 working_folder <- "/home/mmorlot/dev-work/CORTH/"
 
@@ -50,7 +51,7 @@ for(station_file in files_station){
 
     if(station_file != files_station[1]){
         default_columns = names_of_columns
-        merged_content = rbind(merged_content, content)
+        merged_content = bind_rows(merged_content, content)
     }
 }
 
@@ -83,12 +84,13 @@ load_data_from_db_files <- function(
             if( i == 0){
                 resulting_data <- file_content
             } else {
-                resulting_data <- rbind(file_content)
+
+                resulting_data <- bind_rows(resulting_data, file_content)
             }
             i <- i+1
         }
     }
-    if(! exists("resulting_data")){
+    if(exists("resulting_data")){
         return(resulting_data)
     }
 }
@@ -96,10 +98,6 @@ load_data_from_db_files <- function(
 df_entetecourbe_files <- files_extract[grepl("entetecourbe", files_extract)]
 
 df_entetecourbe <- load_data_from_db_files(df_entetecourbe_files)
-
-df_entetecourbe_sel <- df_entetecourbe[
-    which(df_entetecourbe$nosta %in% nosta_sel),
-]
 
 df_courbecorrection_files <- files_extract[grepl("correction", files_extract)]
 
@@ -109,14 +107,16 @@ df_courbe_files <- files_extract[grepl("_courbe", files_extract)]
 
 df_courbe <- load_data_from_db_files(df_courbe_files)
 
-
-pdf("All_curves_select_station.pdf")
-for (i in seq(1,nrow(station_db_sel))){
+for(i in seq(1, nrow(stations_db_sel))){
     print(i)
-    station <- station_db_sel[i, ]
-    nosta <- station_db_sel$nosta[[i]]
-    entetecourbe_sel_nosta <- entetecourbe_sel[
-        which(entetecourbe_sel$nosta==nosta),
+    break
+    station <- stations_db_sel[i, ]
+    nosta <- stations_db_sel$nosta[i]
+    region <- stations_db_sel$region[i]
+    entetecourbe_nosta <- df_entetecourbe[
+        which(
+        (df_entetecourbe$nosta==nosta) & (df_entetecourbe$region==region)
+        ),
     ]
     list_of_curve_per_station <- entetecourbe_sel_nosta$noct
     first_curve = TRUE
@@ -133,7 +133,6 @@ for (i in seq(1,nrow(station_db_sel))){
         }
     }
 }
-dev.off()
 
 
 #TODO
