@@ -1,9 +1,10 @@
 library(terra)
 library(dplyr)
-
 working_folder <- "/home/mmorlot/dev-work/CORTH/"
 
 setwd(working_folder)
+
+source("utility_function.r")
 
 print(working_folder)
 
@@ -23,41 +24,21 @@ uh_sel <- uh[
 
 station_kept <- intersect(station_l93, uh_sel)
 
-site_names <- data.frame(station_kept)[, "Site"]
+station_kept_df <- data.frame(merge_spatvectors(station_kept))
+
+site_names <- station_kept_df[, ""]
 
 Extracted_loc <- "Database/Extracted_files"
 
-files_extract <- list.files(Extracted_loc)
+extracted_files <- list.files(Extracted_loc)
 
-files_station <- files_extract[grepl("station.csv", files_extract)]
+files_station <- extracted_files[grepl("station.csv", extracted_files)]
 
 setwd(Extracted_loc)
 
-for(station_file in files_station){
-    print(station_file)
-    content <- read.csv(station_file)
-    region <-unlist(lapply(strsplit(station_file, "_"), "[[", 2))
-    content$region <- region 
-    names_of_columns = colnames(content)
-    if(station_file == files_station[1]){
-        default_columns = names_of_columns
-        merged_content = content
-    }
+stations_db <- load_stations(files_station)
 
-    not_there=which(!names_of_columns %in% default_columns)
-    if(length(not_there) > 0){
-        content <- content[,-not_there]
-    }
-
-    if(station_file != files_station[1]){
-        default_columns = names_of_columns
-        merged_content = bind_rows(merged_content, content)
-    }
-}
-
-stations_db <- merged_content
-
-extra_site_code <- c(
+extra_code <- c(
     "A3500100",
     "A9091060",
     "A9260001",
@@ -71,56 +52,46 @@ stations_db_sel <- stations_db[
 
 nosta_sel <- stations_db_sel$nosta;
 
-load_data_from_db_files <- function(
-    file_list
-) {
-    i <- 0
-    for(file_name in file_list){
-        region <-unlist(lapply(strsplit(file_name, "_"), "[[", 2))
-        file_content <- read.csv(file_name)
-        nb_rows <- nrow(file_content)
-        file_content$region <- rep(region, nb_rows)
-        if(nb_rows > 0){
-            if( i == 0){
-                resulting_data <- file_content
-            } else {
-
-                resulting_data <- bind_rows(resulting_data, file_content)
-            }
-            i <- i+1
-        }
-    }
-    if(exists("resulting_data")){
-        return(resulting_data)
-    }
-}
-
-df_entetecourbe_files <- files_extract[grepl("entetecourbe", files_extract)]
+df_entetecourbe_files <- extracted_files[grepl("entetecourbe", extracted_files)]
 
 df_entetecourbe <- load_data_from_db_files(df_entetecourbe_files)
 
-df_courbecorrection_files <- files_extract[grepl("correction", files_extract)]
+df_courbecorrection_files <- extracted_files[grepl("correction", extracted_files)]
 
 df_courbecorrection <- load_data_from_db_files(df_courbecorrection_files)
 
-df_courbe_files <- files_extract[grepl("_courbe", files_extract)]
+df_courbe_files <- extracted_files[grepl("_pointcourbe", extracted_files)]
 
 df_courbe <- load_data_from_db_files(df_courbe_files)
 
+setwd(working_folder)
+
 for(i in seq(1, nrow(stations_db_sel))){
     print(i)
-    break
     station <- stations_db_sel[i, ]
     nosta <- stations_db_sel$nosta[i]
     region <- stations_db_sel$region[i]
-    entetecourbe_nosta <- df_entetecourbe[
-        which(
-        (df_entetecourbe$nosta==nosta) & (df_entetecourbe$region==region)
-        ),
-    ]
-    list_of_curve_per_station <- entetecourbe_sel_nosta$noct
+    entetecourbe_nosta_region <- sel_data_from_station(
+        df_entetecourbe,
+        nosta,
+        region
+    )
+
+    View(data.frame(entetecourbe_nosta))
     first_curve = TRUE
-    for (curve_i in list_of_curve_per_station){
+
+    codehydro <- station$codehydro
+    name <- station$nom
+    river <- station$courdo
+
+    correction_nosta_region <- sel_data_from_station(
+        df_courbecorrection,
+        nosta,
+        region
+    )
+
+    pdf(paste0("Plots_curves/", codehydro, ".pdf"))
+    for (curve_i in entetecourbe_nosta_region$noct){
         curve_sel <- which(df_courbe$noct %in% curve_i)
         if(length(curve_sel)>0){
             point_curve <- df_courbe[curve_sel, ]
@@ -132,16 +103,8 @@ for(i in seq(1, nrow(stations_db_sel))){
             }
         }
     }
+    dev.off()
+
+    png(paste0("Plots_corrections/", codehydro, ".png"))
+    dev.off()
 }
-
-
-#TODO
-
-#redo all corrections deltaH based calculated Q and measured H
-
-#redo all corrections based on the same Qobs and Hobs (without correction)
-
-
-
-#compare deltaHobs and deltaHcalc
-

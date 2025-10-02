@@ -9,3 +9,7 @@
 [.]R*
 
 .Rproj.user
+
+
+# Build files for pipenv
+Pipfile.lock
