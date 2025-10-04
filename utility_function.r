@@ -1,4 +1,5 @@
 library(terra)
+library(dplyr)
 
 merge_spatvectors <- function(vec_list, all_cols = NULL) {
   # If no columns specified, detect all unique names
@@ -43,16 +44,15 @@ load_data_from_db_files <- function(
             i <- i+1
         }
     }
-    if(exists("resulting_data")){
+    if(exists("resulting_data")) {
         return(resulting_data)
     }
 }
 
-load_stations <- function(files_station){
+load_stations <- function(files_station) {
     merged_content <- NULL
 
     for(station_file in files_station){
-        print(station_file)
         content <- read.csv(station_file)
         region <-unlist(lapply(strsplit(station_file, "_"), "[[", 2))
         content$region <- region 
@@ -75,11 +75,10 @@ load_stations <- function(files_station){
     return(merged_content)
 }
 
-sel_data_from_station <- function(df, nosta, region){
-     df <- df[
-        which(
-            (df$nosta == nosta) & (df$region == region)
-        )
-     ]
+sel_data_from_station <- function(df, nosta, region) {
+
+    sel <- which((df$nosta == nosta) & (df$region == region))
+
+     df <- df[ sel,]
      return(df)
 }

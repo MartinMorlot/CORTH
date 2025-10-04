@@ -1,5 +1,4 @@
 library(terra)
-library(dplyr)
 working_folder <- "/home/mmorlot/dev-work/CORTH/"
 
 setwd(working_folder)
@@ -26,7 +25,7 @@ station_kept <- intersect(station_l93, uh_sel)
 
 station_kept_df <- data.frame(merge_spatvectors(station_kept))
 
-site_names <- station_kept_df[, ""]
+stations_code <- station_kept_df[, "Station"]
 
 Extracted_loc <- "Database/Extracted_files"
 
@@ -38,7 +37,7 @@ setwd(Extracted_loc)
 
 stations_db <- load_stations(files_station)
 
-extra_code <- c(
+extra_site_code <- c(
     "A3500100",
     "A9091060",
     "A9260001",
@@ -46,8 +45,13 @@ extra_code <- c(
     "A9071050"
 )
 
+all_retained <- unique(c(
+    which(stations_db$codehydro3 %in% c(stations_code)),
+    which(stations_db$codesitehydro3 %in% c(extra_site_code))
+))
+
 stations_db_sel <- stations_db[
-    which(stations_db$codehydro %in% c(site_names, extra_site_code)),
+    which(stations_db$codehydro3 %in% c(site_names, extra_site_code)),
 ]
 
 nosta_sel <- stations_db_sel$nosta;
@@ -64,7 +68,11 @@ df_courbe_files <- extracted_files[grepl("_pointcourbe", extracted_files)]
 
 df_courbe <- load_data_from_db_files(df_courbe_files)
 
+date_fmt <- "%m/%d/%y %H:%M:%S"
+
 setwd(working_folder)
+
+mega_df <- data.frame()
 
 for(i in seq(1, nrow(stations_db_sel))){
     print(i)
@@ -77,18 +85,11 @@ for(i in seq(1, nrow(stations_db_sel))){
         region
     )
 
-    View(data.frame(entetecourbe_nosta))
     first_curve = TRUE
 
     codehydro <- station$codehydro
     name <- station$nom
     river <- station$courdo
-
-    correction_nosta_region <- sel_data_from_station(
-        df_courbecorrection,
-        nosta,
-        region
-    )
 
     pdf(paste0("Plots_curves/", codehydro, ".pdf"))
     for (curve_i in entetecourbe_nosta_region$noct){
@@ -105,6 +106,23 @@ for(i in seq(1, nrow(stations_db_sel))){
     }
     dev.off()
 
+    print("rating_curve_done!")
+
+    correction_nosta_region <- sel_data_from_station(
+        df_courbecorrection,
+        nosta,
+        region
+    )
+
+    correction_nosta_region$dateOK <- as.POSIXct(correction_nosta_region$ladate, tz="UTC", format=date_fmt)
+
+    date_in_order <- match(sort(correction_nosta_region$dateOK), correction_nosta_region$dateOK)
+
+    if(nrow(correction_nosta_region)==0) next
     png(paste0("Plots_corrections/", codehydro, ".png"))
+        plot(correction_nosta_region$dateOK, correction_nosta_region$valeur, type='l')
     dev.off()
+
+    print("Corretion plotted")
 }
+
