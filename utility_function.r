@@ -1,5 +1,6 @@
 library(terra)
 library(dplyr)
+library(lubridate)
 
 merge_spatvectors <- function(vec_list, all_cols = NULL) {
   # If no columns specified, detect all unique names
@@ -81,4 +82,27 @@ sel_data_from_station <- function(df, nosta, region) {
 
      df <- df[ sel,]
      return(df)
+}
+
+
+date_load_and_correction <- function(df, date_format, col_to_add, col_to_transform) {
+
+    print(df[,col_to_transform])
+
+    df[,col_to_add] <- as.POSIXct(df[,col_to_transform], tz="UTC", format=date_format)
+
+    loc_of_years_to_be_poitentially_corrected <- which(as.numeric(format(df[,col_to_add], "%Y")) > 2025)
+
+    
+    if(length(loc_of_years_to_be_poitentially_corrected) > 0){
+        years_2digit_in_question <- unlist(lapply(strsplit(unlist(lapply(strsplit(df[,col_to_transform][loc_of_years_to_be_poitentially_corrected], " "), "[[",1)), "[/]"), "[[", 3))
+            for(i in seq_len(loc_of_years_to_be_poitentially_corrected)){
+                digit_year <- as.numeric(years_2digit_in_question[i])
+                if(digit_year <= 70){
+                    loc_to_fix <- loc_of_years_to_be_poitentially_corrected[i]
+                    df[loc_to_fix,col_to_fix] <-  df[loc_to_fix,col_to_fix] - years(100)
+                }
+        }
+    }
+    return(df)
 }

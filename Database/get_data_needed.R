@@ -112,17 +112,32 @@ for(i in seq(1, nrow(stations_db_sel))){
 
     print("rating_curve_done!")
 
+
+    #ntetecourbe_nosta_region$datedebut <- as.POSIXct(entetecourbe_nosta_region$cdatedeb, tz="UTC", format=date_fmt)
+
+    entetecourbe_nosta_region <- date_load_and_correction(entetecourbe_nosta_region, date_fmt, "datedebut", "cdatedeb")
+
+    entetecourbe_nosta_region$datefin <- as.POSIXct(entetecourbe_nosta_region$cdatefin, tz="UTC", format=date_fmt)
+
+    entetecourbe_nosta_region <- date_correction(entetecourbe_nosta_region, "datedebut", "cdatedeb")
+
+    startorder <- match(sort(entetecourbe_nosta_region$datedebut), entetecourbe_nosta_region$datedebut)
+    endorder <- match(sort(entetecourbe_nosta_region$datefin), entetecourbe_nosta_region$datefin)
+
     correction_nosta_region <- sel_data_from_station(
         df_courbecorrection,
         nosta,
         region
     )
 
+    intervals_date
+
     correction_nosta_region$dateOK <- as.POSIXct(correction_nosta_region$ladate, tz="UTC", format=date_fmt)
 
     date_in_order <- match(sort(correction_nosta_region$dateOK), correction_nosta_region$dateOK)
 
     correction_nosta_region <- correction_nosta_region[date_in_order,]
+    
     if(nrow(correction_nosta_region)==0) next
     png(paste0("Plots_corrections/", codehydro, ".png"))
         values <- correction_nosta_region$valeur
@@ -133,3 +148,33 @@ for(i in seq(1, nrow(stations_db_sel))){
     print("Corretion plotted")
 }
 
+#find the longest interval with constant rating curve and correction present
+date_debut_corrected <- which(as.numeric(format(entetecourbe_nosta_region$datedebut, "%Y")) > 2025)
+unlist(lapply(strsplit(unlist(lapply(strsplit(entetecourbe_nosta_region$cdatedeb[date_debut_corrected], " "), "[[",1)), "[/]"), "[[", 3))
+
+
+
+#date debut
+find date where it is ==0 when date + 1 < 0
+#date fin
+find date where it is ==0 when date - 1 < 0
+
+#year considered:
+
+
+#date maxima
+find date for each year where value is min.
+
+#duree par an
+date fin - date fin
+
+#maxima par an
+min correction()
+
+
+#integral
+linear ()
+
+(par linear interopolation par trapeze)
+
+integral normalized
