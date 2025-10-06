@@ -7,7 +7,9 @@ source("utility_function.r")
 
 print(working_folder)
 
-station <- terra::vect("/home/mmorlot/dev-work/CORTH/Shp_files/Test_kept_stations_with_grass.gpkg")
+station <- terra::vect(
+    "/home/mmorlot/dev-work/CORTH/Shp_files/Test_kept_stations_with_grass.gpkg"
+)
 
 df_station <- data.frame(station)
 
@@ -51,7 +53,7 @@ all_retained <- unique(c(
 ))
 
 stations_db_sel <- stations_db[
-    which(stations_db$codehydro3 %in% c(site_names, extra_site_code)),
+    all_retained,
 ]
 
 nosta_sel <- stations_db_sel$nosta;
@@ -85,6 +87,8 @@ for(i in seq(1, nrow(stations_db_sel))){
         region
     )
 
+    title <-paste(station$codehydro, station$nom)
+
     first_curve = TRUE
 
     codehydro <- station$codehydro
@@ -97,7 +101,7 @@ for(i in seq(1, nrow(stations_db_sel))){
         if(length(curve_sel)>0){
             point_curve <- df_courbe[curve_sel, ]
             if(first_curve){
-                plot(point_curve$h, point_curve$q, type='l', main=paste(station$codehydro, station$nom), ylab="Discharge [m^3/s]", xlab="Height [m]")
+                plot(point_curve$h, point_curve$q, type='l', main=title, ylab="Discharge [m^3/s]", xlab="Height [m]")
                 first_curve=FALSE
             } else {
                 lines(point_curve$h, point_curve$q)
@@ -118,9 +122,12 @@ for(i in seq(1, nrow(stations_db_sel))){
 
     date_in_order <- match(sort(correction_nosta_region$dateOK), correction_nosta_region$dateOK)
 
+    correction_nosta_region <- correction_nosta_region[date_in_order,]
     if(nrow(correction_nosta_region)==0) next
     png(paste0("Plots_corrections/", codehydro, ".png"))
-        plot(correction_nosta_region$dateOK, correction_nosta_region$valeur, type='l')
+        values <- correction_nosta_region$valeur
+        dateOK <- correction_nosta_region$dateOK
+        plot(dateOK, values, type='l', ylab='Correction (mm)', xlab="Date period", main=title, ylim=c(max(values), min(values)))
     dev.off()
 
     print("Corretion plotted")
