@@ -20,7 +20,7 @@ uh <- terra::vect(
 station_l93 <- project(station, crs(uh))
 
 uh_sel <- uh[
-    c(1,9,10),
+    c(1, 9, 10),
 ]
 
 station_kept <- intersect(station_l93, uh_sel)
@@ -56,8 +56,7 @@ stations_db_sel <- stations_db[
     all_retained,
 ]
 
-nosta_sel <- stations_db_sel$nosta;
-
+nosta_sel <- stations_db_sel$nosta
 df_entetecourbe_files <- extracted_files[grepl("entetecourbe", extracted_files)]
 
 df_entetecourbe <- load_data_from_db_files(df_entetecourbe_files)
@@ -74,9 +73,33 @@ date_fmt <- "%m/%d/%y %H:%M:%S"
 
 setwd(working_folder)
 
-mega_df <- data.frame()
+considered_years <- c(2015:year(today()))
 
-for(i in seq(1, nrow(stations_db_sel))){
+variable_names <- c(
+    "start_day",
+    "end_day",
+    "duration",
+    "minima_day",
+    "minima_value",
+    "minima_norm_all",
+    "integral",
+    "integral_norm_year",
+    "integral_norm_all"
+)
+
+all_colnames <- as.vector(outer(variable_names, considered_years, paste, sep = "_"))
+
+# variable to consider:
+all_data_df <- as.data.frame(
+    matrix(NA,
+        nrow = length(stations_db_sel$codehydro3), ncol = length(all_colnames),
+        dimnames = list(stations_db_sel$codehydro3, all_colnames)
+    )
+)
+
+
+
+for (i in seq(1, nrow(stations_db_sel))) {
     print(i)
     station <- stations_db_sel[i, ]
     nosta <- stations_db_sel$nosta[i]
@@ -87,24 +110,41 @@ for(i in seq(1, nrow(stations_db_sel))){
         region
     )
 
-    title <-paste(station$codehydro, station$nom)
-
-    first_curve = TRUE
-
-    codehydro <- station$codehydro
+    codehydro <- station$codehydro3
     name <- station$nom
     river <- station$courdo
 
+    entetecourbe_nosta_region <- date_load_and_correction(entetecourbe_nosta_region, date_fmt, "datedebut", "cdatedeb", TRUE)
+
+    entetecourbe_nosta_region <- date_load_and_correction(entetecourbe_nosta_region, date_fmt, "datefin", "cdatefin", FALSE)
+
+    curve_station_region <- which((df_courbe$noct %in% entetecourbe_nosta_region$noct) & (df_courbe$region == region))
+
+    df_courbe_sta_region <- df_courbe[curve_station_region, ]
+
+    title <- paste(codehydro, name, river, "[", region, "]")
+
+    first_curve <- TRUE
+    ylim <- c(min(df_courbe_sta_region$q), max(df_courbe_sta_region$q))
+
     pdf(paste0("Plots_curves/", codehydro, ".pdf"))
-    for (curve_i in entetecourbe_nosta_region$noct){
-        curve_sel <- which(df_courbe$noct %in% curve_i)
-        if(length(curve_sel)>0){
-            point_curve <- df_courbe[curve_sel, ]
-            if(first_curve){
-                plot(point_curve$h, point_curve$q, type='l', main=title, ylab="Discharge [m^3/s]", xlab="Height [m]")
-                first_curve=FALSE
+    for (i in seq_len(nrow(entetecourbe_nosta_region))) {
+        curve_i <- entetecourbe_nosta_region[i, ]
+        curve_sel <- which(df_courbe_sta_region$noct == curve_i$noct)
+        start <- curve_i$datedebut
+        end <- curve_i$datedebut
+        point_curve <- df_courbe_sta_region[curve_sel, ]
+        if (nrow(point_curve) > 0) {
+            if (first_curve) {
+                sorted_Q_order <- match(sort(point_curve$q), point_curve$q)
+                point_curve <- point_curve[sorted_Q_order, ]
+                plot(point_curve$h / 1000, point_curve$q,
+                    type = "l", main = title, ylab = "Discharge [m³/s]", xlab = "Height [m]",
+                    ylim = ylim
+                )
+                first_curve <- FALSE
             } else {
-                lines(point_curve$h, point_curve$q)
+                lines(point_curve$h / 1000, point_curve$q)
             }
         }
     }
@@ -112,69 +152,48 @@ for(i in seq(1, nrow(stations_db_sel))){
 
     print("rating_curve_done!")
 
-
-    #ntetecourbe_nosta_region$datedebut <- as.POSIXct(entetecourbe_nosta_region$cdatedeb, tz="UTC", format=date_fmt)
-
-    entetecourbe_nosta_region <- date_load_and_correction(entetecourbe_nosta_region, date_fmt, "datedebut", "cdatedeb")
-
-    entetecourbe_nosta_region$datefin <- as.POSIXct(entetecourbe_nosta_region$cdatefin, tz="UTC", format=date_fmt)
-
-    entetecourbe_nosta_region <- date_correction(entetecourbe_nosta_region, "datedebut", "cdatedeb")
-
-    startorder <- match(sort(entetecourbe_nosta_region$datedebut), entetecourbe_nosta_region$datedebut)
-    endorder <- match(sort(entetecourbe_nosta_region$datefin), entetecourbe_nosta_region$datefin)
-
     correction_nosta_region <- sel_data_from_station(
         df_courbecorrection,
         nosta,
         region
     )
 
-    intervals_date
+    # intervals_date
 
-    correction_nosta_region$dateOK <- as.POSIXct(correction_nosta_region$ladate, tz="UTC", format=date_fmt)
+    correction_nosta_region <- date_load_and_correction(correction_nosta_region, date_fmt, "dateOK", "ladate", TRUE)
 
-    date_in_order <- match(sort(correction_nosta_region$dateOK), correction_nosta_region$dateOK)
-
-    correction_nosta_region <- correction_nosta_region[date_in_order,]
-    
-    if(nrow(correction_nosta_region)==0) next
+    if (nrow(correction_nosta_region) == 0) next
     png(paste0("Plots_corrections/", codehydro, ".png"))
-        values <- correction_nosta_region$valeur
-        dateOK <- correction_nosta_region$dateOK
-        plot(dateOK, values, type='l', ylab='Correction (mm)', xlab="Date period", main=title, ylim=c(max(values), min(values)))
+    values <- correction_nosta_region$valeur
+    dateOK <- correction_nosta_region$dateOK
+    plot(dateOK, values, type = "l", ylab = "Correct    ion (mm)", xlab = "Date period", main = title, ylim = c(max(values), min(values)))
+
+    date_in_range <- which(as.numeric(format(dateOK, "%Y")) %in% considered_years)
+    if (length(date_in_range) > 0) {
+        correction_sel_nosta_region <- correction_nosta_region[date_in_range, ]
+
+        minima_for_norm <- quantile(correction_sel_nosta_region$valeur, 2.5 / 100)[[1]]
+
+        for (year in considered_years) {
+            sel_year <- which(as.numeric(format(correction_sel_nosta_region$dateOK, "%Y")) == year)
+            correction_year <- correction_sel_nosta_region[sel_year, ]
+
+            results_year <- get_data_for_specific_year(correction_year, minima_for_norm)
+            if (is.null(results_year)) next
+            col_to_write <- paste(variable_names, "_", year)
+            names(results_year) <- col_to_write
+            all_data_df[codehydro, col_to_write] <- unlist(results_year)
+        }
+    }
+
     dev.off()
+
 
     print("Corretion plotted")
 }
 
-#find the longest interval with constant rating curve and correction present
-date_debut_corrected <- which(as.numeric(format(entetecourbe_nosta_region$datedebut, "%Y")) > 2025)
-unlist(lapply(strsplit(unlist(lapply(strsplit(entetecourbe_nosta_region$cdatedeb[date_debut_corrected], " "), "[[",1)), "[/]"), "[[", 3))
+setwd(working_folder)
 
+all_data_df <- all_data_df[rowSums(!is.na(all_data_df)) > 0, ]
 
-
-#date debut
-find date where it is ==0 when date + 1 < 0
-#date fin
-find date where it is ==0 when date - 1 < 0
-
-#year considered:
-
-
-#date maxima
-find date for each year where value is min.
-
-#duree par an
-date fin - date fin
-
-#maxima par an
-min correction()
-
-
-#integral
-linear ()
-
-(par linear interopolation par trapeze)
-
-integral normalized
+write.csv(all_data_df, "data_regionalization/data_df.csv")
