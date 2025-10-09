@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 orange3 = "*"
+pyqt5 = "*"
+pyside2 = "*"
+pyqtwebengine = "*"
+orange3-geo = "*"
 
 [dev-packages]
 
