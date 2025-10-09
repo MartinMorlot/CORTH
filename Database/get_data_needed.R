@@ -128,11 +128,11 @@ for (i in seq(1, nrow(stations_db_sel))) {
     ylim <- c(min(df_courbe_sta_region$q), max(df_courbe_sta_region$q))
 
     pdf(paste0("Plots_curves/", codehydro, ".pdf"))
-    for (i in seq_len(nrow(entetecourbe_nosta_region))) {
-        curve_i <- entetecourbe_nosta_region[i, ]
-        curve_sel <- which(df_courbe_sta_region$noct == curve_i$noct)
-        start <- curve_i$datedebut
-        end <- curve_i$datedebut
+    for (j in seq_len(nrow(entetecourbe_nosta_region))) {
+        curve_j <- entetecourbe_nosta_region[j, ]
+        curve_sel <- which(df_courbe_sta_region$noct == curve_j$noct)
+        start <- curve_j$datedebut
+        end <- curve_j$datedebut
         point_curve <- df_courbe_sta_region[curve_sel, ]
         if (nrow(point_curve) > 0) {
             if (first_curve) {
@@ -166,7 +166,7 @@ for (i in seq(1, nrow(stations_db_sel))) {
     png(paste0("Plots_corrections/", codehydro, ".png"))
     values <- correction_nosta_region$valeur
     dateOK <- correction_nosta_region$dateOK
-    plot(dateOK, values, type = "l", ylab = "Correct    ion (mm)", xlab = "Date period", main = title, ylim = c(max(values), min(values)))
+    plot(dateOK, values, type = "l", ylab = "Correction (mm)", xlab = "Date", main = title, ylim = c(max(values), min(values)))
 
     date_in_range <- which(as.numeric(format(dateOK, "%Y")) %in% considered_years)
     if (length(date_in_range) > 0) {
@@ -197,3 +197,7 @@ setwd(working_folder)
 all_data_df <- all_data_df[rowSums(!is.na(all_data_df)) > 0, ]
 
 write.csv(all_data_df, "data_regionalization/data_df.csv")
+
+write.csv(stations_db_sel, "data_regionalization/stations_db_sel.csv")
+
+write.csv(station_kept_df, "data_regionalization/station_kept_df.csv")

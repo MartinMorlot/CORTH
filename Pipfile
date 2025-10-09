@@ -9,6 +9,7 @@ pyqt5 = "*"
 pyside2 = "*"
 pyqtwebengine = "*"
 orange3-geo = "*"
+orange3-sqlite3 = "*"
 
 [dev-packages]
 
