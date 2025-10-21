@@ -106,12 +106,11 @@ for (file_to_read in station_files) {
 
   q1090_serie <- serie_na_replace(aggregate(serie_data, by = list(tS_d), FUN = quantile, c(0.1, 0.9), na.rm = T))
 
-
-
-
   range <- c(max(max_serie$x), min(min_serie$x))
 
-  plot(mean_serie, type = "l", main = file_to_read, ylim = range, col = "red")
+  main_title_graph <- paste(station_info$Station, station_info$Name_station)
+
+  plot(mean_serie, type = "l", main = main_title_graph, ylim = range, col = "red", ylab = "DeltaH (m)", xlab = "Day of the year")
 
   lines(min_serie)
   lines(max_serie)
