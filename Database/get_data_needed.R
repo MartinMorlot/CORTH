@@ -1,4 +1,5 @@
 library(terra)
+library(viridis)
 working_folder <- "/home/mmorlot/dev-work/CORTH/"
 
 setwd(working_folder)
@@ -25,7 +26,7 @@ uh_sel <- uh[
 
 station_kept <- intersect(station_l93, uh_sel)
 
-station_kept_df <- data.frame(merge_spatvectors(station_kept))
+station_kept_df <- data.frame(station_kept)
 
 stations_code <- station_kept_df[, "Station"]
 
@@ -125,14 +126,18 @@ for (i in seq(1, nrow(stations_db_sel))) {
     title <- paste(codehydro, name, river, "[", region, "]")
 
     first_curve <- TRUE
+    any_curve <- FALSE
     ylim <- c(min(df_courbe_sta_region$q), max(df_courbe_sta_region$q))
+    xlim <- c(min(df_courbe_sta_region$h) / 1000, max(df_courbe_sta_region$h) / 1000)
 
-    pdf(paste0("Plots_curves/", codehydro, ".pdf"))
-    for (j in seq_len(nrow(entetecourbe_nosta_region))) {
+    png(paste0("Plots_curves/", codehydro, ".png"))
+    n_curves <- nrow(entetecourbe_nosta_region)
+    colors <- viridis(n_curves)
+    for (j in seq_len(n_curves)) {
         curve_j <- entetecourbe_nosta_region[j, ]
         curve_sel <- which(df_courbe_sta_region$noct == curve_j$noct)
         start <- curve_j$datedebut
-        end <- curve_j$datedebut
+        end <- curve_j$datefin
         point_curve <- df_courbe_sta_region[curve_sel, ]
         if (nrow(point_curve) > 0) {
             if (first_curve) {
@@ -140,12 +145,43 @@ for (i in seq(1, nrow(stations_db_sel))) {
                 point_curve <- point_curve[sorted_Q_order, ]
                 plot(point_curve$h / 1000, point_curve$q,
                     type = "l", main = title, ylab = "Discharge [m³/s]", xlab = "Height [m]",
-                    ylim = ylim
+                    ylim = ylim,
+                    xlim = xlim,
+                    col = colors[j]
                 )
                 first_curve <- FALSE
+                any_curve <- TRUE
+                legend_labels <- c(
+                    paste(
+                        format(start, "%Y"),
+                        "-",
+                        format(end, "%Y")
+                    )
+                )
+                retained_colors <- c(colors[j])
             } else {
-                lines(point_curve$h / 1000, point_curve$q)
+                lines(
+                    point_curve$h / 1000,
+                    point_curve$q,
+                    col = colors[j]
+                )
+                years_label <- paste(
+                    format(start, "%Y"),
+                    "-",
+                    format(end, "%Y")
+                )
+                if (!years_label %in% legend_labels) {
+                    legend_labels <- c(
+                        legend_labels,
+                        years_label
+                    )
+                    retained_colors <- c(
+                        retained_colors,
+                        colors[j]
+                    )
+                }
             }
+            legend("bottomright", legend = legend_labels, col = retained_colors, lwd = 2, cex = 0.8, title = "Period")
         }
     }
     dev.off()
@@ -180,7 +216,7 @@ for (i in seq(1, nrow(stations_db_sel))) {
 
             results_year <- get_data_for_specific_year(correction_year, minima_for_norm)
             if (is.null(results_year)) next
-            col_to_write <- paste(variable_names, "_", year)
+            col_to_write <- paste0(variable_names, "_", year)
             names(results_year) <- col_to_write
             all_data_df[codehydro, col_to_write] <- unlist(results_year)
         }
