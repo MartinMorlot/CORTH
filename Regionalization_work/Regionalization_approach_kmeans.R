@@ -38,8 +38,10 @@ df <- kept_data
 
 df <- na.omit(df)
 
+png("Regionalization_work/Plots/Eucledian_distance.png", height = 3000, width = 3000, res = 300)
 distance <- get_dist(df)
 fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07"))
+dev.off()
 
 k2 <- kmeans(df, centers = 2, nstart = 25)
 k3 <- kmeans(df, centers = 3, nstart = 25)
@@ -51,17 +53,26 @@ p1 <- fviz_cluster(k2, geom = "point", data = df) + ggtitle("k = 2")
 p2 <- fviz_cluster(k3, geom = "point", data = df) + ggtitle("k = 3")
 p3 <- fviz_cluster(k4, geom = "point", data = df) + ggtitle("k = 4")
 p4 <- fviz_cluster(k5, geom = "point", data = df) + ggtitle("k = 5")
+
+png("Regionalization_work/Plots/kmeans_cluster_nb_comparison.png", height = 3000, width = 3000, res = 300)
 grid.arrange(p1, p2, p3, p4, nrow = 2)
+dev.off()
 
 set.seed(123)
 
-fviz_nbclust(df, kmeans, method = "wss")
+p1 <- fviz_nbclust(df, kmeans, method = "wss")
 
-fviz_nbclust(df, kmeans, method = "silhouette")
+p2 <- fviz_nbclust(df, kmeans, method = "silhouette")
 
 gap_stat <- clusGap(df, FUN = kmeans, nstart = 25, K.max = 7, B = 50)
 
-fviz_gap_stat(gap_stat)
+p3 <- fviz_gap_stat(gap_stat)
 
 final <- kmeans(df, 5, nstart = 25)
-fviz_cluster(final, data = df)
+p4 <- fviz_cluster(final, data = df)
+
+png("Regionalization_work/Plots/kmeans_analysis.png", height = 3000, width = 3000, res = 300)
+grid.arrange(p1, p2, p3, p4, nrow = 2)
+dev.off()
+
+results <- write.csv(df, "Regionalization_work/Results/Results_kmeans.csv")

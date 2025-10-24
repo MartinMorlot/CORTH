@@ -39,17 +39,22 @@ df <- kept_data
 
 df <- na.omit(df)
 
+write.csv(df, "Regionalization_work/Kept_data.csv")
+
 
 # Dissimilarity matrix
 d <- dist(df, method = "euclidean")
 
+
 # Hierarchical clustering using Complete Linkage
 hc1 <- hclust(d, method = "complete")
+dev.off()
 
 # Plot the obtained dendrogram
 plot(hc1, cex = 0.6, hang = -1)
 
 hc2 <- agnes(df, method = "complete")
+dev.off()
 
 # Agglomerative coefficient
 hc2$ac
@@ -64,20 +69,25 @@ ac <- function(x) {
 map_dbl(m, ac)
 
 hc3 <- agnes(df, method = "ward")
+
 pltree(hc3, cex = 0.6, hang = -1, main = "Dendrogram of agnes")
+dev.off()
 
 # compute divisive hierarchical clustering
 hc4 <- diana(df)
+dev.off()
 
 # Divise coefficient; amount of clustering structure found
 hc4$dc
-## [1] 0.8514345
+
 
 # plot dendrogram
 pltree(hc4, cex = 0.6, hang = -1, main = "Dendrogram of diana")
+dev.off()
 
 
 hc5 <- hclust(d, method = "ward.D2")
+
 
 # Cut tree into 4 groups
 sub_grp <- cutree(hc5, k = 4)
@@ -130,3 +140,6 @@ fviz_nbclust(df, FUN = hcut, method = "silhouette")
 
 gap_stat <- clusGap(df, FUN = hcut, nstart = 25, K.max = 10, B = 50)
 fviz_gap_stat(gap_stat)
+
+
+write.csv(df, "Results_clustering.csv")
