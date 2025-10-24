@@ -6,6 +6,8 @@ library(cluster) # clustering algorithms
 library(factoextra) # clustering visualization
 library(colorspace)
 library(dendextend) # for comparing two dendrograms
+library(jsonlite)
+library(dplyr)
 library(gridExtra)
 library(terra)
 
@@ -46,22 +48,39 @@ empty_elev <- which(is.na(new_df_with_data$elev))
 
 new_df_with_data$elev[empty_elev] <- as.numeric(df_omit[empty_elev, "Altitude..m..1"])
 
-empty_elev <- which(is.na(new_df_with_data$elev))
-
-elevation_france <- rast("/home/mmorlot/dev-work/frenchMap/mnt-france-metro-drom/France_metropolitaine.tif")
-crs(elevation_france)
-for (id in empty_elev) {
-    info <- df_omit[id, ]
-    if (info$Geometry == "") {
-        # TODO create geometry from Lambert coordinates (x and y), add to Geometry in CRS84
-        pt <- vect(cbind(as.numeric(info$xlambert), as.numeric(info$ylambert)), crs = "EPSG:2154")
-        pt_proj <- project(pt, "EPSG:4326")
-    }
-}
-
 new_df_with_data$qrefetiage <- as.numeric(df_omit$qrefetiage)
 new_df_with_data$qix2 <- as.numeric(df_omit$qix2)
 
+df_omit$geo_json <- gsub("'", "\"", df_omit$Geometry)
+
+df_geo_json_not_empty <- which(df_omit$geo_json != "")
+
+df_sel_geo <- df_omit[df_geo_json_not_empty, ]
+
+# Parse the coordinates from JSON
+df_transform_geo <- df_sel_geo %>%
+    mutate(
+        parsed = lapply(geo_json, fromJSON),
+        lon = sapply(parsed, function(x) x$coordinates[1]),
+        lat = sapply(parsed, function(x) x$coordinates[2])
+    )
+
+# Create a terra SpatVector from lon/lat (CRS84 ≈ EPSG:4326)
+points_crs84 <- vect(df_transform_geo[, c("lon", "lat")], crs = "EPSG:4326")
+
+# Reproject to Lambert-93 (France)
+points_lambert <- project(points_crs84, "EPSG:2154")
+
+# Extract projected coordinates
+coords_lambert <- crds(points_lambert)
+df_transform_geo$xlambert <- coords_lambert[, 1]
+df_transform_geo$ylambert <- coords_lambert[, 2]
+df_transform_geo[, c("lon", "lat", "xlambert", "ylambert")]
+
+df_omit[df_geo_json_not_empty, c("xlambert", "ylambert")] <- df_transform_geo[, c("xlambert", "ylambert")]
+
+# coordinates col
+coords_col <- c("xlambert", "ylambert")
 # Start date for each year
 start_col <- which(grepl("start", cnames))
 # End date for each year
@@ -88,7 +107,7 @@ all_cols <- cnames[c(
     integral_value_col
 )]
 
-sel_cols <- all_cols[grepl("[.]_[.]", all_cols)]
+sel_cols <- c(coords_col, all_cols[grepl("[.]_[.]", all_cols)])
 
 data_from_df <- df_omit[, sel_cols]
 
@@ -97,36 +116,16 @@ colnames(data_from_df) <- new_cols
 
 all_data_df <- cbind(new_df_with_data, data_from_df)
 
+all_data_df[] <- lapply(all_data_df, function(x) as.numeric(as.character(x)))
+
+empty_elev <- which(is.na(new_df_with_data$elev))
+
+station_data_official <- data.frame(vect("Shp_files/StationHydro_FXX.gpkg"))
+
+no_elev_code_hydro <- unlist(lapply(stringr::str_split(rownames(all_data_df[empty_elev, ]), " "), "[[", 1))
+
+match_station_info <- match(no_elev_code_hydro, station_data_official$CdStationHydro)
+
+all_data_df[empty_elev, c("xlambert", "ylambert")] <- station_data_official[match_station_info, c("CoordXStationHydro", "CoordYStationHydro")]
+
 write.csv(all_data_df, "Regionalization_work/cleaned_up_data.csv")
-
-
-terraOptions(tempdir = "/home/mmorlot/terra_tmp")
-terraOptions(memfrac = 0.75) # use 75% of RAM
-
-elevation_france <- rast("/home/mmorlot/dev-work/frenchMap/mnt-france-metro-drom/France_metropolitaine.tif")
-
-crs(raster_crs <- crs(elevation_france))
-crs(point_crs <- crs(pt_proj))
-ext(elevation_france)
-crds(pt_proj)
-
-# 2) Make sure point and raster use the same CRS (align the point to raster)
-pt_aligned <- project(pt_proj, crs(elevation_france))
-crds(pt_aligned) # lon/lat or projected coords as expected
-
-# 3) Which cell does the point fall into?
-cell <- cellFromXY(elevation_france, crds(pt_aligned))
-cell # NA -> point outside raster extent
-
-# 4) If cell is not NA, check raster value at that cell
-if (!is.na(cell)) {
-    # value via cell index
-    vals <- values(elevation_france)
-    vals[cell] # raw cell value (may be NA)
-    # OR using single-layer extract (returns data.frame)
-    ex <- terra::extract(elevation_france, pt_aligned)
-    print(ex)
-}
-
-terraOptions(memfrac = 0.75) # use 75% of RAM
-terraOptions(tempdir = "/fast/tmp")
