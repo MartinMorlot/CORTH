@@ -74,7 +74,7 @@ date_fmt <- "%m/%d/%y %H:%M:%S"
 
 setwd(working_folder)
 
-considered_years <- c(2015:year(today()))
+considered_years <- c(1975:year(today()))
 
 variable_names <- c(
     "start_day",
@@ -237,3 +237,14 @@ write.csv(all_data_df, "data_regionalization/data_df.csv")
 write.csv(stations_db_sel, "data_regionalization/stations_db_sel.csv")
 
 write.csv(station_kept_df, "data_regionalization/station_kept_df.csv")
+
+station_kept_df_sel <- match(row.names(all_data_df), station_kept_df$Station)
+
+reordered_station <- station_kept_df[station_kept_df_sel, ]
+
+stations_db_sel_order <- match(row.names(all_data_df), stations_db_sel$codehydro3)
+stations_db_sel_ordered <- stations_db_sel[stations_db_sel_order, ]
+
+merge_data <- cbind(all_data_df, reordered_station, stations_db_sel_ordered)
+
+write.csv(merge_data, "data_regionalization/all_merged_data.csv")
