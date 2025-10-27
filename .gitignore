@@ -4,6 +4,7 @@
 # Stations file
 *.gz
 *.tar
+HydroPortail/*
 
 # 
 [.]R*
