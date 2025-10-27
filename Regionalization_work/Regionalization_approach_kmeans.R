@@ -38,7 +38,7 @@ df <- kept_data
 
 df <- na.omit(df)
 
-png("Regionalization_work/Plots/Eucledian_distance.png", height = 3000, width = 3000, res = 300)
+png("Regionalization_work/Plots/Eucledian_distance.png", height = 1500, width = 2000, res = 300)
 distance <- get_dist(df)
 fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07"))
 dev.off()
