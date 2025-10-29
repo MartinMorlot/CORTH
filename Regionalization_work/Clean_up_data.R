@@ -15,7 +15,10 @@ library(terra)
 df <- read.csv("/home/mmorlot/dev-work/CORTH/data_regionalization/all_merged_data.csv")
 
 station_data_official <- data.frame(vect("Shp_files/StationHydro_FXX.gpkg"))
-head(df[, 1])
+
+hydro_portail_path <- list.files("/home/mmorlot/dev-work/CORTH/HydroPortail", pattern = ".txt", full.names = TRUE)
+
+stations_meta <- ASHE::create_meta_HYDRO3(hydro_portail_path)
 
 names_for_row <- paste(df[, 1], df$nom)
 rownames(df) <- names_for_row
@@ -32,27 +35,11 @@ station_data_official_ordered <- station_data_official[station_data_official_ord
 
 new_df_with_data[, c("xlambert", "ylambert")] <- station_data_official_ordered[, c("CoordXStationHydro", "CoordYStationHydro")]
 
+station_meta_order <- match(new_df_with_data$stationcode, stations_meta$code)
+stations_meta_kept <- stations_meta[station_meta_order, ]
+cnames_meta <- colnames(stations_meta_kept)
+new_df_with_data[, cnames_meta] <- stations_meta_kept
 View(new_df_with_data)
-
-# empty_bv <- which(new_df_with_data$bv == "")
-
-# new_df_with_data$bv[empty_bv] <- df_omit$Surface_bv..km..[empty_bv]
-
-# empty_bv <- which(new_df_with_data$bv == "")
-
-# new_df_with_data$bv[empty_bv] <- df_omit[empty_bv, "Surface_bv..km...1"]
-
-# new_df_with_data$bv <- as.numeric(new_df_with_data$bv)
-
-# new_df_with_data$elev <- as.numeric(df_omit$ngfechelle) / 100
-
-# empty_elev <- which(is.na(new_df_with_data$elev))
-
-# new_df_with_data$elev[empty_elev] <- as.numeric(df_omit$Altitude..m.[empty_elev])
-
-# empty_elev <- which(is.na(new_df_with_data$elev))
-
-# new_df_with_data$elev[empty_elev] <- as.numeric(df_omit[empty_elev, "Altitude..m..1"])
 
 new_df_with_data$qrefetiage <- as.numeric(df$qrefetiage)
 new_df_with_data$qix2 <- as.numeric(df$qix2)
@@ -87,8 +74,11 @@ data_from_df <- df[, all_cols]
 
 colnames(data_from_df) <- all_cols
 
+data_from_df <- lapply(data_from_df, function(x) as.numeric(as.character(x)))
+
+
 all_data_df <- cbind(new_df_with_data, data_from_df)
 
-all_data_df[] <- lapply(all_data_df, function(x) as.numeric(as.character(x)))
+View(all_data_df)
 
 write.csv(all_data_df, "Regionalization_work/cleaned_up_data.csv")
