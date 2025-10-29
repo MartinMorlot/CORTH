@@ -69,7 +69,7 @@ k.max <- 2:10
 
 plots_best <- make_silhouette_and_wss_pot(cor_dist, hcut, 10, hc_func = "agnes", hc_method = "ward")
 
-hc <- hclust(as.hclust(cor_dist),  method = "ward"))
+hc <- hclust(as.hclust(cor_dist), method = "ward")
 sub_grp_2 <- cutree(hc, k = 2)
 sub_grp_4 <- cutree(hc, k = 4)
 

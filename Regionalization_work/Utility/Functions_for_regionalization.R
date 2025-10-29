@@ -47,7 +47,6 @@ make_silhouette_and_wss_pot <- function(distance, FUNcluster = NULL, k.max = 10,
         clusters = as.factor(1:k.max), y = v, z = w,
         stringsAsFactors = TRUE
     )
-    ylab <- "Average silhouette width"
     p_wss <- ggpubr::ggline(df,
         x = "clusters", y = "z", group = 1, color = linecolor, ylab = "Total Within Sum of Square", xlab = "Number of clusters k",
         main = "Optimal number of clusters"
@@ -55,7 +54,7 @@ make_silhouette_and_wss_pot <- function(distance, FUNcluster = NULL, k.max = 10,
     p_silhouette <- ggpubr::ggline(df,
         x = "clusters", y = "y", group = 1, color = linecolor, ylab = "Average silhouette width", xlab = "Number of clusters k",
         main = "Optimal number of clusters"
-    ) + geom_vline(
+    ) + ggplot2::geom_vline(
         xintercept = which.max(v), linetype = 2,
         color = linecolor
     )
