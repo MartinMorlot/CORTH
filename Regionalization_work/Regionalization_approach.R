@@ -95,18 +95,66 @@ df_with_cluster <- df %>%
     mutate(cluster = sub_grp_4)
 
 # TODO fix fviz_cluster to work with the data as it is
-fviz_cluster(list(data = df, cluster = sub_grp_4))
+# fviz_cluster(list(data = df, cluster = sub_grp_4))
 
-fvoz
+?fviz_cluster
 
+cnames <- colnames(df_with_cluster)
+cluster_col <- cnames[length(cnames)]
+cluster_numbers <- unique(df_with_cluster[, cluster_col])
 
 # TODO make a start table by cluster and station and year
-cnames <- colnames()
-ggplot(df)
+start_columns <- grepl("start", cnames)
+df_start <- df_with_cluster[, start_columns]
+
+end_columns <- grepl("end", cnames)
+df_end <- df_with_cluster[, end_columns]
+
+minima_day_columns <- grepl("minima_day", cnames)
+df_end <- df_with_cluster[, minima_day_columns]
+
+xlab <- "Year"
+
+png("Regionalization_work/Plots/All_start_days_year.png", res = 300, height = 1800, width = 2700)
+# plot_all_starts by line:
+min_start <- min(df_start, na.rm = T)
+max_start <- max(df_start, na.rm = T)
+for (i in seq_len(nrow(df_with_cluster))) {
+    if (i == 1) {
+        plot(year_to_analyze, df_start[i, ], type = "o", ylab = "Start day (Doy)", xlab = xlab, ylim = c(min_start, max_start))
+    } else {
+        lines(year_to_analyze, df_start[i, ], type = "o")
+    }
+}
+dev.off()
+
+png("Regionalization_work/Plots/All_end_days_year.png", res = 300, height = 1800, width = 2700)
+# plot_all_starts by line:
+min_end <- min(df_end, na.rm = T)
+max_end <- max(df_end, na.rm = T)
+for (i in seq_len(nrow(df_with_cluster))) {
+    if (i == 1) {
+        plot(year_to_analyze, df_end[i, ], type = "o", ylab = "End day (Doy)", xlab = xlab, ylim = c(min_end, max_end))
+    } else {
+        lines(year_to_analyze, df_end[i, ], type = "o")
+    }
+}
+dev.off()
+
+png("Regionalization_work/Plots/ALl_minima_days_year.png", res = 300, height = 1800, width = 2700)
+# plot_all_starts by line:
+min_minima <- min(df_minima, na.rm = T)
+max_minima <- max(df_minima, na.rm = T)
+for (i in seq_len(nrow(df_with_cluster))) {
+    if (i == 1) {
+        plot(year_to_analyze, df_minima[i, ], type = "o", ylab = "Minima day (Doy)", xlab = xlab, ylim = c(min_minima, max_minima))
+    } else {
+        lines(year_to_analyze, df_minima[i, ], type = "o")
+    }
+}
+dev.off()
 
 # TODO make an end table by cluster and station and year
-# spaghetti par groupement de 4
-# start
 
 # TODO make an end table by cluster and station and year
 # date maxima
