@@ -263,5 +263,26 @@ need_to_be_reworked <- function(
             repel = repel
         )
     }
-    p
+}
+
+
+plot_cluster <- function(data, word, cluster_number, year_to_analyze, location_to_write) {
+    min_start <- min(data, na.rm = T)
+    max_start <- max(data, na.rm = T)
+    ylim <- c(min_start, max_start)
+    ylab <- paste(word, "occurence day (DOY)")
+    xlab <- "Year"
+    main <- paste(word, "day per year, cluster number:", cluster_number)
+    file_name <- paste0(location_to_write, "/", word, "_", cluster_number, ".png")
+    colors <- viridis::viridis(nrow(data))
+    png(file_name, res = 300, height = 1800, width = 2700)
+    for (i in seq(nrow(data))) {
+        print(i)
+        if (i == 1) {
+            plot(year_to_analyze, data[i, ], type = "o", ylab = ylab, xlab = xlab, ylim = ylim, col = colors[i], main = main)
+        } else {
+            lines(year_to_analyze, data[i, ], type = "o", col = colors[i])
+        }
+    }
+    dev.off()
 }

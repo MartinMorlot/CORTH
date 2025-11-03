@@ -103,7 +103,7 @@ cnames <- colnames(df_with_cluster)
 cluster_col <- cnames[length(cnames)]
 cluster_numbers <- unique(df_with_cluster[, cluster_col])
 
-# TODO make a start table by cluster and station and year
+# make dataframe with starts and end
 start_columns <- grepl("start", cnames)
 df_start <- df_with_cluster[, start_columns]
 
@@ -111,7 +111,7 @@ end_columns <- grepl("end", cnames)
 df_end <- df_with_cluster[, end_columns]
 
 minima_day_columns <- grepl("minima_day", cnames)
-df_end <- df_with_cluster[, minima_day_columns]
+df_minima <- df_with_cluster[, minima_day_columns]
 
 xlab <- "Year"
 
@@ -154,10 +154,43 @@ for (i in seq_len(nrow(df_with_cluster))) {
 }
 dev.off()
 
-# TODO make an end table by cluster and station and year
+cluster_col_data <- df_with_cluster[, cluster_col]
 
-# TODO make an end table by cluster and station and year
-# date maxima
+# make an start table by cluster and station and year
+start_data_cluster <- cbind(df_start, cluster_col_data)
+write.csv(start_data_cluster, "/home/mmorlot/dev-work/CORTH/Regionalization_work/Results/Per_cluster/start_data_cluster.csv")
 
-# TODO make a geopackage with the clusters
-# carto
+# make an end table by cluster and station and year
+end_data_cluster <- cbind(df_end, cluster_col_data)
+write.csv(end_data_cluster, "/home/mmorlot/dev-work/CORTH/Regionalization_work/Results/Per_cluster/end_data_cluster.csv")
+
+# make an minima table by cluster and station and year
+minima_data_cluster <- cbind(df_minima, cluster_col_data)
+write.csv(minima_data_cluster, "/home/mmorlot/dev-work/CORTH/Regionalization_work/Results/Per_cluster/minima_data_cluster.csv")
+
+
+for (cluster_number in seq_along(cluster_numbers)) {
+    print(cluster_number)
+    row_sel <- which(cluster_col_data == cluster_number)
+
+    select_start_cluster <- df_start[row_sel, ]
+    plot_cluster(
+        select_start_cluster, "start", cluster_number, year_to_analyze,
+        "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/Per_cluster/"
+    )
+
+    select_end_cluster <- df_end[row_sel, ]
+    plot_cluster(
+        select_end_cluster, "end", cluster_number, year_to_analyze,
+        "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/Per_cluster/"
+    )
+
+    select_minima_cluster <- df_minima[row_sel, ]
+    plot_cluster(
+        select_minima_cluster, "minima", cluster_number, year_to_analyze,
+        "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/Per_cluster/"
+    )
+}
+
+
+# make a geopackage with the clusters
