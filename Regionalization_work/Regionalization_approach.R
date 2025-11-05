@@ -192,5 +192,4 @@ for (cluster_number in seq_along(cluster_numbers)) {
     )
 }
 
-
 # make a geopackage with the clusters
