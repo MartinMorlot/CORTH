@@ -286,3 +286,27 @@ plot_cluster <- function(data, word, cluster_number, year_to_analyze, location_t
     }
     dev.off()
 }
+
+distance_calc_clustering_method <- function(distance, location_to_write = NA) {
+    distance
+
+    m <- c("average", "single", "complete", "ward", "weighted", "gaverage")
+    names(m) <- c("average", "single", "complete", "ward", "weighted", "gaverage")
+
+    # function to compute coefficient
+    ac <- function(x) {
+        agnes(distance, method = x)$ac
+    }
+
+    results_clust_type <- map_dbl(m, ac)
+
+    d_r <- diana(distance)
+
+    results_clust_type["diana"] <- d_r$dc
+
+    if (!is.na(location_to_write)) {
+        write.csv(results_clust_type, location_to_write)
+    }
+
+    return(results_clust_type)
+}
