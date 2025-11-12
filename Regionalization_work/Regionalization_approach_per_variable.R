@@ -17,7 +17,15 @@ year_to_analyze <- as.character("1986":"2025")
 full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable) {
     data_cluster <- read.csv(file_to_analyze)
     row.names(data_cluster) <- data_cluster$X
-    df <- data_cluster[, -c(1, ncol(data_cluster))]
+    df <- data_cluster[, -c(1)]
+
+    if (variable != "mixed") {
+        df <- df[, -c(ncol(df))]
+    }
+
+    NonNAs_per_row <- rowSums(!is.na(df))
+    row_to_rm <- which(NonNAs_per_row < (20 / 100 * length(year_to_analyze)))
+    df <- df[-row_to_rm, ]
 
     dir.create(where_to_plot, recursive = T)
 
@@ -35,9 +43,17 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable) {
 
     print(sorted_clustering[1:3])
 
-    best_3 <- names(sorted_clustering)[1:3]
+    best_sel <- names(sorted_clustering)[1:3]
 
-    for (name in best_3) {
+    # Todo make the loop below for diana
+    if (any(best_sel == "diana")) {
+        rm_di <- which(best_sel == "diana")
+        best_sel <- best_sel[-rm_di]
+    }
+    # ToDO to be removed up from here
+
+
+    for (name in best_sel) {
         dir.create(paste0(where_to_plot, name), recursive = T)
 
         plots <- make_silhouette_and_wss_pot(cor_dist, hcut, 10, hc_func = "agnes", hc_method = name)
@@ -79,18 +95,31 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable) {
 
             cluster_col_data <- df_with_cluster[, cluster_col]
 
-
             for (cluster_number in seq_along(cluster_numbers)) {
                 row_sel <- which(cluster_col_data == cluster_number)
-
-                select_start_cluster <- df[row_sel, ]
-                plot_cluster(
-                    select_start_cluster, variable, cluster_number, year_to_analyze,
-                    nb_plot_loc
-                )
+                select_cluster <- df[row_sel, ]
+                if (variable == "mixed") {
+                    sub_variables <- c("start", "end", "minima")
+                    for (sub_variable in sub_variables) {
+                        cnames_sel <- colnames(select_cluster)
+                        cnames_to_keep <- grepv(sub_variable, cnames_sel)
+                        print(cnames_to_keep)
+                        sel_variable_cluster <- select_cluster[, cnames_to_keep]
+                        plot_cluster(
+                            sel_variable_cluster, sub_variable, cluster_number, year_to_analyze,
+                            nb_plot_loc
+                        )
+                    }
+                } else {
+                    plot_cluster(
+                        select_cluster, variable, cluster_number, year_to_analyze,
+                        nb_plot_loc
+                    )
+                }
             }
         }
     }
+    return("Everything ran correctly")
 }
 
 file_start <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Results/Per_cluster/start_data_cluster.csv"
@@ -102,13 +131,17 @@ end_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/End/"
 file_minima <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Results/Per_cluster/minima_data_cluster.csv"
 minima_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/Minima/"
 
+file_mixed <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Kept_data.csv"
+mixed_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/All_variables/"
 
+variables_to_iterate <- c("start", "end", "minima", "mixed")
 
-variables_to_iterate <- c("start", "end", "minima")
+variable <- "mixed"
 
 for (variable in variables_to_iterate) {
     print(variable)
     file_loc <- get(paste0("file_", variable))
     plot_loc <- get(paste0(variable, "_plot_loc"))
-    full_cluster_analysis(file_loc, plot_loc, variable)
+    variable_result <- full_cluster_analysis(file_loc, plot_loc, variable)
+    print(variable_result)
 }
