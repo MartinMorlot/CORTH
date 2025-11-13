@@ -103,7 +103,6 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable) {
                     for (sub_variable in sub_variables) {
                         cnames_sel <- colnames(select_cluster)
                         cnames_to_keep <- grepv(sub_variable, cnames_sel)
-                        print(cnames_to_keep)
                         sel_variable_cluster <- select_cluster[, cnames_to_keep]
                         plot_cluster(
                             sel_variable_cluster, sub_variable, cluster_number, year_to_analyze,
@@ -136,12 +135,9 @@ mixed_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/All_v
 
 variables_to_iterate <- c("start", "end", "minima", "mixed")
 
-variable <- "mixed"
-
 for (variable in variables_to_iterate) {
     print(variable)
     file_loc <- get(paste0("file_", variable))
     plot_loc <- get(paste0(variable, "_plot_loc"))
     variable_result <- full_cluster_analysis(file_loc, plot_loc, variable)
-    print(variable_result)
 }
