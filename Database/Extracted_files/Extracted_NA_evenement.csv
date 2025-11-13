@@ -1,0 +1,415 @@
+numero,nosta,datedeb,datefin,nature,detail,comment,datemaj,dateenregistrement,datecreation
+0,0,"01/01/47 00:00:00","09/07/88 00:00:00","5","50","mise en service de la station amont rive gauche",,"01/17/13 11:12:00","08/08/12 16:05:00"
+1,0,"01/01/53 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 10:45:00","01/17/13 10:45:00"
+2,0,"11/17/88 00:00:00",,"3","30","nouvelle station avec nouvelle échelle mise en place en amont rive droite
+nouveau zero d'échelle",,"01/17/13 11:12:00","01/17/13 10:46:00"
+3,0,"01/01/47 00:00:00","01/01/00 00:00:00","5","50","exploitation station par DIREN centre",,"01/17/13 10:46:00","01/17/13 10:46:00"
+4,0,"01/01/00 00:00:00",,"5","50","exploitation station DIREN Limousin",,"01/17/13 10:47:00","01/17/13 10:47:00"
+5,0,"11/19/91 00:00:00",,"3","32","changement mouvement d'horlogerie",,"01/17/13 11:13:00","01/17/13 11:13:00"
+6,0,"02/02/12 00:00:00","02/15/12 00:00:00","1","17","gel du ours d'eau; données débit estimées",,"02/11/13 10:18:00","02/11/13 10:18:00"
+7,1,"05/17/11 00:00:00",,"2","20","Nouvelle échelle mise en place en rive gauche dont le zéro est calé par rapport au zéro de l'ancienne échelle rive droite",,"10/12/11 09:16:00","10/12/11 09:16:00"
+8,1,"06/21/94 00:00:00",,"5","50","creation station avec échelle de 2m
+talonnage de la cote ",,"01/17/13 11:14:00","01/17/13 10:58:00"
+9,1,"06/21/94 00:00:00",,"3","30","mise en place LPN8",,"01/17/13 11:14:00","01/17/13 10:58:00"
+10,1,"08/30/95 00:00:00",,"3","32","descente de la prise de pression de 0.10 cm",,"01/17/13 11:14:00","01/17/13 11:14:00"
+11,1,"02/03/12 00:00:00","02/14/12 00:00:00","1","17","gel du cours d'eau; données débit estimées",,"02/11/13 10:01:00","02/11/13 10:01:00"
+12,1,"12/18/12 00:00:00",,"2","21",,,"12/13/13 15:21:00","12/13/13 15:21:00"
+13,2,"11/29/01 00:00:00",,"5","50","mise en place station hydro en rempalcement de la station de Masléon (1966 au 29/11/2001)",,"01/17/13 10:49:00","01/17/13 10:49:00"
+14,2,"12/05/12 11:00:00",,"5","50","mivellement échelle : 305.845",,"01/25/13 17:25:00","01/25/13 17:25:00"
+15,2,"02/03/12 00:00:00","02/16/12 00:00:00","1","17","gel du cours d'eau. données débit estimées",,"02/11/13 10:45:00","02/11/13 10:45:00"
+16,2,"06/11/10 00:00:00",,"2","21",,,"12/12/13 16:39:00","12/12/13 16:39:00"
+17,2,"12/17/11 00:00:00",,"2","21",,,"12/12/13 16:39:00","12/12/13 16:39:00"
+18,2,"04/29/12 00:00:00",,"2","21",,,"12/12/13 16:39:00","12/12/13 16:39:00"
+19,3,"06/26/90 00:00:00",,"5","50","mise en service de la station avec échelle de 0 à 3m
+creation de la station en remplacement de la station du Moulin de l'Age (1967 à 13/06/1990) suite à la création d'un micro centrale 10 m en amont de la station",,"01/17/13 13:16:00","08/08/12 16:12:00"
+20,3,"06/27/90 00:00:00",,"3","30","mise en place OTT mensuel 1/5è",,"01/17/13 13:16:00","01/17/13 13:16:00"
+21,3,"01/12/95 00:00:00",,"3","30","mise en place newlog",,"01/17/13 13:17:00","01/17/13 13:17:00"
+22,3,"02/21/95 00:00:00",,"5","50","pose de la ligne téléphonique",,"01/17/13 13:17:00","01/17/13 13:17:00"
+23,3,"12/05/12 09:45:00",,"5","50","nivellement échelle : 395.814",,"01/25/13 17:27:00","01/25/13 17:27:00"
+24,3,"02/02/12 00:00:00","02/13/12 00:00:00","1","17","gel du cours d'eau",,"04/09/13 15:53:00","04/09/13 15:53:00"
+25,3,"02/02/13 00:00:00",,"2","21","détarage suite à la crue de février 2013",,"12/11/13 15:38:00","12/11/13 15:38:00"
+26,4,"01/01/42 00:00:00",,"5","50","creation station",,"01/17/13 10:54:00","01/17/13 10:54:00"
+27,4,"01/01/48 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 10:54:00","01/17/13 10:54:00"
+28,4,"09/18/96 00:00:00",,"5","50","descente de la station de 15 cm sans changement de cote à l'échelle",,"01/17/13 10:55:00","01/17/13 10:55:00"
+29,4,"08/31/88 00:00:00",,"5","50","refection totale de la passerelle d'acces",,"01/17/13 11:36:00","01/17/13 11:36:00"
+30,4,"10/27/88 00:00:00",,"5","50","marquage pont",,"01/17/13 11:37:00","01/17/13 11:37:00"
+31,4,"05/24/89 00:00:00",,"5","50","rempalcement troncon d'échelle de 0 à 1m",,"01/17/13 11:37:00","01/17/13 11:37:00"
+32,4,"06/13/89 00:00:00",,"5","50","remplacement de troncon d'échelle de 1 à 4m",,"01/17/13 11:37:00","01/17/13 11:37:00"
+33,4,"02/01/96 00:00:00",,"3","30","pose d'un newlog",,"01/17/13 11:37:00","01/17/13 11:37:00"
+34,4,"03/08/96 00:00:00",,"3","30","mise en marche newlog",,"01/17/13 11:38:00","01/17/13 11:38:00"
+35,10,"06/25/10 00:00:00","06/30/10 00:00:00","4","42","reconstitution des débits et des hauteurs à partir de Forgefer -4h",,"10/13/11 09:51:00","10/13/11 09:51:00"
+36,10,"12/05/10 00:00:00","12/09/10 00:00:00","1","12","pas de reconstitution puisqu'il s'agit de la perte d'une pointe de crue (dans hydro QMJ inconnus jours et QMM inconnus forts)",,"10/13/11 09:56:00","10/13/11 09:56:00"
+37,10,"02/03/12 00:00:00","02/23/12 00:00:00","1","17","reconstitution des débits suite au gel du cours d'eau",,"02/26/13 14:00:00","02/06/13 13:51:00"
+38,10,"12/07/12 05:00:00","12/08/12 22:30:00","4","42","reconstition a partir de Pontarion",,"02/06/13 13:52:00","02/06/13 13:52:00"
+39,11,"02/02/12 00:00:00","02/14/12 00:00:00","1","17","gel du cours d'eau",,"01/22/13 16:12:00","01/22/13 16:12:00"
+40,12,"01/01/60 00:00:00",,"5","50","creation station",,"01/17/13 10:56:00","01/17/13 10:56:00"
+41,12,"01/01/60 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 10:56:00","01/17/13 10:56:00"
+42,12,"06/28/88 00:00:00",,"5","50","reparation échelle et changement planche",,"01/17/13 11:35:00","01/17/13 11:35:00"
+43,12,"10/27/88 00:00:00",,"5","50","marquage pont",,"01/17/13 11:35:00","01/17/13 11:35:00"
+44,12,"01/13/95 00:00:00",,"3","30","mise en place d'un newlog",,"01/17/13 11:35:00","01/17/13 11:35:00"
+45,12,"02/14/95 00:00:00",,"3","32","pose d'une gaine pour le téléphone",,"01/17/13 11:36:00","01/17/13 11:36:00"
+46,12,"02/21/95 00:00:00",,"3","32","pose de la ligne téléphonique",,"01/17/13 11:36:00","01/17/13 11:36:00"
+47,12,"02/02/12 00:00:00","02/15/12 00:00:00","1","17","gel du cours d'eau",,"04/24/13 13:48:00","04/24/13 13:48:00"
+48,12,"08/20/12 00:00:00",,"2","26","changement de CT suite à la création d'un seuil pour permettre la baignade
+suppression des donnéesde débits instantannés pour limiter l'impact du changement de CT",,"05/03/13 10:57:00","05/03/13 10:57:00"
+49,14,"05/21/90 00:00:00",,"5","50","déplacement de la station de Bellac hors du bourg (20/07/1965 au 21/05/1990)
+pose de 4m d'échelle",,"01/17/13 13:19:00","08/08/12 13:00:00"
+50,14,"04/20/94 00:00:00",,"5","50","mise en place d'une échelle auxilliaire de 2m à 30m en aval du pont",,"01/17/13 13:20:00","01/17/13 13:20:00"
+51,14,"02/02/12 00:00:00","02/15/12 00:00:00","1","17","gel du cours d'eau",,"05/03/13 14:25:00","05/03/13 14:25:00"
+52,15,"09/01/94 12:00:00",,"5","50","mise en service de la station",,"08/08/12 15:43:00","08/08/12 15:43:00"
+53,25,"05/07/14 00:00:00",,"2","25","jaugeages effectués à la passerelle 100 m en aval de la station --> permet de prendre en compte l'apport d'un petit ruisseau estimé à 30 % du débit total.
+rattachement du jaugeage à l'échelle de la station.
+--> effectuer des jaugeages comparatifs (avant et après la confluence)  pour déterminer l'apport de ce ruisseau, et selon les résultats obtenus, mettre à jour les données antérieures en prenant en compte cet apport (Q jaugé +   % estimé ruisseau).",,"05/14/14 10:53:00","05/14/14 10:49:00"
+54,30,"01/10/12 00:00:00",,"5","50","repris les jaugeages de crues n° 14, 15, 16, 17 et 28. Renseigné hauteur aveugle, harmonisé coef de fond à 0.9, de rive début à 0.8 et rive fin à 0.95, profondeur constante (seuil béton) vers la rive de fin (courant plus fort en rive  G), k=0.8, largeur au miroir de 2 fois 5 m.",,"01/24/12 15:12:00","01/10/12 14:33:00"
+55,30,"02/17/12 00:00:00",,"2","26","critique puis remplacement de la courbe de tarage depuis  la création en mettant en douteux les jaugeages SATESE et ceux aux commentaires ""douteux"" (J5;6;7;8;13)",,"02/17/12 15:27:00","02/17/12 15:27:00"
+56,30,"04/01/14 00:00:00",,"5","50","transfert station DREAL Pays de Loire à DREAL PC/ SPC VCA ",,"04/09/14 10:00:00","04/09/14 10:00:00"
+57,31,"09/01/12 00:00:00",,"2","23","entretien des berges assuré (amont et aval) par agriculteur riverain en août 2012.",,"05/27/13 16:59:00","05/27/13 16:59:00"
+58,31,"04/01/14 00:00:00",,"5","50","transfert station DREAL Pays de Loire à DREAL PC/ SPC VCA ",,"04/09/14 09:59:00","04/09/14 09:58:00"
+59,32,"01/09/09 00:00:00",,"2","26","Réajustement des courbes de tarage.
+Le calage des hautes eaux se fait sur l'estimation de la crue de 1960 à 350 m3/s (restitution aval barrage) pour une hauteur cotée sur un croquis du pont estimée à 4m à l'échelle.",,"01/09/09 14:25:00","01/09/09 14:25:00"
+60,32,"04/01/14 00:00:00",,"5","50","transfert station DREAL Pays de Loire à DREAL PC/ SPC VCA ",,"04/09/14 10:01:00","04/09/14 10:01:00"
+61,32,"04/10/14 00:00:00",,"3","30","Modernisation de la station vers une CPL+",,"04/10/14 16:43:00","04/10/14 16:42:00"
+62,37,"06/10/11 00:00:00",,"3","30","changment de station / changement de sonde",,"05/19/14 11:52:00","05/19/14 11:52:00"
+63,37,"01/01/07 00:00:00","12/31/08 00:00:00","5","50","jaugeages 2007-2008 réalisés par Hydro invest",,"05/19/14 11:55:00","05/19/14 11:55:00"
+64,40,"01/01/15 00:00:00",,"5","50","station passée en TU en enregistrement des données et en envoi des données sur la banque hydro",,"01/14/15 11:53:00","01/14/15 11:53:00"
+65,60,"09/18/12 12:00:00",,"2","24","réfection du seuil ",,"10/15/15 10:58:00","10/15/15 10:58:00"
+66,62,"01/01/19 00:00:00",,"5","50","creation station",,"01/17/13 11:05:00","01/17/13 11:05:00"
+67,62,"03/27/29 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 11:05:00","01/17/13 11:05:00"
+68,62,"09/20/95 00:00:00",,"3","32","refection complete de la station avec EDF",,"01/17/13 11:06:00","01/17/13 11:06:00"
+69,62,"09/03/75 00:00:00",,"3","30","mise en place mouvement mensuel",,"01/17/13 13:20:00","01/17/13 13:20:00"
+70,62,"06/28/88 00:00:00",,"5","50","changement échelle 4m",,"01/17/13 13:21:00","01/17/13 13:21:00"
+71,62,"01/03/89 00:00:00",,"5","50","marquage du pont",,"01/17/13 13:21:00","01/17/13 13:21:00"
+72,62,"09/20/95 00:00:00",,"3","31","pose d'un PLN",,"01/17/13 13:21:00","01/17/13 13:21:00"
+73,62,"02/03/12 00:00:00","02/13/12 00:00:00","1","17","gel du cours d'eau; données débits estimées",,"02/11/13 11:11:00","02/11/13 11:11:00"
+74,63,"01/01/58 00:00:00",,"5","50","creation station",,"01/17/13 11:07:00","01/17/13 11:07:00"
+75,63,"10/06/64 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 11:07:00","01/17/13 11:07:00"
+76,63,"10/16/90 00:00:00",,"3","32","refection complete de la station + mise en place échelle de 0 à 2m",,"01/17/13 13:23:00","01/17/13 11:08:00"
+77,63,"06/28/88 00:00:00",,"5","50","changement échelle 2m et planche",,"01/17/13 13:23:00","01/17/13 13:23:00"
+78,63,"01/24/01 00:00:00",,"3","30","mise en place et en marche d'un Cyr2 avec sonde 4m",,"01/17/13 13:24:00","01/17/13 13:24:00"
+79,63,"09/25/78 00:00:00","10/16/78 00:00:00","5","50","pont en réparation",,"01/17/13 13:24:00","01/17/13 13:24:00"
+80,63,"03/09/78 00:00:00","06/23/78 00:00:00","5","50","mise en place échelle 0 à 1m",,"01/17/13 13:25:00","01/17/13 13:25:00"
+81,63,"07/13/78 00:00:00",,"5","50","nouvelle mise en place d'un troncon de 0 à 1m suite à la disparition du précédent",,"01/17/13 13:26:00","01/17/13 13:26:00"
+82,63,"02/02/12 00:00:00","02/15/12 00:00:00","1","17","gel du cours d'eau",,"04/18/13 10:21:00","04/18/13 10:21:00"
+83,64,"01/01/23 00:00:00",,"5","50","creation station",,"01/17/13 10:55:00","01/17/13 10:55:00"
+84,64,"01/01/51 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 10:56:00","01/17/13 10:56:00"
+85,64,"10/27/88 00:00:00",,"5","50","marquage pont",,"01/17/13 11:31:00","01/17/13 11:31:00"
+86,64,"05/15/86 00:00:00",,"5","50","pose passerelle d'accès",,"01/17/13 11:31:00","01/17/13 11:31:00"
+87,64,"02/03/87 00:00:00",,"5","50","pose échelle de lecture",,"01/17/13 11:31:00","01/17/13 11:31:00"
+88,64,"07/11/90 00:00:00",,"3","30","mise en place hydrologic SA",,"01/17/13 11:32:00","01/17/13 11:32:00"
+89,64,"07/28/94 00:00:00",,"3","32","mise en place panneau solaire",,"01/17/13 11:32:00","01/17/13 11:32:00"
+90,64,"01/06/95 00:00:00",,"3","32","mise en place d'un parafoudre",,"01/17/13 11:33:00","01/17/13 11:33:00"
+91,64,"12/15/12 00:00:00",,"2","21","crue de décembre 2012",,"04/03/13 14:04:00","04/03/13 14:04:00"
+92,64,"08/05/13 00:00:00",,"5","50","vidange du barrage du pas de la mule pour travaux",,"08/21/13 10:20:00","08/21/13 10:20:00"
+93,65,"04/24/68 00:00:00",,"5","50","mesure du zéro d'échelle (209.95m NGF)",,"11/16/12 15:22:00","11/16/12 11:57:00"
+94,65,"01/01/66 00:00:00",,"5","50","mise en service station",,"11/16/12 15:22:00","11/16/12 15:20:00"
+95,65,"01/01/66 00:00:00","09/15/00 00:00:00","5","50","Cette station a été gérée par le service de bassin Loire-Bretagne jusqu'au 15.09.2000
+",,"11/16/12 15:21:00","11/16/12 15:21:00"
+96,65,"01/01/09 00:00:00",,"5","50","Passage à l'heure TU ",,"01/17/13 15:21:00","11/16/12 15:21:00"
+97,65,"01/01/66 00:00:00",,"5","50","creation station",,"01/17/13 10:51:00","01/17/13 10:51:00"
+98,65,"10/27/88 00:00:00",,"5","50","marquage du pont",,"01/17/13 11:24:00","01/17/13 11:24:00"
+99,65,"06/13/89 00:00:00",,"5","50","changement d'échelle de 0 à 1m",,"01/17/13 11:25:00","01/17/13 11:25:00"
+100,65,"02/03/12 00:00:00","02/15/12 00:00:00","1","17","gel du cours d'eau",,"01/17/13 15:21:00","01/17/13 15:21:00"
+101,66,"02/02/12 00:00:00","02/14/12 00:00:00","1","17","gel du cours d'eau",,"01/17/13 15:10:00","01/17/13 15:10:00"
+102,67,"01/01/71 00:00:00",,"5","50","creation de la station",,"01/17/13 10:50:00","01/17/13 10:50:00"
+103,67,"01/01/71 00:00:00",,"3","30","mise en place d'un limnigraphe",,"01/17/13 10:50:00","01/17/13 10:50:00"
+104,67,"10/03/88 00:00:00","10/06/88 00:00:00","5","50","descente bas de gain de 0.4m et pose de 3.5 m d'échelle",,"01/17/13 11:26:00","01/17/13 11:26:00"
+105,67,"10/27/88 00:00:00",,"5","50","marquage du pont",,"01/17/13 11:26:00","01/17/13 11:26:00"
+106,67,"09/07/01 00:00:00","10/02/01 00:00:00","1","10",,,"09/23/13 11:13:00","09/23/13 11:13:00"
+107,67,"01/01/73 00:00:00",,"5","50","mise en place d'une station hydrométrie",,"11/22/12 14:48:00","11/22/12 14:48:00"
+108,67,"01/01/09 00:00:00",,"5","50","passage à l'heure TU",,"11/22/12 14:48:00","11/22/12 14:48:00"
+109,67,"01/01/73 00:00:00","09/15/00 00:00:00","5","50","station gérée par le service de bassin Loire Bretagne",,"11/22/12 14:49:00","11/22/12 14:49:00"
+110,67,"09/15/00 00:00:00",,"5","50","station gérée par la DIREN Limousin",,"11/22/12 14:49:00","11/22/12 14:49:00"
+111,67,"01/01/73 00:00:00",,"5","50","nivellement échelle : 183.4 IGN 69",,"11/22/12 14:50:00","11/22/12 14:50:00"
+112,67,"03/29/97 00:00:00",,"2","26",,,"11/22/12 14:54:00","11/22/12 14:54:00"
+113,67,"03/10/99 00:00:00",,"2","26",,,"11/22/12 14:54:00","11/22/12 14:54:00"
+114,67,"01/28/97 00:00:00",,"2","26",,,"11/22/12 14:54:00","11/22/12 14:54:00"
+115,67,"05/10/96 00:00:00",,"2","26",,,"11/22/12 14:54:00","11/22/12 14:54:00"
+116,67,"01/11/96 00:00:00",,"2","26",,,"11/22/12 14:55:00","11/22/12 14:55:00"
+117,67,"05/19/95 00:00:00",,"2","26",,,"11/22/12 14:55:00","11/22/12 14:55:00"
+118,67,"01/25/95 00:00:00",,"2","26",,,"11/22/12 14:55:00","11/22/12 14:55:00"
+119,68,"02/02/12 00:00:00","02/22/12 00:00:00","1","17","gel des cours d'eau",,"04/19/13 13:04:00","04/19/13 13:04:00"
+128,70,"10/11/13 00:00:00",,"5","50","création de la station Etagnac aval suite à la construction d'une centrale hydroélectrique
+installation et aménagement fournis par M. Coger gestionnaire de la micro-centrale
+",,"10/18/13 11:28:00","10/18/13 11:28:00"
+129,71,"12/17/15 10:00:00","12/17/15 13:00:00","5","50","Enlèvement souche située à 15 m en aval de la section
+Dégagement d'embâcles bloqués par le seuil situé à environ 80 m en aval","11/28/16 15:00:00","11/28/16 15:01:00","11/28/16 15:00:00"
+130,82,"10/25/11 00:00:00",,"5","50","nivellement zéro échelle : 496.93",,"10/26/11 13:29:00","10/26/11 13:29:00"
+131,82,"01/01/20 00:00:00",,"5","50","creation station",,"01/17/13 11:00:00","01/17/13 11:00:00"
+132,82,"01/01/61 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 11:00:00","01/17/13 11:00:00"
+133,82,"09/23/76 00:00:00",,"2","25","changement d'emplacement de la station 40m en amont avec la meme cote à l'echelle",,"01/17/13 11:20:00","01/17/13 11:01:00"
+134,82,"09/01/82 00:00:00",,"5","50","importants travaux de curage dans le lit de la rivière",,"01/17/13 11:01:00","01/17/13 11:01:00"
+135,82,"09/17/84 00:00:00",,"3","30","refection compléte de la station
+mise en place échelle de basses eaux",,"01/17/13 11:19:00","01/17/13 11:02:00"
+136,82,"07/29/81 00:00:00",,"3","30","mise en place 1/10è",,"01/17/13 11:17:00","01/17/13 11:17:00"
+137,82,"08/31/84 00:00:00","09/26/84 00:00:00","5","50","changement d'échelle",,"01/17/13 11:19:00","01/17/13 11:19:00"
+138,82,"01/03/89 00:00:00",,"5","50","marquage du pont",,"01/17/13 11:20:00","01/17/13 11:20:00"
+139,82,"04/04/01 00:00:00",,"3","31","mise ne place et en marche d'un cyr 2 donde 4m",,"01/17/13 11:21:00","01/17/13 11:21:00"
+140,82,"02/03/12 00:00:00","02/14/12 00:00:00","1","17","gel du cours d'eau
+données estimées",,"03/11/13 12:46:00","03/11/13 12:46:00"
+141,83,"10/25/11 00:00:00",,"5","50","nivellement zéro échelle : 440.92",,"10/26/11 13:30:00","10/26/11 13:30:00"
+142,83,"01/01/19 00:00:00",,"3","32","creation de la station",,"01/17/13 10:53:00","01/17/13 10:53:00"
+143,83,"01/03/89 00:00:00",,"5","50","marquage du pont",,"01/17/13 11:22:00","01/17/13 11:22:00"
+144,83,"04/04/01 00:00:00",,"3","31","mise en place et en marche d'un Cyr2 avec sonde de 4m",,"01/17/13 11:22:00","01/17/13 11:22:00"
+145,83,"02/02/12 00:00:00","02/24/12 00:00:00","1","17","gel du cours d'eau",,"04/24/13 11:48:00","04/24/13 11:48:00"
+146,83,"04/30/12 14:30:00",,"2","21",,,"04/24/13 13:47:00","04/24/13 13:47:00"
+147,84,"02/24/93 00:00:00",,"5","50","creation station",,"01/17/13 10:52:00","01/17/13 10:52:00"
+148,84,"02/24/93 00:00:00",,"3","30","mise en place d'un LPN + panneau solaire",,"01/17/13 11:23:00","01/17/13 10:52:00"
+149,84,"08/01/95 00:00:00",,"2","26","changement du niveau du plan d'eau à cause de la réfection de l'écluse en aval de la station",,"01/17/13 10:53:00","01/17/13 10:53:00"
+150,84,"09/14/93 00:00:00","09/16/93 00:00:00","5","50","changement d'échelle de 0 à 3m (madrier 12cm)",,"01/17/13 11:23:00","01/17/13 11:23:00"
+151,84,"03/16/95 00:00:00",,"3","30","installation ligne téléphonie quet prise téléphonique dans la cabine",,"01/17/13 11:24:00","01/17/13 11:24:00"
+152,84,"04/20/95 00:00:00",,"5","50","installation prise de terre",,"01/17/13 11:24:00","01/17/13 11:24:00"
+153,84,"06/12/12 00:00:00","06/13/12 00:00:00","4","40","perte de données reconstituées en QMJ",,"04/03/13 14:19:00","04/03/13 14:19:00"
+154,84,"02/04/12 00:00:00","02/17/12 00:00:00","1","17","gel du cours d'eau",,"04/03/13 14:36:00","04/03/13 14:36:00"
+155,84,"12/27/12 00:00:00",,"2","21","détarage suite à la crue de dec 2012",,"12/11/13 17:30:00","12/11/13 17:30:00"
+156,85,"01/01/24 00:00:00",,"5","50","creation station",,"01/17/13 11:03:00","01/17/13 11:03:00"
+157,85,"01/01/53 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 11:03:00","01/17/13 11:03:00"
+158,85,"08/05/88 00:00:00",,"5","50","remplacement échelle",,"01/17/13 11:30:00","01/17/13 11:30:00"
+159,85,"10/27/88 00:00:00",,"5","50","marquage pont",,"01/17/13 11:30:00","01/17/13 11:30:00"
+160,86,"01/01/24 00:00:00",,"5","50","creation station",,"01/17/13 11:02:00","01/17/13 11:02:00"
+161,86,"10/05/62 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 11:02:00","01/17/13 11:02:00"
+162,86,"10/27/88 00:00:00",,"5","50","marquage pont",,"01/17/13 11:29:00","01/17/13 11:29:00"
+163,86,"06/28/88 00:00:00",,"5","50","changement d'échelle",,"01/17/13 11:29:00","01/17/13 11:29:00"
+164,86,"05/10/95 00:00:00",,"5","50","mise en place de 2m d'échelle",,"01/17/13 11:30:00","01/17/13 11:30:00"
+165,86,"02/02/12 00:00:00","02/22/12 00:00:00","1","17","gel des rivières",,"04/09/13 15:50:00","04/09/13 15:50:00"
+166,87,"12/25/73 00:00:00",,"2","21","Modification en basses eaux.",,,
+167,87,"06/17/76 00:00:00",,"2","24","Constat sur le limni d'une augmentation du niveau de 2cm
+Modification en basses eaux.",,,
+168,87,"06/04/77 00:00:00",,"2","20","Pose d'une échelle provisoire pour la période des travaux de réfection du pont.
+Le ""0"" de l'échelle provisoire est à -0,35m par rapport à celui d'origine.",,,
+169,87,"10/24/77 00:00:00",,"2","20","Fin des travaux de réfection du pont.
+Pose d'une échelle définitive sur la pile centrale du pont. Le ""0"" de l'échelle est à -0,425m par rapport à celui d'origine.",,,
+170,87,"05/02/79 00:00:00",,"2","26","Modification en basses eaux.",,,
+171,87,"05/23/77 00:00:00",,"5","50","Démontage du limnigraphe pour la réfection du pont.",,,
+172,87,"05/23/77 00:00:00","06/03/77 00:00:00","4","43","Les débits ont été calculés d'après les hauteurs lus directement à l'échelle",,,
+173,87,"08/21/77 00:00:00","08/22/77 00:00:00","1","11","Reconstitution des débits par interpolation",,,
+174,87,"09/10/79 00:00:00",,"2","26","Retour sur la courbe antérieur au 1/05/1979",,,
+175,87,"09/13/83 00:00:00",,"2","20","Changement de colonne PVC et déplacement de l'échelle. Elle se trouve fixée maintenant sur la colonne PVC.
+Le ""0"" de l'échelle est à +0,46m par rapport à l'ancien emplacement.
+Série de photos.",,,
+176,87,"03/01/83 00:00:00",,"5","50","Série de photos de la station.",,,
+177,87,"12/17/84 00:00:00",,"2","24","Recalibrage de la section",,,
+178,87,"01/01/88 00:00:00",,"2","26",,,,
+179,87,"02/04/03 00:00:00",,"2","21","Modification en basses eaux.",,,
+180,87,"08/03/04 11:15:00",,"3","32","changement de centrale et modem pour une Alcyr2",,,
+181,87,"09/21/04 00:00:00",,"5","50","Changement du support de l'échelle, remise à la même altitude",,,
+182,87,"08/07/03 12:44:00",,"5","50","changements de piles",,,
+183,87,"07/28/04 14:15:00",,"5","50","réinitialisation car panne centrale",,,
+184,87,"08/03/04 11:15:00",,"5","50","changement centrale et modem
+
+",,,
+185,87,"09/21/04 11:00:00",,"5","50","changement échelle et planche, recalage",,,
+186,87,"10/11/04 13:35:00",,"5","50","changement de piles",,,
+187,87,"12/28/05 11:40:00",,"3","32","pas d'évènement ce jour",,,
+188,87,"12/29/05 14:14:00",,"3","32","pas d'évènement ce jour",,,
+189,87,"09/07/04 00:00:00",,"5","50","PHOTOS",,,
+190,87,"12/06/12 14:45:00",,"5","50","nivellement zéro échelle : 121.444",,"02/07/13 13:12:00","02/07/13 13:12:00"
+191,87,"01/18/00 00:00:00",,"3","32","Changement complet d'équipement neuf - Centrale-Modem-Armoire après une succession de pannes.",,,
+192,87,"04/11/00 00:00:00",,"3","32","Changement de modem - Défaut de télétransmission",,,
+193,87,"06/27/00 00:00:00",,"5","50","Nettoyage préventif de la sonde.",,,
+194,87,"08/21/00 07:45:00","08/24/00 11:25:00","1","13",,,,
+195,87,"05/01/69 12:00:00",,"5","50","Mise en service de la station",,,
+196,87,"12/30/70 00:00:00",,"5","50","1ères données hauteurs rentrées sur la base HYDRO",,,
+197,87,"08/01/73 00:00:00",,"2","24","Pose d'une conduite AEP en aval du pont des Forges, le 31juillet 1973
+Modification des basses eaux.",,,
+198,87,"02/15/90 00:00:00",,"2","21","Modification en basses eaux.",,,
+199,87,"03/20/95 00:00:00",,"2","21","Modification en basses eaux suite aux crues succéssives de l'hiver 94-95",,,
+200,87,"11/21/91 13:00:00",,"3","30","Changement du limnigraphe OTTXX par une centrale d'acquisition télétransmise CR2M avec un capteur USi ",,,
+201,87,"09/26/96 00:00:00",,"5","50","Démontage de la colonne de 300mm et changement du support de l'échelle.
+L'échelle a été remise au même emplacement et à la même cote.",,,
+202,87,"11/09/99 16:00:00","11/24/99 16:00:00","1","11","changement centrale (5274 -> 3300)",,,
+203,87,"07/23/98 14:00:00","08/04/98 12:00:00","1","11",,,,
+204,87,"01/03/97 00:00:00","01/09/97 00:00:00","4","42","Température très basses(-5 à -10°), eau gelée dans le tube.",,,
+205,87,"12/23/96 09:00:00","12/26/96 15:30:00","1","11",,,,
+206,87,"01/03/01 15:00:00",,"5","50","Nettoyage de la sonde en préventif.",,,
+207,87,"05/09/96 00:00:00",,"5","50","nettoyage sonde",,,
+208,87,"03/06/97 00:00:00",,"5","50","nettoyage sonde",,,
+209,87,"04/03/97 00:00:00",,"5","50","nettoyage sonde",,,
+210,87,"02/04/99 00:00:00",,"5","50","nettoyage sonde
+Photos",,,
+211,87,"07/12/99 00:00:00",,"3","31","remplacement de sonde",,,
+212,87,"09/15/99 00:00:00",,"5","50","nettoyage sonde",,,
+213,87,"10/13/99 00:00:00",,"5","50","reset",,,
+214,87,"12/16/99 00:00:00",,"3","32","changement centrale (3300 -> 4481)",,,
+215,87,"07/17/76 00:00:00",,"2","26",,,,
+216,87,"11/24/77 00:00:00",,"2","26",,,,
+217,87,"05/29/01 00:00:00",,"5","50","nettoyage sonde",,,
+218,87,"02/10/99 00:00:00",,"5","50","Photos",,,
+219,87,"01/08/02 00:00:00",,"5","50","Nettoyage de la sonde en préventif",,,
+220,87,"05/30/02 00:00:00",,"5","50","Nettoyage de la sonde",,,
+221,87,"08/27/02 00:00:00",,"5","50","Changement de dispositif PVC (support de la sonde)",,,
+222,87,"05/01/01 16:00:00",,"2","21","Modification en basses et moyennes eaux.",,,
+223,89,"10/01/71 12:00:00",,"5","50","mise en service de la station",,"08/08/12 15:58:00","08/08/12 15:58:00"
+224,89,"02/02/12 00:00:00","02/13/12 00:00:00","1","17","gel du cours d'eau",,"06/17/13 16:17:00","06/17/13 16:17:00"
+225,89,"12/18/11 00:00:00",,"2","21","détarage suite à la crue de dec 2011",,"12/11/13 17:00:00","12/11/13 17:00:00"
+281,92,"01/01/81 00:00:00",,"5","50","station hydrométrique installée en partenariat avec la compagnie minière Dong-Trieu",,"10/15/13 11:21:00","10/15/13 11:21:00"
+322,102,"10/11/79 00:00:00","11/24/92 00:00:00","5","50","creation station",,"01/17/13 11:04:00","01/17/13 11:04:00"
+323,102,"10/10/91 00:00:00",,"2","24","creation d'un seuil de controle par la DTG Brive",,"01/17/13 11:04:00","01/17/13 11:04:00"
+324,102,"11/24/92 00:00:00",,"5","50","mise en place nouvelle station dans la retenue",,"01/17/13 11:04:00","01/17/13 11:04:00"
+325,102,"10/11/79 00:00:00",,"3","30","mise en place d'un limnigraphe",,"01/17/13 11:05:00","01/17/13 11:05:00"
+326,102,"10/27/88 00:00:00",,"5","50","marquagep ont",,"01/17/13 11:33:00","01/17/13 11:33:00"
+327,102,"10/18/89 00:00:00",,"5","50","changement d'échelle de 0 à 2 m",,"01/17/13 11:34:00","01/17/13 11:34:00"
+328,102,"03/28/91 00:00:00",,"3","32","changement mouvement d'horlogerie",,"01/17/13 11:34:00","01/17/13 11:34:00"
+329,102,"09/19/96 00:00:00",,"5","50","changement troncon d'échelle de 1m",,"01/17/13 11:34:00","01/17/13 11:34:00"
+330,102,"03/05/13 00:00:00",,"5","50","travaux sur les vannes du barrage
+niveau du barrage maintenu bas ",,"03/11/13 11:23:00","03/11/13 11:23:00"
+331,105,"05/09/84 00:00:00","05/10/84 00:00:00","5","50","remplacement échelle et planche",,"01/17/13 11:27:00","01/17/13 11:27:00"
+332,105,"03/27/84 00:00:00","03/29/84 00:00:00","5","50","changement échelle",,"01/17/13 11:27:00","01/17/13 11:27:00"
+333,105,"07/07/87 00:00:00",,"5","50","reparation échelle basses eaux",,"01/17/13 11:28:00","01/17/13 11:28:00"
+334,105,"07/11/90 00:00:00",,"3","30","mise en place hydrologic SA",,"01/17/13 11:28:00","01/17/13 11:28:00"
+335,105,"06/24/92 00:00:00",,"3","31","mise en place d'un LPN8 et de la prise de pression",,"01/17/13 11:28:00","01/17/13 11:28:00"
+336,105,"10/25/12 00:00:00",,"2","24","suppression du petit batardeau en RG",,"01/17/13 14:50:00","01/17/13 14:48:00"
+337,105,"09/25/12 00:00:00",,"2","24","suppression du batardeau RG pour en mettre un petit pour realiser les passes à poissons et a canoes",,"01/17/13 14:48:00","01/17/13 14:48:00"
+338,105,"08/15/12 00:00:00",,"2","24","mise en place d'un batardeau RG",,"01/17/13 14:49:00","01/17/13 14:49:00"
+339,105,"07/09/12 00:00:00",,"2","24","mise en place batardeau RD",,"01/17/13 14:49:00","01/17/13 14:49:00"
+340,105,"08/13/12 00:00:00","08/16/12 00:00:00","4","40","reconstitution des QMJ à partir de Verneuil, chaillac et St junien",,"04/18/13 10:22:00","04/18/13 10:21:00"
+341,105,"01/08/14 00:00:00",,"5","50","mise en route centrale hydroélectrique",,"01/28/14 17:21:00","01/28/14 17:21:00"
+342,105,"07/09/12 00:00:00","08/14/12 00:00:00","5","50","travaux de réfection du seuil
+mise en place d'un batardeau en RD 
+début de la démolition : 10/08/2012",,"08/28/12 09:55:00","08/28/12 09:55:00"
+343,105,"08/15/12 00:00:00","09/25/12 00:00:00","5","50","travaux de réfection du seuil
+mise en place d'un batardeau en RG
+batardeau terminé le 17/08/2012",,"01/10/13 14:28:00","08/28/12 09:56:00"
+344,105,"06/27/12 00:00:00","07/08/12 00:00:00","4","40","reconstition des QJ à partir de verneuil chaillac et st junien",,"01/17/13 14:46:00","01/10/13 14:27:00"
+345,105,"09/25/12 00:00:00","10/25/12 00:00:00","5","50","travaux de réfection du seuil
+suppression du batardeau en RG et mise en place d'un nouveau batardeau plus petit en RG pour realiser les passes à poissons et a canoes
+",,"01/10/13 14:29:00","01/10/13 14:29:00"
+346,105,"01/01/68 00:00:00",,"5","50","creation de la station",,"01/17/13 10:49:00","01/17/13 10:49:00"
+347,105,"10/27/88 00:00:00",,"5","50","marquage du pont",,"01/17/13 11:27:00","01/17/13 11:27:00"
+348,117,"12/06/12 00:00:00",,"5","50","nivellement du zéro d'échelle : 430.849
+",,"01/23/13 09:22:00","01/23/13 09:22:00"
+349,122,"10/27/88 00:00:00",,"5","50","marquage du pont",,"01/17/13 08:41:00","01/17/13 08:41:00"
+350,122,"05/03/89 00:00:00",,"3","32","changement du mouvement d'horlogerie",,"01/17/13 08:42:00","01/17/13 08:42:00"
+351,122,"06/05/91 00:00:00",,"3","32","changement d'échelle de basse eau de 0 à 1m",,"01/17/13 08:43:00","01/17/13 08:43:00"
+352,122,"12/06/12 00:00:00",,"5","50","nivellement zéro échelle : 83.75",,"02/06/13 15:27:00","02/06/13 15:27:00"
+353,134,"01/01/11 00:00:00","12/31/18 00:00:00","5","50","Réfection du pont de Chinon notamment du radier et des soubassements des piles rive droite",,"10/26/18 14:30:00","10/26/18 14:29:00"
+354,139,"01/01/08 00:00:00",,"2","20","déplacement du zéro de l'échelle par les agents de maintenance de + 43.5 cm le 29 avril 2008",,"02/24/14 14:25:00","02/19/14 13:51:00"
+355,142,"01/01/14 00:00:00","04/01/14 00:00:00","4","40",,,"04/04/14 10:16:00","04/04/14 10:16:00"
+356,97,"01/01/00 00:00:00",,"2","21","Modification en basses eaux constatée à l'étiage 2000.",,,
+357,97,"09/12/00 15:00:00",,"5","50","visite au seuil situé 700m en aval de la station. le seuil n'est pas encombré.",,,
+358,97,"04/13/00 00:00:00",,"3","32","Installation d'une alimentation solaire.",,,
+359,97,"10/09/97 15:30:00",,"5","50","Mise en service.",,,
+360,97,"01/29/98 11:15:00",,"5","50","Nivellement du ""0"" de l'échelle avec comme point repère le coin RD de la pointe amont de la pile centrale (Croquis dans le dossier station).
+La cote du ""0"" est de -0,964m par rapport au repère.
+photos",,,
+361,97,"03/01/99 00:00:00",,"5","50","Visite sur le seuil aval, il n'y a pas de dépot.
+Photos de la station (amont et aval du pont)",,,
+362,97,"09/24/99 00:00:00",,"5","50","Visite sur le seuil aval, il n'y a pas de dépot.",,,
+363,97,"03/31/99 00:00:00",,"5","50","Nettoyage de la section de mesure, Ht avant 625mm après 615mm.",,,
+364,97,"04/27/98 00:00:00",,"5","50","embacle retirée",,,
+365,97,"11/18/99 00:00:00",,"5","50","nettoyage sonde. Dépot de sable passe gauche",,,
+366,97,"04/08/98 00:00:00",,"5","50","Photos",,,
+367,97,"12/27/99 00:00:00",,"5","50","Photos de la crue à la station",,,
+368,97,"05/15/98 00:00:00",,"2","26",,,,
+369,97,"01/16/01 00:00:00",,"5","50","nettoyage pilier central du pont.",,,
+370,97,"09/26/02 00:00:00",,"5","50","nettoyage du contrôle. Baisse de 15mm du niveau d'eau.",,,
+371,97,"01/01/98 00:00:00","04/30/98 00:00:00","5","50","Mesures moyennes et hautes eaux à 3,5 kms en aval de la station, au lieu-dit : Beauvais",,,
+372,97,"02/01/99 00:00:00",,"5","50","Découverte d'un seuil en grosses pierres encombrées de branches et autres détritus à 750 mètres en aval de la station.",,,
+373,97,"04/27/99 00:00:00",,"5","50","Seuil aval 700 mètres propre.",,,
+374,97,"08/13/03 00:00:00",,"5","50","Nettoyage sonde.",,,
+375,97,"10/17/05 00:00:00",,"5","50","Levé par géomètre pour un projet de la céation d'un seuil de contrôle -Altitude du ""0"" de l'échelle: 36.59m",,,
+376,97,"05/28/04 00:00:00",,"2","24","Nettoyage du contrôle",,,
+377,97,"10/14/04 00:00:00",,"2","26","Période influençée  par emcombrement du lit en aval du seuil suite aux crues où dépôts sur le seuil aval (700m).",,,
+378,97,"03/28/05 00:00:00",,"2","26","retour au contrôle sans influence",,,
+379,97,"04/14/05 14:46:00",,"5","50","nettoyage du seuil",,,
+380,97,"05/10/05 11:00:00",,"5","50","nettoyage du radier (barrage de pierre)",,,
+381,97,"07/28/05 13:50:00",,"5","50","emcombrement volontaire dans le buse gauche",,,
+382,97,"08/11/05 14:25:00",,"3","32","changement de centrale",,,
+383,97,"11/24/05 10:54:00",,"3","32","Enlèvement de matériel CR2M contre de l'ALCYR.",,,
+384,97,"12/09/05 15:14:00",,"5","50","influence aval",,,
+385,97,"04/21/04 00:00:00",,"5","50","PHOTOS",,,
+386,97,"08/31/04 00:00:00",,"5","50","PHOTOS",,,
+387,97,"09/13/04 00:00:00",,"5","50","PHOTOS",,,
+388,97,"05/09/05 00:00:00",,"5","50","PHOTOS barrage sauvage",,,
+389,97,"04/24/06 00:00:00",,"5","50","Photos (eutrophysation du lit)",,,
+390,97,"03/04/06 00:00:00","01/05/07 00:00:00","5","50","Influence aval très variable - la végétation aquatique dans le lit était particulièrement importante cette année 2006.",,"06/15/07 09:33:00","06/15/07 09:33:00"
+391,97,"03/22/06 14:55:00",,"5","50","Embâcle sur le contrôle - nettoyage",,"06/15/07 09:34:00","06/15/07 09:34:00"
+392,97,"12/07/06 15:48:00",,"5","50","Nettoyage du contrôle",,"06/15/07 09:38:00","06/15/07 09:38:00"
+393,97,"01/15/07 00:00:00",,"5","50","Constat d'un écoulement enfin sans influence",,"06/15/07 09:40:00","06/15/07 09:40:00"
+394,97,"08/16/17 11:00:00","08/16/17 11:30:00","5","50","Réalisation d'une brèche au milieu du seuil aval suite à la réhausse de celui-ci par F.Michaud et B.Gireaud; cela avec l'accord du propriétaire",,"02/12/18 14:15:00","02/12/18 14:14:00"
+395,96,"09/21/16 00:00:00","09/21/16 23:00:00","5","50","Abaissement de 1 à 2 cm de l'entrée du déversoir de la Fausse Manse (rive droite)",,"01/09/17 16:00:00","01/03/17 17:03:00"
+396,69,"11/21/89 00:00:00",,"5","50","creation station en remplacement de Rochechouart (1965 à 22/05/1990) avec 4m d'échelle",,"01/17/13 13:22:00","01/17/13 10:57:00"
+397,69,"08/29/02 00:00:00",,"3","30","mise en place limnigraphe",,"01/17/13 10:58:00","01/17/13 10:58:00"
+398,69,"02/03/12 00:00:00","02/14/12 00:00:00","1","17","gel du cours d'eau, données estimées",,"01/17/13 14:35:00","01/17/13 14:35:00"
+399,69,"04/27/12 00:00:00",,"2","21",,,"01/17/13 14:35:00","01/17/13 14:35:00"
+400,69,"02/24/11 00:00:00","04/06/11 00:00:00","5","50","hauteurs traitées avec 2 cm de moins que les données brutes à cause de la présence de batardeaux relevant le niveau d'eau au niveau du capteur",,"01/17/13 14:37:00","01/17/13 14:37:00"
+401,69,"04/06/12 00:00:00","04/07/12 00:00:00","4","40","reconstitution des QMJ à partir de St Junien",,"01/17/13 14:38:00","01/17/13 14:38:00"
+402,69,"11/09/11 00:00:00","11/13/11 00:00:00","4","40","reconstitution des QMJ à partir de St Junien",,"01/17/13 14:38:00","01/17/13 14:38:00"
+403,69,"12/05/11 00:00:00",,"2","21",,,"01/17/13 14:39:00","01/17/13 14:39:00"
+404,175,"12/15/21 00:00:00","12/24/21 00:00:00","5","50","Manoeuvre de vanne du gestionnaire d'un barrage à l'aval pour alimenter son étang - M Delamotte 0607666344
+Opération réalisée tous les 2 ans.
+Création d'une sur-hauteur à l'échelle de la station pendant la période de manoeuvre (fin décembre 2021).",,"01/03/22 08:31:00","12/31/21 10:34:00"
+405,155,"03/07/22 00:00:00",,"2","24","Retrait d'importants embâcles dans des brèches en aval (servant de passes à poissons) par le syndicat de BV du Né",,"03/31/22 10:19:00","03/31/22 10:19:00"
+406,58,"07/18/22 00:00:00","09/01/22 00:00:00","5","50","Création d'un barrage de pierre en aval de l'échelle le 18/07 par enfants? pris en compte par un corth.
+Nettoyage des algues accumulées en amont du seuil le 01/08/2022",,"08/02/22 13:19:00","08/01/22 15:02:00"
+408,34,"01/04/23 00:00:00",,"2","23","Retrait d'un arbre tombé en aval de l'échelle en rive gauche",,"01/05/23 11:11:00","01/05/23 11:11:00"
+409,172,"10/11/22 00:00:00",,"5","50","Arbre retiré sur le seuil de contrôle --> légère modification du seuil suite à ce retrait",,"11/17/22 13:25:00","11/17/22 13:25:00"
+410,27,"11/28/23 07:50:00",,"2","24","Information reçu, par le propriétaire, de l'ouverture, pour l'hiver, de la pelle du seuil de contrôle aval.",,"11/28/23 11:32:00","11/28/23 11:32:00"
+411,34,"07/26/90 00:00:00","07/28/90 00:00:00","5","50","Possible construction du seuil aval (moulin de Valade) à ces dates: modification durable des hauteurs moyennes (qui durent jusqu'à aujourd'hui 30/11/2023)",,"11/30/23 14:18:00","11/30/23 14:18:00"
+412,183,"07/25/24 00:00:00",,"2","20","instalation d'une echelle SPC correspondance echelle bleu EDF 100cm (echelle SPC) =44cm (echelle bleu)",,"07/26/24 09:18:00","07/26/24 09:18:00"
+413,155,"09/03/24 00:00:00",,"2","24","a priori compblement d'une brèche par propriétaire. Notamment le 03/09 vers 9hTU. Début estimé le 29/08.",,"09/05/24 16:18:00","09/05/24 16:18:00"
+414,53,"09/30/24 00:00:00",,"2","20","Station déplacée de l'aval du pont à l'amont du pont car non pertinente en crue à son emplacement initial",,"10/11/24 09:17:00","10/11/24 09:17:00"
+415,32,"07/30/24 07:35:00","08/01/24 13:30:00","5","50","Arrasement du 1er seuil en aval de la station",,"01/15/25 13:28:00","01/15/25 13:27:00"
+416,32,"08/01/24 13:30:00","01/01/25 00:00:00","5","50","Amenagement de la breche du 1er seuil aval (enrochement et confortation) et travaux sur le deuxieme seuil aval pour la creation d'une passe à poisson.
+Date précise de la fin de travaux inconnue !",,"01/15/25 13:31:00","01/15/25 13:31:00"
+417,40,"09/20/17 00:00:00","09/26/17 00:00:00","1","16","Arrasement du seuil",,"05/22/25 13:03:00","05/22/25 13:03:00"
+418,40,"09/01/77 00:00:00","10/01/77 00:00:00","1","16","Travaux avec abaissement du plan d'eau",,"05/22/25 14:42:00","05/22/25 14:42:00"
+419,179,"05/28/25 14:00:00",,"2","24","Installation d'une plaque métallique (demande DREAL) en lieu et place de la pelle en bois détériorée située en RG à l'amont du pont.",,"06/10/25 13:52:00","06/10/25 11:32:00"
+420,143,"09/10/25 13:00:00",,"2","20","Déplacement de l'échelle limnimétrique de la rive droite en rive gauche, sur nouveau support, pour une meilleure lecture en crue + mise en place d'un nouveau support intégrant les capteurs",,"09/15/25 08:40:00","09/15/25 08:36:00"
+421,91,"08/24/89 00:00:00",,"5","50","Photos",,,
+422,91,"02/20/90 00:00:00",,"5","50","Photos",,,
+423,91,"02/03/95 00:00:00",,"5","50","Photos",,,
+424,91,"08/24/00 00:00:00",,"5","50","Photos",,,
+425,91,"08/26/00 00:00:00",,"5","50","Photos",,,
+426,91,"03/04/01 00:00:00",,"5","50","Photos",,,
+427,91,"11/22/72 00:00:00",,"2","26",,,,
+428,91,"12/24/73 00:00:00",,"2","26",,,,
+429,91,"11/04/76 00:00:00",,"2","26",,,,
+430,91,"01/01/78 00:00:00",,"2","26",,,,
+431,91,"01/06/82 00:00:00",,"2","26",,,,
+432,91,"04/27/86 00:00:00",,"2","26",,,,
+433,91,"01/01/72 00:00:00",,"5","50","Mise en service",,,
+434,91,"07/01/93 11:20:00","10/18/00 11:15:00","1","16","Arrêt provisoire pour des raisons d'instabilité du contrôle.
+Il sera envisagé la construction d'un seuil en béton.",,,
+435,91,"11/25/02 16:00:00",,"5","50","La hauteur où le cours d'eau commence à déborder du lit mineur est 2,20m, constat lors du jaugeage fait ce jour.",,,
+436,91,"02/21/03 10:00:00","02/26/03 12:00:00","1","11",,,,
+437,91,"02/28/03 15:15:00","03/05/03 14:20:00","1","11",,,,
+438,91,"08/17/06 10:00:00","08/17/06 17:00:00","5","50","Levé topo, profil en travers du lit mineur et ligne d'eau en amont de l'ouvrage",,"07/16/07 16:35:00",
+439,91,"05/30/02 00:00:00",,"5","50","Nettoyage de la sonde.",,,
+440,91,"08/20/02 00:00:00",,"5","50","Installation provisoire de la sonde dans le fond du lit pour enregistrer correctement les basses eaux.",,,
+441,91,"10/15/02 00:00:00",,"5","50","Nettoyage du seuil, la cote a baissé de 20mm.",,,
+442,91,"11/06/02 00:00:00",,"5","50","La sonde est remise à son emplacement initial.",,,
+443,91,"12/01/01 00:00:00","12/15/01 00:00:00","5","50","Aménagement d'une plate-forme sécurisée et d'un escalier en béton pour faciliter l'accès à l'échelle et à la section de mesure.",,,
+444,91,"09/23/88 00:00:00","10/11/88 00:00:00","5","50","Recalibrage et nettoyage des rives en aval de la station. Le seuil naturel semble s'être déplacé d'une dizaine de mêtres en aval.Voir photo du 24/09/1989",,,
+445,91,"12/18/88 00:00:00","12/27/88 00:00:00","5","50","Recalibrage et nettoyage des rives en amont de la station. Suppression de l'îlot à 10m en amont. Le seuil en aval de la station est encombré de branches.Voir photo du 24/09/1989",,,
+446,91,"07/21/89 00:00:00","07/22/89 00:00:00","5","50","Aménagement par les riverains d'un seuil de grosses pierres afin d'abreuver les animaux. Le niveau d'eau est remonté de 45cm. Voir photo du 24/08/1988.",,,
+447,91,"02/14/90 00:00:00","02/15/90 00:00:00","5","50","Suite à la crue(ht maxi:2,62m), le seuil de pierre a rompu, notamment en rive droite, voir photo 20/02/1990.",,,
+448,91,"04/02/90 00:00:00",,"5","50","Colmatage de la brèche du seuil. Remontée du niveau de 30cm",,,
+449,91,"05/06/03 00:00:00",,"2","26","Modification en basses eaux(passage de l'eau sous le seuil)",,,
+450,91,"09/01/03 00:00:00",,"2","26","Modification de la courbe mis arbitrairement le 01/09/2003 suite au constat d'une modification du contrôle(moins de passsage d'eau sous le seuil) au cours de la deuxième quinzaine du mois d'août.",,,
+451,91,"08/09/03 00:00:00","09/01/03 00:00:00","4","43","Compte-tenu le mauvais contrôle du niveau d'eau par le seuil (renard, dépôt en amont), une reconstitution s'imposait.",,,
+452,91,"04/29/03 00:00:00",,"3","31","Passage d'une centrale CR2M avec capteur USi à une centrale OTT avec capteur bulle à bulle (Nimbus)",,,
+453,91,"01/18/04 00:00:00",,"2","21",,,,
+454,91,"07/10/03 00:00:00",,"3","32","liaison direct centrale impossible",,,
+455,91,"08/18/03 00:00:00",,"3","32","changement centrale OOT",,,
+456,91,"11/13/03 00:00:00",,"5","50","installation d'une deuxième batterie",,,
+457,91,"08/03/04 14:20:00",,"5","50","buche en aval du seuil + PHOTOS",,,
+458,91,"12/28/05 11:40:00",,"3","32","changement centrale, changement batterie",,,
+459,91,"09/07/04 00:00:00",,"5","50","PHOTOS",,,
+460,91,"05/04/06 00:00:00",,"5","50","PHOTOS érosion des rives",,,
+461,91,"03/04/06 00:00:00",,"2","21",,,"06/14/07 11:40:00","06/14/07 11:40:00"
+462,91,"03/02/06 11:55:00",,"5","50","Capillaire ensablé -> nettoyage et pompage",,"06/14/07 11:44:00","06/14/07 11:44:00"
+463,91,"06/06/06 10:00:00",,"5","50","La lame d'eau sur le seuil dans sa partie centrale était de 70mm et la hauteur à l'échelle était de 143mm",,"06/14/07 11:47:00","06/14/07 11:47:00"
+464,91,"10/12/06 10:00:00","10/12/06 16:00:00","5","50","Levé topo du profil en long après l'ouvrage existant et profil en travers du premier seuil après l'ouvrage",,"07/16/07 16:33:00","07/16/07 16:33:00"
+465,91,"10/18/00 11:15:00",,"5","50","Reprise des informations.
+Equipement: Centrale CR2M avec capteur Ultra-Son, alimentation solaire.
+Contrôle par le seuil en poutrelles béton mis en place par le propriétaire des parcelles en 1993. Le seuil semble stabilisé.",,,
+466,91,"12/04/00 00:00:00",,"5","50","Changement d'appareillage et raccordement au réseau France-Télécom.",,,
+467,91,"04/03/01 12:00:00",,"5","50","Nivellement le 03/04/2001 de l'ancienne échelle par rapport à la nouvelle, la nouvelle échelle est 11 cm plus basse que l'ancienne.",,,
+468,91,"01/01/79 00:00:00","01/31/79 00:00:00","5","50","Photos",,,
+469,91,"11/01/80 00:00:00",,"5","50","Photos",,,
+470,91,"02/01/82 00:00:00",,"5","50","Photos",,,
+471,91,"05/29/01 00:00:00",,"5","50","nettoyage sonde",,,
+472,91,"08/28/01 00:00:00",,"5","50","nettoyage sonde + décalage sonde",,,
+473,91,"09/25/01 00:00:00",,"5","50","remise en place du tube",,,
+474,91,"12/19/01 12:00:00",,"5","50","Contat que l'eau est gelée dans le tube PVC.",,,
+475,91,"01/24/89 00:00:00",,"5","50","Photos",,,

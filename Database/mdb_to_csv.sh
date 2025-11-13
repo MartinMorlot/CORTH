@@ -9,6 +9,7 @@ DB_filename_dict["BAREMEBASE-HYDRO_TU.MDB"]="Extracted_Moselle_"
 DB_filename_dict["SARRE.MDB"]="Extracted_Sarre_"
 DB_filename_dict["SEMA67.MDB"]="Extracted_67_"
 DB_filename_dict["SEMA68.MDB"]="Extracted_68_"
+DB_filename_dict["BASE_VCA.MDB"]="Extracted_NA_"
 
 for db_file in "${!DB_filename_dict[@]}"; do
 
