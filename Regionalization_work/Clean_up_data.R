@@ -12,7 +12,7 @@ library(gridExtra)
 library(terra)
 
 
-df <- read.csv("/home/mmorlot/dev-work/CORTH/data_regionalization/all_merged_data.csv")
+df <- read.csv("/home/mmorlot/dev-work/CORTH/data_regionalization/all_merged_data_2.csv")
 
 station_data_official <- data.frame(vect("Shp_files/StationHydro_FXX.gpkg"))
 
@@ -79,6 +79,8 @@ data_from_df <- lapply(data_from_df, function(x) as.numeric(as.character(x)))
 
 all_data_df <- cbind(new_df_with_data, data_from_df)
 
+rownames(all_data_df) <- names_for_row
+
 View(all_data_df)
 
-write.csv(all_data_df, "Regionalization_work/cleaned_up_data.csv")
+write.csv(all_data_df, "Regionalization_work/cleaned_up_data_2.csv")
