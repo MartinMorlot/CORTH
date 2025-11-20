@@ -1,18 +1,19 @@
-# source("Regionalization_work/Utility/Functions_for_regionalization.R")
+source("Regionalization_work/Utility/Functions_for_regionalization.R")
+source("Regionalization_work/Utility/distance_plotting.R")
 
 # file_to_analyze <- file_loc
 
 # where_to_plot <- plot_loc
 
-# variable <- "start"
+# variable <- variable
 
 # percentage_years_station <- 30 / 100
-# percentage_one_station <- 30 / 100
+# percentage_one_station <- 60 / 100
 
 # col_to_rm <- TRUE
-# euclidean <- TRUE
+# dist_type <- "euclidean_eq"
 
-full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, percentage_years_station, percentage_one_station, col_to_rm = FALSE, euclidean = FALSE) {
+full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, percentage_years_station, percentage_one_station, col_to_rm = FALSE, dist_type) {
     data_cluster <- read.csv(file_to_analyze)
     row.names(data_cluster) <- data_cluster$X
     df <- data_cluster[, -c(1)]
@@ -39,45 +40,40 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, perc
     dir.create(where_to_plot, recursive = T)
 
     dist <- NA
-    
-    if(euclidean){
+
+    if (dist_type == "euclidean") {
         dist_df <- as.data.frame(pairwise_euclidean(df))
         row.names(dist_df) <- row.names(df)
         dist <- as.dist(dist_df)
-        dist_type <- "euclidean"
+        row.names(dist)
+    } else if (dist_type == "euclidean_eq") {
+        dist_df <- as.data.frame(pairwise_euclidean_eq(df))
+        row.names(dist_df) <- row.names(df)
+        dist <- as.dist(dist_df)
         row.names(dist)
     } else {
-            dist <- as.dist(1 - cor(t(df), use = "pairwise.complete.obs"))
-            dist[is.na(dist)] <- 2
-            dist_type <- "correlation"
+        dist <- as.dist(1 - cor(t(df), use = "pairwise.complete.obs"))
     }
 
-    # if(is.na(dist)){
-    #     print("This failed")
-    #     return()
-    # }
-    
+    # TODO make a function taking df and dist and remove the columns and rows that have NAs for dist
+
     dist_plot_location <- paste0(where_to_plot, dist_type, "_distance.png")
     print(dist_plot_location)
-    png(dist_plot_location, height = 1500, width = 2000, res = 300)
-    fviz_dist(dist, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07"))
+    png(dist_plot_location, height = 4500, width = 4000, res = 300)
+    fviz_dist(dist, FALSE, gradient = list(low = "#00AFBB", high = "#FC4E07"))
     dev.off()
 
-    best_clustering_method <- distance_calc_clustering_method(dist)
+    file_clustering_method <- paste0(where_to_plot, dist_type, "_clustering_method.csv")
+
+    clustering_methods_considered <- c("ward", "complete", "average")
+
+    best_clustering_method <- distance_calc_clustering_method(dist, file_clustering_method, clustering_methods_considered)
 
     sorted_clustering <- sort(best_clustering_method, decreasing = TRUE)
 
-    print(sorted_clustering[1:3])
+    print(sorted_clustering[1:2])
 
-    best_sel <- names(sorted_clustering)[1:3]
-
-    # Todo make the loop below for diana
-    if (any(best_sel == "diana")) {
-        rm_di <- which(best_sel == "diana")
-        best_sel <- best_sel[-rm_di]
-    }
-    # ToDO to be removed up from here
-
+    best_sel <- names(sorted_clustering)[1:2]
 
     for (name in best_sel) {
         dir.create(paste0(where_to_plot, name), recursive = T)

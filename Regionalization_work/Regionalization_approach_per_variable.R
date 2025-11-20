@@ -29,22 +29,17 @@ mixed_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/All_v
 
 variables_to_iterate <- c("start", "end", "minima", "mixed")
 
-dist_types <- c("correlation", "euclidean")
+dist_types <- c("correlation", "euclidean", "euclidean_eq")
 for (variable in variables_to_iterate) {
     print(variable)
     file_loc <- get(paste0("file_", variable))
     orig_loc <- get(paste0(variable, "_plot_loc"))
     for (dist_type in dist_types) {
-        euclidean_condition <- FALSE
         plot_loc <- paste0(orig_loc, dist_type, "/")
-        if (dist_type == "euclidean") {
-            euclidean_condition <- TRUE
-        }
-        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, 30 / 100, 30 / 100, TRUE, euclidean_condition)
+        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, 30 / 100, 30 / 100, TRUE, dist_type)
     }
 }
 
 
 
 ### debug lines
-

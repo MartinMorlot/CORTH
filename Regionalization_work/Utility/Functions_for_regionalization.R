@@ -93,36 +93,36 @@ plot_cluster <- function(data, word, cluster_number, year_to_analyze, location_t
     dev.off()
 }
 
-# function to compute coefficient
-ac <- function(x) {
-    agnes(distance, method = x)$ac
-}
-
 distance_calc_clustering_method <- function(distance, location_to_write = NA, methods_to_consider = c("average", "single", "complete", "ward", "weighted", "gaverage", "diana")) {
-
     methods <- methods_to_consider
 
     diana_loc <- which(methods == "diana")
     diana_loc_cond <- length(diana_loc) > 0
 
-    if(diana_loc_cond){
+    if (diana_loc_cond) {
         methods <- methods[-diana_loc]
     }
 
     m <- methods
     names(m) <- methods
 
+
+    # function to compute coefficient
+    ac <- function(x) {
+        agnes(distance, method = x)$ac
+    }
+
     results_clust_type <- map_dbl(m, ac)
 
-    if(diana_loc){
+    if (diana_loc_cond) {
         d_r <- diana(distance)
         results_clust_type["diana"] <- d_r$dc
     }
 
     if (!is.na(location_to_write)) {
-        dataframe_results <- data.frame(matrix(NA,1,length(methods_to_consider)))
+        dataframe_results <- data.frame(matrix(NA, 1, length(methods_to_consider)))
         colnames(dataframe_results) <- names(results_clust_type)
-        dataframe_results[1,] <- results_clust_type
+        dataframe_results[1, ] <- results_clust_type
         write.csv(dataframe_results, location_to_write)
     }
 
@@ -130,14 +130,30 @@ distance_calc_clustering_method <- function(distance, location_to_write = NA, me
 }
 
 pairwise_euclidean <- function(x) {
-  n <- nrow(x)
-  d <- matrix(NA, n, n)
-  for (i in 1:n) {
-    for (j in 1:n) {
-      # Find columns without NAs in either row i or j
-      cols <- which(!is.na(x[i, ]) & !is.na(x[j, ]))
-      d[i, j] <- sqrt(sum((x[i, cols] - x[j, cols])^2))
+    n <- nrow(x)
+    d <- matrix(NA, n, n)
+    for (i in 1:n) {
+        for (j in 1:n) {
+            # Find columns without NAs in either row i or j
+            cols <- which(!is.na(x[i, ]) & !is.na(x[j, ]))
+            d[i, j] <- sqrt(sum((x[i, cols] - x[j, cols])^2))
+            if (length(cols) == 0) d[i, j] <- NA
+        }
     }
-  }
-  return(d)
+    return(d)
+}
+
+
+pairwise_euclidean_eq <- function(x) {
+    n <- nrow(x)
+    d <- matrix(NA, n, n)
+    for (i in 1:n) {
+        for (j in 1:n) {
+            # Find columns without NAs in either row i or j
+            cols <- which(!is.na(x[i, ]) & !is.na(x[j, ]))
+            d[i, j] <- sqrt(sum((x[i, cols] - x[j, cols])^2)) / length(cols)
+            if (length(cols) == 0) d[i, j] <- NA
+        }
+    }
+    return(d)
 }
