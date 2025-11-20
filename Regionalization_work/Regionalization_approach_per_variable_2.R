@@ -1,15 +1,6 @@
 rm(list = ls())
 gc()
 
-library(tidyverse) # data manipulation
-library(cluster) # clustering algorithms
-library(factoextra) # clustering visualization
-library(dendextend) # for comparing two dendrograms
-library(colorspace)
-library(ggplot2)
-library(ggdendro)
-library(gridExtra)
-
 source("Regionalization_work/Utility/Functions_for_regionalization.R")
 source("Regionalization_work/Utility/Regionalization_analysis_function.R")
 
@@ -40,6 +31,14 @@ all_cols <- cnames[c(
 
 data_from_df <- df[, all_cols]
 
+start_end_cols <- cnames[c(
+    start_col,
+    end_col
+)]
+
+combined_start_end_df <- df[, start_end_cols]
+
+
 
 df_start <- df[, c(start_col)]
 file_start <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Results/Per_cluster_2/start_data_cluster_2.csv"
@@ -57,11 +56,15 @@ df_mixed <- data_from_df
 file_mixed <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Per_cluster_2/Kept_data_2.csv"
 mixed_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots_2/All_variables/"
 
+df_combined_start_end <- combined_start_end_df
+file_combined_start_end <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Per_cluster_2/Combined_start_end_data_2.csv"
+combined_start_end_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots_2/Combined_start_end/"
+
 dir.create("/home/mmorlot/dev-work/CORTH/Regionalization_work/Results/Per_cluster_2/")
 
-variables_to_iterate <- c("start", "end", "minima", "mixed")
+variables_to_iterate <- c("start", "end", "minima", "mixed", "combined_start_end")
 
-dist_types <- c("correlation", "euclidean")
+dist_types <- c("absolute_correlation", "correlation", "euclidean", "euclidean_eq")
 
 for (variable in variables_to_iterate) {
     print(variable)
@@ -70,17 +73,10 @@ for (variable in variables_to_iterate) {
     df_sel[] <- lapply(df_sel, as.numeric)
     write.csv(df_sel, file_loc)
     orig_loc <- get(paste0(variable, "_plot_loc"))
-    percentage_one_station <- 40 / 100
-    percentage_year_station <- 40 / 100
+    percentage_one_station <- 30 / 100
+    percentage_year_station <- 30 / 100
     for (dist_type in dist_types) {
-        euclidean_condition <- FALSE
         plot_loc <- paste0(orig_loc, dist_type, "/")
-        if (dist_type == "euclidean") {
-            euclidean_condition <- TRUE
-        }
-        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, percentage_year_station, percentage_one_station, euclidean_condition)
+        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, percentage_year_station, percentage_one_station, FALSE, dist_type)
     }
 }
-
-file_to_analyze <- file_start
-where_to_plot <- plot_loc

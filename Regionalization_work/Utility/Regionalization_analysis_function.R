@@ -1,5 +1,5 @@
 source("Regionalization_work/Utility/Functions_for_regionalization.R")
-source("Regionalization_work/Utility/distance_plotting.R")
+source("Regionalization_work/Utility/distance_calculating_and_plotting.R")
 
 # file_to_analyze <- file_loc
 
@@ -8,17 +8,18 @@ source("Regionalization_work/Utility/distance_plotting.R")
 # variable <- variable
 
 # percentage_years_station <- 30 / 100
-# percentage_one_station <- 60 / 100
+# percentage_one_station <- 30 / 100
 
 # col_to_rm <- TRUE
-# dist_type <- "euclidean_eq"
+
+sub_variables <- c("start", "end", "minima")
 
 full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, percentage_years_station, percentage_one_station, col_to_rm = FALSE, dist_type) {
     data_cluster <- read.csv(file_to_analyze)
     row.names(data_cluster) <- data_cluster$X
     df <- data_cluster[, -c(1)]
 
-    if ((variable != "mixed") & (col_to_rm)) {
+    if ((variable %in% sub_variables) && (col_to_rm)) {
         df <- df[, -c(ncol(df))]
     }
 
@@ -39,28 +40,16 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, perc
 
     dir.create(where_to_plot, recursive = T)
 
-    dist <- NA
+    distance_list_result <- dist_calculation(df, dist_type, TRUE)
+    dist <- distance_list_result[[1]]
+    df <- distance_list_result[[2]]
 
-    if (dist_type == "euclidean") {
-        dist_df <- as.data.frame(pairwise_euclidean(df))
-        row.names(dist_df) <- row.names(df)
-        dist <- as.dist(dist_df)
-        row.names(dist)
-    } else if (dist_type == "euclidean_eq") {
-        dist_df <- as.data.frame(pairwise_euclidean_eq(df))
-        row.names(dist_df) <- row.names(df)
-        dist <- as.dist(dist_df)
-        row.names(dist)
-    } else {
-        dist <- as.dist(1 - cor(t(df), use = "pairwise.complete.obs"))
-    }
+    p_dist <- fviz_dist(dist, FALSE, gradient = list(low = "#00AFBB", high = "#FC4E07"))
 
-    # TODO make a function taking df and dist and remove the columns and rows that have NAs for dist
 
     dist_plot_location <- paste0(where_to_plot, dist_type, "_distance.png")
-    print(dist_plot_location)
     png(dist_plot_location, height = 4500, width = 4000, res = 300)
-    fviz_dist(dist, FALSE, gradient = list(low = "#00AFBB", high = "#FC4E07"))
+    print(p_dist)
     dev.off()
 
     file_clustering_method <- paste0(where_to_plot, dist_type, "_clustering_method.csv")
@@ -118,7 +107,7 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, perc
             rect.hclust(hc, k = number_of_clusters, border = 2:3)
             dev.off()
 
-            df_with_cluster <- df %>% mutate(cluster = sub_grp)
+            df_with_cluster <- df %>% dplyr::mutate(cluster = sub_grp)
 
             cnames <- colnames(df_with_cluster)
             cluster_col <- cnames[length(cnames)]
@@ -129,16 +118,17 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, perc
             for (cluster_number in seq_along(cluster_numbers)) {
                 row_sel <- which(cluster_col_data == cluster_number)
                 select_cluster <- df[row_sel, ]
-                if (variable == "mixed") {
-                    sub_variables <- c("start", "end", "minima")
+                if (!variable %in% sub_variables) {
                     for (sub_variable in sub_variables) {
                         cnames_sel <- colnames(select_cluster)
                         cnames_to_keep <- grepv(sub_variable, cnames_sel)
-                        sel_variable_cluster <- select_cluster[, cnames_to_keep]
-                        plot_cluster(
-                            sel_variable_cluster, sub_variable, cluster_number, year_to_analyze,
-                            nb_plot_loc
-                        )
+                        if (length(cnames_to_keep) > 0) {
+                            sel_variable_cluster <- select_cluster[, cnames_to_keep]
+                            plot_cluster(
+                                sel_variable_cluster, sub_variable, cluster_number, year_to_analyze,
+                                nb_plot_loc
+                            )
+                        }
                     }
                 } else {
                     plot_cluster(
