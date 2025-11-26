@@ -1,9 +1,12 @@
 library(cluster) # clustering algorithms
 library(factoextra) # clustering visualization
+library(NbClust)
 library(dendextend) # for comparing two dendrograms
 library(colorspace)
 library(ggplot2)
 library(ggdendro)
+library(tidyverse)
+library(purrr)
 
 make_silhouette_and_wss_plots <- function(distance, FUNcluster = NULL, k.max = 10, linecolor = "steelblue", ...) {
     v <- rep(0, k.max)

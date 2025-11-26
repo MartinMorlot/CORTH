@@ -1,6 +1,9 @@
 rm(list = ls())
 gc()
 
+plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots_2/"
+unlink(plot_loc, recursive = T)
+
 source("Regionalization_work/Utility/Functions_for_regionalization.R")
 source("Regionalization_work/Utility/Regionalization_analysis_function.R")
 
@@ -74,7 +77,7 @@ for (variable in variables_to_iterate) {
     write.csv(df_sel, file_loc)
     orig_loc <- get(paste0(variable, "_plot_loc"))
     percentage_one_station <- 30 / 100
-    percentage_year_station <- 30 / 100
+    percentage_year_station <- 10 / 100
     for (dist_type in dist_types) {
         plot_loc <- paste0(orig_loc, dist_type, "/")
         variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, percentage_year_station, percentage_one_station, FALSE, dist_type)
