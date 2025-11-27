@@ -14,6 +14,8 @@ library(terra)
 
 df <- read.csv("/home/mmorlot/dev-work/CORTH/data_regionalization/all_merged_data_2.csv")
 
+View(df)
+
 station_data_official <- data.frame(vect("Shp_files/StationHydro_FXX.gpkg"))
 
 hydro_portail_path <- list.files("/home/mmorlot/dev-work/CORTH/HydroPortail", pattern = ".txt", full.names = TRUE)

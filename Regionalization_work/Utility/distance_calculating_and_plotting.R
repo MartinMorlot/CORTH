@@ -29,11 +29,11 @@ cor_with_min_obs <- function(x, min_obs = 5, transpose = TRUE) {
     return(cor_matrix)
 }
 
-clean_correlation <- function(corr, df, cor_function) {
+clean_correlation <- function(corr, df, cor_function, min_obs, init_NA_corr = 10) {
     # check for presence of NA,
     NA_corr <- rowSums(is.na(corr))
 
-    rm_row_corr_index <- which(row.names(df) %in% names(which(NA_corr >= 10)))
+    rm_row_corr_index <- which(row.names(df) %in% names(which(NA_corr >= init_NA_corr)))
 
     iteration <- 1
     while (length(rm_row_corr_index) > 0) {
@@ -42,7 +42,7 @@ clean_correlation <- function(corr, df, cor_function) {
 
         rownames_of_df <- row.names(df)
 
-        corr <- cor_function(df)
+        corr <- cor_function(df, min_obs)
         NA_corr <- rowSums(is.na(corr))
         if (all(NA_corr == 0)) break
         sorted_NA_corr <- sort(NA_corr, decreasing = TRUE)
@@ -58,7 +58,7 @@ clean_correlation <- function(corr, df, cor_function) {
         iteration <- iteration + 1
     }
 
-    corr <- cor_function(df)
+    corr <- cor_function(df, min_obs)
 
     if (any(is.na(corr))) {
         cat("This Failed!")
@@ -137,45 +137,33 @@ dist_calculation <- function(df_with_data, dist_type, clean = FALSE) {
     }
 }
 
-# new_dist_plot <- function(
-#     dist.obj, show_labels = TRUE, lab_size = NULL,
-#     gradient = list(low = "red", mid = "white", high = "blue")) {
-#     if (!inherits(dist.obj, "dist")) {
-#         stop("An object of class dist is required.")
-#     }
+anomaly_per_vector <- function(x) {
+    # if (!(class(x) == vector)) {
+    #     return(NA)
+    # }
 
-#     dist.obj_mat <- as.matrix(dist.obj)
+    if (all(is.na(x))) {
+        return(NA)
+    }
+    mean_x <- mean(x, na.rm = T)
+    std_dev_x <- sd(x, na.rm = T)
+    anomaly_x <- (x - mean_x) / std_dev_x
 
-#     rownames(dist.obj_mat) <- colnames(dist.obj_mat) <- row.names(dist.obj)
+    return(anomaly_x)
+}
 
-#     d <- reshape2::melt(dist.obj_mat)
-#     p <- ggplot(d, aes_string(x = "Var1", y = "Var2")) +
-#         ggplot2::geom_tile(aes_string(fill = "value"))
-#     if (is.null(gradient$mid)) {
-#         p <- p + ggplot2::scale_fill_gradient(
-#             low = gradient$low,
-#             high = gradient$high
-#         )
-#     } else {
-#         p <- p + ggplot2::scale_fill_gradient2(
-#             midpoint = mean(dist.obj_mat, na.rm = T),
-#             low = gradient$low, mid = gradient$mid, high = gradient$high,
-#             space = "Lab"
-#         )
-#     }
-#     if (show_labels) {
-#         p <- p + theme(
-#             axis.title.x = element_blank(), axis.title.y = element_blank(),
-#             axis.text.x = element_text(
-#                 angle = 45, hjust = 1,
-#                 size = lab_size
-#             ), axis.text.y = element_text(size = lab_size)
-#         )
-#     } else {
-#         p <- p + theme(
-#             axis.text = element_blank(), axis.ticks = element_blank(),
-#             axis.title.x = element_blank(), axis.title.y = element_blank()
-#         )
-#     }
-#     return(p)
-# }
+
+calculate_anomaly_per_variable <- function(df, sub_variables) {
+    cnames_df <- colnames(df)
+    anomaly_df <- df
+    for (variable_it in sub_variables) {
+        c_retained <- grep(variable_it, cnames_df)
+        if (length(c_retained) == 0) next
+        for (row_it in seq_len(nrow(df))) {
+            data <- as.numeric(df[row_it, ])[c_retained]
+            anomaly_data <- anomaly_per_vector(data)
+            anomaly_df[row_it, c_retained] <- anomaly_data
+        }
+    }
+    return(anomaly_df)
+}

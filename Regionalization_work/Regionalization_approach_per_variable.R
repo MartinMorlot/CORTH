@@ -25,36 +25,13 @@ combined_start_end_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_wor
 
 variables_to_iterate <- c("start", "end", "minima", "mixed", "combined_start_end")
 
-dist_types <- c("absolute_correlation", "correlation", "euclidean", "euclidean_eq")
-
-break_all <- T
-dist_types <- c("absolute_correlation", "correlation")
 for (variable in variables_to_iterate) {
     print(variable)
     file_loc <- get(paste0("file_", variable))
     orig_loc <- get(paste0(variable, "_plot_loc"))
     unlink(orig_loc, recursive = TRUE)
-    for (dist_type in dist_types) {
-        plot_loc <- paste0(orig_loc, dist_type, "/")
-        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, 10 / 100, 30 / 100, TRUE, dist_type)
-        View(variable_result)
-        image(variable_result, zlim=c(-1,1))
-
-        image(variable_result, zlim=c(0,1))
-
-        image(variable_result, zlim=c(0.5,1))
-
-        image(variable_result, zlim=c(0.7,1))
-
-        dist <- dist_correlation(variable_result)
-        if (break_all) break
+    plot_loc <- paste0(orig_loc)
+    for (anomaly_to_run in c(TRUE, FALSE)) {
+        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, TRUE, anomaly_to_run)
     }
-    if (break_all) break
 }
-
-
-
-### debug lines
-variable <- "end"
-
-variable <- 

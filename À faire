@@ -1,3 +1,5 @@
 pour multi-variables, faire avec anomalies (x - mean) / (std.dev)
 
 faire une boucle pour enlever corr par la longeur des données (petits avant grand dans le df)
+
+
