@@ -1,6 +1,7 @@
 library(corrplot)
 library(ggplot2)
 library(patchwork)
+library(NbClust)
 
 source("Regionalization_work/Utility/Functions_for_regionalization.R")
 source("Regionalization_work/Utility/distance_calculating_and_plotting.R")
@@ -73,7 +74,7 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, col_
         print(scatter_p)
         dev.off()
     } else {
-        for (sub_variable in sub_variables) {
+        for (sub_variable in variable_present) {
             scatter_p <- scatter_plot_high_corr(corr_matrix, 0.7, df, sub_variable, anomaly)
             scatter_plot_correlation_loc <- paste0(where_to_plot, sub_variable, "_high_corr_scatter.png")
             png(scatter_plot_correlation_loc, height = 2500, width = 4000, res = 300)
@@ -82,10 +83,9 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, col_
         }
     }
 
-    # TODO remake function for dis_calculation for correlation only
-    distance <- as.dist(dist_correlation(corr_matrix))
+    distance_matrix <- dist_correlation(corr_matrix)
+    distance <- as.dist(distance_matrix)
 
-    # TODO remake function with the color mid at 0.75
     p_dist <- fviz_dist(distance, FALSE, gradient = list(low = "#00AFBB", mid = "#FFD000D3", high = "#FC4E07"))
 
     dist_plot_location <- paste0(where_to_plot, "distance.png")
@@ -93,34 +93,65 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, col_
     print(p_dist)
     dev.off()
 
+    col_inv <- t(col)
+
+    dist_plot_location <- paste0(where_to_plot, "distance_corr.png")
+    png(dist_plot_location, height = 4000, width = 4000, res = 300)
+    corr_plot_location <- paste0(where_to_plot, "corr.png")
+    corrplot(distance_matrix,
+        method = "color", col = col_inv,
+        type = "upper", tl.col = "black", tl.srt = 90,
+        addCoef.col = "black", number.cex = 0.7, col.lim = c(0, 1), is.corr = FALSE
+    )
+    dev.off()
+
     file_clustering_method <- paste0(where_to_plot, "clustering_method.csv")
 
-    clustering_methods_considered <- c("ward", "complete")
+    clustering_methods_considered <- c("ward", "average", "single", "complete")
 
     best_clustering_method <- distance_calc_clustering_method(distance, file_clustering_method, clustering_methods_considered)
 
     sorted_clustering <- sort(best_clustering_method, decreasing = TRUE)
 
-    print(sorted_clustering[1])
-
-    best_sel <- names(sorted_clustering)[1:2]
+    best_sel <- names(sorted_clustering)
 
     for (name in best_sel) {
         dir.create(paste0(where_to_plot, name), recursive = T)
+        print(name)
 
-        plots <- make_silhouette_and_wss_plots(distance, hcut, (nrow(df) - 1), hc_func = "agnes", hc_method = name)
+        plots <- make_nb_fitting_plots(distance, hcut, (nrow(df) - 1) / 2, hc_func = "agnes", hc_method = name)
 
-        wss_plot_location <- paste0(where_to_plot, name, "/number_cluster_fitting_wss.png")
-        print(wss_plot_location)
-        png(wss_plot_location, height = 1500, width = 2000, res = 300)
+        gap_plot_location <- paste0(where_to_plot, name, "/number_cluster_fitting_gap.png")
+        png(gap_plot_location, height = 1500, width = 2000, res = 300)
         print(plots[[1]])
         dev.off()
 
         silhouette_plot_location <- paste0(where_to_plot, name, "/number_cluster_fitting_silhouette.png")
-        print(silhouette_plot_location)
         png(silhouette_plot_location, height = 1500, width = 2000, res = 300)
         print(plots[[2]])
         dev.off()
+
+        if (name == "ward") {
+            wss_plot_location <- paste0(where_to_plot, name, "/number_cluster_fitting_wss.png")
+            png(wss_plot_location, height = 1500, width = 2000, res = 300)
+            print(plots[[3]])
+            dev.off()
+        }
+        name_nb_clust <- name
+        if (name_nb_clust == "ward") {
+            name_nb_clust <- "ward.D"
+        }
+
+        indices <- c("frey", "mcclain", "silhouette", "dunn")
+        table_index_fitting <- data.frame(matrix(data = NA, nrow = length(indices), ncol = c((((nrow(df) - 1) / 2))) + 1))
+        row.names(table_index_fitting) <- indices
+        colnames(table_index_fitting) <- c(2:((nrow(df) - 1) / 2), "Number_clusters", "Best_val")
+        for (index in indices) {
+            best_clust_nb <- NbClust(diss = distance, distance = NULL, min.nc = 2, max.nc = (nrow(df) - 1) / 2, method = name_nb_clust, index = index)
+            table_index_fitting[index, ] <- c(best_clust_nb$All.index, best_clust_nb$Best.nc)
+        }
+        table_index_loc <- paste0(where_to_plot, name, "/number_cluster_other_index.csv")
+        write.csv(table_index_fitting, table_index_loc)
 
         hc <- as.hclust(agnes(distance, method = name))
 
@@ -138,9 +169,8 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, col_
         plot(hc, cex = 0.6, main = name)
         dev.off()
 
-        for (number_of_clusters in 2:(nrow(df) - 1)) {
+        for (number_of_clusters in 2:((nrow(df) - 1) / 2)) {
             sub_grp <- cutree(hc, k = number_of_clusters)
-            main_plot <- paste(variable, name, number_of_clusters)
 
             nb_plot_loc <- paste0(where_to_plot, name, "/", number_of_clusters)
 
@@ -150,6 +180,13 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, col_
             png(cluster_number_plot_loc, height = 2500, width = 2000, res = 300)
             plot(hc, cex = 0.6, main = name)
             rect.hclust(hc, k = number_of_clusters, border = 2:3)
+            dev.off()
+
+            dend_plot <- fviz_dend(hc, k = number_of_clusters, rect = TRUE, cex = 0.5)
+
+            cluster_number_plot_loc <- paste0(where_to_plot, name, "/", number_of_clusters, "/hclust_fviz_dend.png")
+            png(cluster_number_plot_loc, height = 2500, width = 2000, res = 300)
+            print(dend_plot)
             dev.off()
 
             df_with_cluster <- df %>% dplyr::mutate(cluster = sub_grp)

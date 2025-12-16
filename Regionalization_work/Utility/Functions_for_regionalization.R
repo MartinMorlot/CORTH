@@ -1,40 +1,149 @@
 library(cluster) # clustering algorithms
 library(factoextra) # clustering visualization
-library(NbClust)
-library(dendextend) # for comparing two dendrograms
 library(colorspace)
+library(RColorBrewer)
 library(ggplot2)
-library(ggdendro)
 library(tidyverse)
-library(purrr)
 
-make_silhouette_and_wss_plots <- function(distance, FUNcluster = NULL, k.max = 10, linecolor = "steelblue", ...) {
-    v <- rep(0, k.max)
-    w <- rep(0, k.max)
+# Fonction pour calculer la dispersion intra-cluster
+compute_dispersion <- function(distance, clusters) {
+    n <- nrow(distance)
+    dispersion <- 0
+    for (i in 1:(n - 1)) {
+        for (j in (i + 1):n) {
+            if (clusters[i] == clusters[j]) {
+                dispersion <- dispersion + distance[i, j]
+            }
+        }
+    }
+    return(dispersion)
+}
+
+generate_reference_dist_matrix_existing <- function(dist_matrix) {
+    n <- nrow(dist_matrix)
+    ref_dist_matrix <- matrix(0, nrow = n, ncol = n)
+
+    upper_distances <- dist_matrix[upper.tri(dist_matrix, diag = FALSE)]
+
+    permuted_distances <- sample(upper_distances)
+
+    ref_dist_matrix[upper.tri(ref_dist_matrix, diag = FALSE)] <- permuted_distances
+
+    ref_dist_matrix[lower.tri(ref_dist_matrix, diag = FALSE)] <- t(ref_dist_matrix)[lower.tri(ref_dist_matrix, diag = FALSE)]
+
+    return(ref_dist_matrix)
+}
+
+
+generate_reference_dist_matrix_new <- function(dist_matrix, B = 100) {
+    n <- nrow(dist_matrix)
+
+    # Extraire les distances au-dessus de la diagonale
+    upper_distances <- dist_matrix[upper.tri(dist_matrix, diag = FALSE)]
+
+    reference_datasets <- list()
+
+    for (b in 1:B) {
+        # Initialiser la matrice de référence
+        ref_dist_matrix <- matrix(0, nrow = n, ncol = n)
+
+        # Générer des distances aléatoires basées sur la distribution des distances réelles
+        permuted_distances <- sample(upper_distances)
+
+        # Remplir la partie supérieure de la matrice avec les distances permutées
+        ref_dist_matrix[upper.tri(ref_dist_matrix, diag = FALSE)] <- permuted_distances
+
+        # Remplir la partie inférieure de la matrice en copiant la partie supérieure
+        ref_dist_matrix[lower.tri(ref_dist_matrix, diag = FALSE)] <- t(ref_dist_matrix)[lower.tri(ref_dist_matrix, diag = FALSE)]
+
+        reference_datasets[[b]] <- ref_dist_matrix
+    }
+
+    return(reference_datasets)
+}
+
+gap_calculation <- function(distance, k = 10, ref_data, clusters, FUNcluster = hcut, hc_func = agnes, hc_method = "ward") {
+    dist_matrix <- as.matrix(distance)
+    real_dispersion <- log(compute_dispersion(dist_matrix, clusters$cluster))
+
+    B <- length(ref_data)
+
+    ref_dispersions <- numeric(length = B)
+    for (b in seq_along(B)) {
+        ref_dist_matrix <- ref_data[[b]]
+
+        ref_hc <- FUNcluster(as.dist(ref_dist_matrix), k, hc_func = hc_func, hc_method = hc_method)
+        ref_dispersions[b] <- log(compute_dispersion(ref_dist_matrix, ref_hc$cluster))
+    }
+
+    se_values <- sd(ref_dispersions) * sqrt(1 + 1 / B)
+
+    gap_value <- mean(ref_dispersions) - real_dispersion
+    return(list(value = gap_value, se = se_values))
+}
+
+# Fonction pour trouver le meilleur k selon Tibshirani
+find_optimal_k_tibshirani <- function(gap_values, se_values) {
+    max_k <- length(gap_values)
+    optimal_k <- 1
+
+    for (k in 2:(max_k)) {
+        if (gap_values[k] >= gap_values[k + 1] - se_values[k + 1]) {
+            optimal_k <- k
+            break
+        }
+    }
+
+    return(optimal_k)
+}
+
+make_nb_fitting_plots <- function(distance, FUNcluster = hcut, k.max = 10, linecolor = "steelblue", hc_func = agnes, hc_method = "ward") {
+    v <- rep(NaN, k.max)
+    w <- rep(NaN, k.max)
+    z <- rep(NaN, k.max)
+    a <- rep(NaN, k.max)
+
+    dist_ref_data <- generate_reference_dist_matrix_new(as.matrix(distance), 30)
+
     for (i in 2:k.max) {
-        clust <- FUNcluster(distance, i, ...)
+        clust <- FUNcluster(distance, i, hc_func = hc_func, hc_method = hc_method)
         v[i] <- factoextra:::.get_ave_sil_width(distance, clust$cluster)
         w[i] <- factoextra:::.get_withinSS(distance, clust$cluster)
+        gap_k_combo <- gap_calculation(distance, i, dist_ref_data, clusters = clust, hc_func = hc_func, hc_method = hc_method)
+        z[i] <- gap_k_combo[["value"]]
+        a[i] <- gap_k_combo[["se"]]
     }
-    clust1 <- FUNcluster(distance, 1, ...)
+
+    clust1 <- FUNcluster(distance, 1, hc_func = hc_func, hc_method = hc_method)
     w[1] <- factoextra:::.get_withinSS(distance, clust1$cluster)
     df <- data.frame(
-        clusters = as.factor(1:k.max), y = v, z = w,
+        clusters = as.factor(1:k.max), sil = v, wss = w, gap = z, se = a,
         stringsAsFactors = TRUE
     )
-    p_wss <- ggpubr::ggline(df,
-        x = "clusters", y = "z", group = 1, color = linecolor, ylab = "Total Within Sum of Square", xlab = "Number of clusters k",
-        main = "TWSS optimal number of clusters"
+    p_gap <- ggpubr::ggline(df,
+        x = "clusters", y = "gap", group = 1, color = linecolor, ylab = "Gap statistique", xlab = "Number of clusters k",
+        main = "gap optimal number of clusters"
+    ) + geom_errorbar(aes(ymin = gap - se, ymax = gap + se), width = 0.1, color = linecolor) + ggplot2::geom_vline(
+        xintercept = find_optimal_k_tibshirani(z, a), linetype = 2,
+        color = "red"
     )
     p_silhouette <- ggpubr::ggline(df,
-        x = "clusters", y = "y", group = 1, color = linecolor, ylab = "Average silhouette width", xlab = "Number of clusters k",
+        x = "clusters", y = "sil", group = 1, color = linecolor, ylab = "Average silhouette width", xlab = "Number of clusters k",
         main = "Silhouette Optimal number of clusters"
     ) + ggplot2::geom_vline(
         xintercept = which.max(v), linetype = 2,
-        color = linecolor
+        color = "red"
     )
 
-    return(list(p_wss, p_silhouette))
+    if (hc_method == "ward") {
+        p_wss <- ggpubr::ggline(df,
+            x = "clusters", y = "wss", group = 1, color = linecolor, ylab = "Total Within Sum of Square", xlab = "Number of clusters k",
+            main = "TWSS optimal number of clusters"
+        )
+        return(list(p_gap, p_silhouette, p_wss))
+    } else {
+        return(list(p_gap, p_silhouette))
+    }
 }
 
 
@@ -49,8 +158,7 @@ plot_cluster <- function(data, word, cluster_number, year_to_analyze, location_t
     file_name <- paste0(location_to_write, "/", word, "_", cluster_number, ".png")
     colors <- viridis::viridis(nrow(data))
     png(file_name, res = 300, height = 1800, width = 2700)
-    for (i in seq(nrow(data))) {
-        print(i)
+    for (i in seq_len(nrow(data))) {
         if (i == 1) {
             plot(year_to_analyze, data[i, ], type = "o", ylab = ylab, xlab = xlab, ylim = ylim, col = colors[i], main = main)
         } else {
@@ -174,11 +282,17 @@ scatter_plot_high_corr <- function(corr_matrix, corr_value, df, variable_name, a
 
     if (anomaly) variable_name_composed <- paste(variable_name_composed, "anomaly")
 
+    # Extract colors from Set1, Set2, and Set3
+    set1_colors <- brewer.pal(8, "Set1")
+    set2_colors <- brewer.pal(8, "Set2")
+    set3_colors <- brewer.pal(12, "Set3")
 
+    # Combine the colors (adjust the number of colors as needed)
+    combined_colors <- c(set1_colors, set2_colors, set3_colors)
 
     p1 <- ggplot(df_corr_data, aes(x = Values_station_1, y = Values_station_2, fill = Combined_station_name)) +
         geom_point(size = 3, shape = 21) + # Adjust size as needed
-        scale_fill_brewer(palette = "Set3") +
+        scale_fill_manual(values = combined_colors) +
         labs(
             title = "a)",
             x = paste0(variable_name_composed, " at station 1"),
@@ -194,7 +308,7 @@ scatter_plot_high_corr <- function(corr_matrix, corr_value, df, variable_name, a
     p2 <- ggplot(df_corr_data, aes(x = Values_station_1, y = Values_station_2, fill = Combined_station_name)) +
         geom_point(size = 3, shape = 21) + # Adjust size as needed
         geom_smooth(method = "lm") +
-        scale_fill_brewer(palette = "Set3") +
+        scale_fill_manual(values = combined_colors) +
         labs(
             title = "b)",
             x = paste0(variable_name_composed, " at station 1"),
