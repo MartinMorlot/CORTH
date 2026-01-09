@@ -16,3 +16,5 @@ k.max <- (nrow(df) - 1)
 linecolor <- "steelblue"
 hc_func <- "agnes"
 hc_method <- "ward"
+
+data <- select_cluster

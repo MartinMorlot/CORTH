@@ -4,6 +4,9 @@ library(colorspace)
 library(RColorBrewer)
 library(ggplot2)
 library(tidyverse)
+library(tidyr)
+library(dplyr)
+library(patchwork)
 
 # Fonction pour calculer la dispersion intra-cluster
 compute_dispersion <- function(distance, clusters) {
@@ -146,26 +149,136 @@ make_nb_fitting_plots <- function(distance, FUNcluster = hcut, k.max = 10, linec
     }
 }
 
+plot_cluster <- function(data, word, cluster_number, year_to_analyze,
+                         location_to_write, write = TRUE) {
+    # ensure column length match
+    data <- data[, seq_along(year_to_analyze), drop = FALSE]
 
+    df <- as.data.frame(data)
+    df$series_id <- seq_len(nrow(df))
 
-plot_cluster <- function(data, word, cluster_number, year_to_analyze, location_to_write) {
-    min_start <- min(data, na.rm = T)
-    max_start <- max(data, na.rm = T)
-    ylim <- c(min_start, max_start)
-    ylab <- paste(word, "occurence day (DOY)")
-    xlab <- "Year"
-    main <- paste(word, "day per year, cluster number:", cluster_number)
-    file_name <- paste0(location_to_write, "/", word, "_", cluster_number, ".png")
-    colors <- viridis::viridis(nrow(data))
-    png(file_name, res = 300, height = 1800, width = 2700)
-    for (i in seq_len(nrow(data))) {
-        if (i == 1) {
-            plot(year_to_analyze, data[i, ], type = "o", ylab = ylab, xlab = xlab, ylim = ylim, col = colors[i], main = main)
-        } else {
-            lines(year_to_analyze, data[i, ], type = "o", col = colors[i])
+    df_long <- df |>
+        pivot_longer(
+            cols = -series_id,
+            names_to = "col_name",
+            values_to = "value"
+        ) |>
+        group_by(series_id) |>
+        mutate(col_idx = row_number()) |>
+        ungroup() |>
+        mutate(year = year_to_analyze[col_idx])
+
+    # y limits
+    ylim <- range(df_long$value, na.rm = TRUE)
+
+    # ---- trim leading empty years ----
+    first_valid_col <- min(df_long$col_idx[!is.na(df_long$value)])
+
+    df_long <- df_long |>
+        filter(col_idx >= first_valid_col)
+
+    # ---- DROP NA YEARS EXPLICITLY ----
+    df_long <- df_long |>
+        filter(!is.na(year))
+    # ---------------------------------
+
+    year_levels <- year_to_analyze[first_valid_col:length(year_to_analyze)]
+
+    df_long$year <- factor(
+        df_long$year,
+        levels = year_levels,
+        ordered = TRUE
+    )
+
+    p <- ggplot(
+        df_long,
+        aes(
+            x = year,
+            y = value,
+            group = series_id,
+            color = series_id
+        )
+    ) +
+        geom_line(na.rm = TRUE) +
+        geom_point(na.rm = TRUE) +
+        scale_color_viridis_c(guide = "none") +
+        scale_x_discrete(drop = FALSE) +
+        coord_cartesian(ylim = ylim) +
+        labs(
+            title = paste(word, "day per year, cluster number:", cluster_number),
+            x = "Year",
+            y = paste(word, "occurrence day (DOY)")
+        ) +
+        theme_bw() +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+    if (write) {
+        ggsave(
+            filename = file.path(
+                location_to_write,
+                paste0(word, "_", cluster_number, ".png")
+            ),
+            plot = p,
+            dpi = 300,
+            width = 9,
+            height = 6
+        )
+    }
+
+    return(p)
+}
+
+plot_cluster_combined <- function(combined_data, cluster_number, year_to_analyze, location_to_write, hc, number_of_clusters, sub_grp) {
+    colors_vir <- viridis::viridis(nrow(combined_data))
+    for (sub_variable in c("start", "end")) {
+        cnames_sel <- colnames(combined_data)
+        cnames_to_keep <- grepv(sub_variable, cnames_sel)
+        if (length(cnames_to_keep) > 0) {
+            sel_variable_cluster <- combined_data[, cnames_to_keep]
+            base_plot <- plot_cluster(
+                sel_variable_cluster, sub_variable, cluster_number, year_to_analyze,
+                "", FALSE
+            )
+
+            plot_name <- paste0(sub_variable, "_plot")
+
+            assign(plot_name, base_plot)
         }
     }
-    dev.off()
+
+    k_colors <- ggpubr:::.get_pal("default", k = number_of_clusters)
+
+    k_colors_sel <- k_colors[cluster_number]
+
+    k_colors <- rep("black", number_of_clusters)
+
+    k_colors[cluster_number] <- k_colors_sel
+
+    k_colors <- k_colors[unique(sub_grp[hc$order])]
+
+    color_labels <- rep("black", length(hc$labels))
+
+    r_sel <- match(row.names(combined_data), hc$labels)
+
+    color_labels[r_sel] <- colors_vir
+
+    dend_plot <- fviz_dend(hc, k = number_of_clusters, rect = TRUE, cex = 0.5, color_labels_by_k = FALSE, k_colors = k_colors)
+
+    dend_plot$layers[[2]]$aes_params$colour <- color_labels[hc$order]
+
+
+    combined_plot <- (start_plot / end_plot) | dend_plot
+    p <- combined_plot + plot_layout(widths = c(2, 1))
+    ggsave(
+        filename = file.path(
+            location_to_write,
+            paste0("Combined_", cluster_number, ".png")
+        ),
+        plot = p,
+        dpi = 300,
+        width = 9,
+        height = 6
+    )
 }
 
 distance_calc_clustering_method <- function(distance, location_to_write = NA, methods_to_consider = c("average", "single", "complete", "ward", "weighted", "gaverage", "diana")) {

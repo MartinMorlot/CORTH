@@ -212,6 +212,12 @@ full_cluster_analysis <- function(file_to_analyze, where_to_plot, variable, col_
                             )
                         }
                     }
+                    if (grepl(variable, "combined_start_end")) {
+                        plot_cluster_combined(
+                            select_cluster, cluster_number, year_to_analyze,
+                            nb_plot_loc, hc, number_of_clusters, sub_grp
+                        )
+                    }
                 } else {
                     plot_cluster(
                         select_cluster, variable, cluster_number, year_to_analyze,

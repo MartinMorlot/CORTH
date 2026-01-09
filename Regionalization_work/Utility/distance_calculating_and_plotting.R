@@ -68,13 +68,6 @@ clean_correlation <- function(corr, df, cor_function, min_obs, init_NA_corr = 10
     return(list(corr = corr, df = df))
 }
 
-# TODO make a function to plot correlation
-plot_correlation_and_dist_return_dist <- function() {
-
-}
-
-# TODO make a function for plot distribution
-
 dist_correlation <- function(corr) {
     dist <- sqrt(0.5 * (1 - corr))
     return(dist)
@@ -123,7 +116,6 @@ dist_calculation <- function(df_with_data, dist_type, clean = FALSE) {
     dist_calc <- dist_function(df_with_data)
     if (clean) {
         na_vals <- is.na(dist_calc)
-        col_with_na <- which(colSums(na_vals) > 0)
         row_with_na <- which(rowSums(na_vals) > 0)
         dist_fix <- dist_calc[-row_with_na, ]
         dist <- as.dist(dist_fix)
