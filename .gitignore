@@ -1,5 +1,5 @@
 # For now
-.csv
+*.csv
 
 # Stations file
 *.gz

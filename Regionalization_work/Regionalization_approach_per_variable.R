@@ -1,7 +1,7 @@
 rm(list = ls())
 gc()
 
-source("Regionalization_work/Utility/Regionalization_analysis_function.R")
+source("R/Regionalization_analysis_function.R")
 
 year_to_analyze <- as.character("1986":"2025")
 
@@ -23,6 +23,8 @@ mixed_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/All_v
 file_combined_start_end <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Combined_data_start_end.csv"
 combined_start_end_plot_loc <- "/home/mmorlot/dev-work/CORTH/Regionalization_work/Plots/Combined_start_end/"
 
+correction_data_loc <- "/home/mmorlot/dev-work/CORTH/Data_correction_databases/"
+
 variables_to_iterate <- c("start", "end", "minima", "mixed", "combined_start_end")
 
 for (variable in variables_to_iterate) {
@@ -32,6 +34,6 @@ for (variable in variables_to_iterate) {
     unlink(orig_loc, recursive = TRUE)
     plot_loc <- paste0(orig_loc)
     for (anomaly_to_run in c(TRUE, FALSE)) {
-        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, TRUE, anomaly_to_run)
+        variable_result <- full_cluster_analysis(file_loc, plot_loc, variable, TRUE, anomaly_to_run, correction_data_loc)
     }
 }
